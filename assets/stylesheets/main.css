@@ -49,7 +49,19 @@ table {
   
 /*
  ========================================
- Container
+ Custom styles
+ ========================================
+*/
+
+body {
+  color: #888;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*
+ ========================================
+ Grid
  ========================================
 */
 
@@ -61,11 +73,15 @@ table {
           box-sizing: border-box;
 }
 
-body {
+.container,
+.grid {
   margin: 0 auto;
+  width: 960px;
+}
+
+.container {
   padding-left: 30px;
   padding-right: 30px;
-  width: 960px;
 }
 
 /*
@@ -74,10 +90,18 @@ body {
  ========================================
 */
 
-.row {
+.row,
+.row-header {
   background: #fff;
   min-width: 960px;
+}
+
+.row {
   padding: 66px 0 44px 0;
+}
+
+.row-header {
+  padding: 10px 0 10px 0;
 }
   
 
@@ -88,10 +112,84 @@ body {
 */
 
 .nav {
+  float: right;
   text-align: right;
+  text-transform: uppercase;
 }
 
 .nav li {
   display: inline-block;
   margin: 0 10px;
 }
+
+
+/*
+ ========================================
+ Primary header
+ ========================================
+*/
+
+.primary-header {
+  min-width:960px;
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #001a66, #e6ecff);
+  background: -moz-linear-gradient(to right, #001a66, #e6ecff);
+  background: linear-gradient(to right, #001a66, #e6ecff);
+}
+
+
+.tagline {
+  color: #e0e0e0;
+  float: left;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+
+/*
+ ========================================
+ Clearfix
+ ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+/*
+ ========================================
+ Links
+ ========================================
+*/
+
+a {
+  text-decoration: none;
+}
+
+.nav a {
+  border-bottom: 1px solid transparent;
+  color: #404040;
+  padding-bottom: 4px;
+}
+
+.nav a:hover {
+  border-bottom: 1px solid #404040;
+}
+
+.nav a.active {
+  border-bottom: 1px solid #404040;
+}
+  
+
