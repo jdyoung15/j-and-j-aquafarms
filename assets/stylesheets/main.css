@@ -58,6 +58,21 @@ body {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*
+ ========================================
+ Typography
+ ========================================
+*/
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
 
 /*
  ========================================
@@ -90,18 +105,10 @@ body {
  ========================================
 */
 
-.row,
-.row-header {
-  background: #fff;
-  min-width: 960px;
-}
-
 .row {
+  min-width: 960px;
+  background: #fff;
   padding: 66px 0 44px 0;
-}
-
-.row-header {
-  padding: 10px 0 10px 0;
 }
   
 
@@ -112,7 +119,6 @@ body {
 */
 
 .nav {
-  float: right;
   text-align: right;
   text-transform: uppercase;
 }
@@ -130,18 +136,21 @@ body {
 */
 
 .primary-header {
-  min-width:960px;
-  background: #cbe2c1;
+  min-width: 960px;
+  background: #001a66;
   background: -webkit-linear-gradient(to right, #001a66, #e6ecff);
   background: -moz-linear-gradient(to right, #001a66, #e6ecff);
   background: linear-gradient(to right, #001a66, #e6ecff);
+  padding: 10px 0 10px 0;
 }
 
+.logo {
+  color: #e0e0e0;
+}
 
 .tagline {
   color: #e0e0e0;
   float: left;
-  font-size: 12px;
   margin-left: 20px;
 }
 
