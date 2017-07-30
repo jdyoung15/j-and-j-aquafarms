@@ -54,7 +54,7 @@ table {
 */
 
 body {
-  background: #00001a;
+  background: #fff;
   color: #404040;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -68,6 +68,10 @@ body {
 h1 {
   font-size: 36px;
   line-height: 44px;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 h5 {
@@ -278,4 +282,54 @@ a {
 
 .right-text {
   text-align: right;
+}
+
+
+/*
+ ========================================
+ About page
+ ========================================
+*/
+
+.intro {
+  padding: 30px 0;
+}
+
+.intro-text {
+  float: right;
+  padding-left: 30px;
+  width: 50%;
+}
+
+.about-contents {
+  background-color: rgba(241, 241, 241, 0.7);
+  margin-top: 40px;
+}
+
+.about-contents p {
+  margin-bottom: 20px;
+}
+
+.intro img {
+  float: left;
+  width: 50%;
+}
+
+.bio img {
+  float: right;
+  width: 50%;
+}
+
+.bio-text {
+  display: inline-block;
+  padding-right: 30px;
+  width: 50%;
+}
+
+.bio-conclusion {
+  margin-top: 20px;
+}
+
+.bio-header {
+  font-weight: 500;
 }
