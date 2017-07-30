@@ -108,7 +108,7 @@ h5 {
 .row {
   min-width: 960px;
   background: #fff;
-  padding: 66px 0 44px 0;
+  padding: 44px 0;
 }
   
 
@@ -202,3 +202,64 @@ a {
 }
   
 
+/*
+ ========================================
+ Home page
+ ========================================
+*/
+
+.quote {
+  background: #fff;
+}
+
+.quote p {
+  text-align: center;
+  font-style: italic;
+}
+
+.new-quote {
+  font-weight: 500;
+}
+
+.exposition {
+  background-image: url("../images/homepage/pond_banner.jpg");
+  background-size: 100% auto;
+  /*
+  background: rgba(145,0,0,0.7);
+  background: -webkit-linear-gradient(#001a66, #e6ecff);
+  background: -moz-linear-gradient(#001a66, #e6ecff);
+  background: linear-gradient(#fff, #fff8dc, #fff);
+  */
+}
+
+.content-box {
+  background: #fff;
+  opacity: 0.9;
+  padding: 35px;
+}
+
+.content-box p {
+  color: #404040;
+  margin-bottom: 35px;
+}
+
+.content-box p:last-child {
+  margin-bottom: 0px;
+}
+
+.conclusion {
+  background-image: url("../images/homepage/pond_sunset.jpg");
+  background-size: 100% auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
