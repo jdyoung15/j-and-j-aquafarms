@@ -291,8 +291,18 @@ a {
  ========================================
 */
 
-.intro {
-  padding: 30px 0;
+.about-contents {
+  background-color: rgba(241, 241, 241, 0.7);
+  padding: 30px;
+}
+
+.about-contents section:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.intro img {
+  float: left;
+  width: 48%;
 }
 
 .intro-text {
@@ -301,23 +311,9 @@ a {
   width: 50%;
 }
 
-.about-contents {
-  background-color: rgba(241, 241, 241, 0.7);
-  margin-top: 40px;
-}
-
-.about-contents p {
-  margin-bottom: 20px;
-}
-
-.intro img {
-  float: left;
-  width: 50%;
-}
-
 .bio img {
   float: right;
-  width: 50%;
+  width: 48%;
 }
 
 .bio-text {
@@ -326,10 +322,12 @@ a {
   width: 50%;
 }
 
-.bio-conclusion {
-  margin-top: 20px;
-}
-
 .bio-header {
   font-weight: 500;
+}
+
+.intro p:not(:last-child),
+.bio p:not(:last-child),
+.bio-conclusion p:not(:last-child) {
+  margin-bottom: 20px;
 }
