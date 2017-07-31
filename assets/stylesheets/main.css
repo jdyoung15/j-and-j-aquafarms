@@ -54,9 +54,16 @@ table {
 */
 
 body {
-  background: #fff;
+  background: #001a66;
+  background: -webkit-linear-gradient(to right, #001a66, #e6ecff);
+  background: -moz-linear-gradient(to right, #001a66, #e6ecff);
+  background: linear-gradient(to right, #001a66, #e6ecff);
   color: #404040;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-container {
+  padding: 0 100px;
 }
 
 /*
@@ -142,11 +149,7 @@ h5 {
 
 .primary-header {
   min-width: 960px;
-  background: #001a66;
-  background: -webkit-linear-gradient(to right, #001a66, #e6ecff);
-  background: -moz-linear-gradient(to right, #001a66, #e6ecff);
-  background: linear-gradient(to right, #001a66, #e6ecff);
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .logo {
@@ -166,14 +169,11 @@ h5 {
 */
 
 .primary-footer {
-  background: #00001a;
-  box-shadow: 0px 500px 0px 500px #000;
   color: #e0e0e0;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .primary-footer  small {
-  color: #696969;
   float: left;
   font-size: 12px;
 }
