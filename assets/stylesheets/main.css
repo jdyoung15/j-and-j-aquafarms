@@ -135,14 +135,18 @@ h5 {
   display: inline-block;
 }
 
-.dropbtn {
-  cursor: pointer;
+.nav a {
+  color: #404040;
+  display: block;
   padding: 10px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.nav a:hover {
+  color: #f9f9f9;
+}
+
+.nav .active {
+  color: #f9f9f9;
 }
 
 .dropdown-content {
@@ -156,21 +160,18 @@ h5 {
 
 .dropdown-content a {
   display: block;
-  padding: 12px 10px;
+  padding: 10px;
   text-align: left;
   text-decoration: none;
 }
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  color: #404040;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropbtn:hover a {
-  color: #f9f9f9;
 }
 
 .dropdown:hover .dropbtn {
@@ -250,11 +251,6 @@ h5 {
 
 a {
   text-decoration: none;
-}
-
-.nav a {
-  color: #404040;
-  padding-bottom: 4px;
 }
 
   
