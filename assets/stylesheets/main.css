@@ -126,15 +126,56 @@ h5 {
 */
 
 .nav {
+  float: right;
   text-align: right;
   text-transform: uppercase;
 }
 
 .nav li {
   display: inline-block;
-  margin: 0 10px;
 }
 
+.dropbtn {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover a {
+  color: #f9f9f9;
+}
+
+.dropdown:hover .dropbtn {
+  color: #f9f9f9;
+}
 
 /*
  ========================================
@@ -144,16 +185,21 @@ h5 {
 
 .primary-header {
   min-width: 1080px;
-  padding: 20px 0;
+  padding: 20px 0 10px 0;
 }
 
 .logo {
   color: #e0e0e0;
 }
 
+.nav-row {
+  height: 42px
+}
+
 .tagline {
   color: #e0e0e0;
   float: left;
+  line-height: 42px;
   margin-left: 20px;
 }
 
@@ -171,6 +217,7 @@ h5 {
 .primary-footer  small {
   float: left;
   font-size: 12px;
+  margin-left: 20px;
 }
 
 /*
@@ -206,18 +253,10 @@ a {
 }
 
 .nav a {
-  border-bottom: 1px solid transparent;
   color: #404040;
   padding-bottom: 4px;
 }
 
-.nav a:hover {
-  border-bottom: 1px solid #404040;
-}
-
-.nav a.active {
-  border-bottom: 1px solid #404040;
-}
   
 
 /*
