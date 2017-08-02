@@ -136,17 +136,17 @@ h5 {
 }
 
 .nav a {
-  color: #404040;
+  color: #e0e0e0;
   display: block;
   padding: 10px;
 }
 
 .nav a:hover {
-  color: #f9f9f9;
+  color: #4caf50;
 }
 
 .nav .active {
-  color: #f9f9f9;
+  color: #4caf50;
 }
 
 .dropdown-content {
@@ -159,6 +159,7 @@ h5 {
 }
 
 .dropdown-content a {
+  color: #404040;
   display: block;
   padding: 10px;
   text-align: left;
@@ -167,7 +168,7 @@ h5 {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
-  color: #404040;
+  color: #4caf50;
 }
 
 .dropdown:hover .dropdown-content {
@@ -175,7 +176,7 @@ h5 {
 }
 
 .dropdown:hover .dropbtn {
-  color: #f9f9f9;
+  color: #4caf50;
 }
 
 /*
@@ -185,8 +186,12 @@ h5 {
 */
 
 .primary-header {
+  background: #282828;
+  color: #e0e0e0;
+  margin-top: 20px;
   min-width: 1080px;
-  padding: 20px 0 10px 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -211,14 +216,23 @@ h5 {
 */
 
 .primary-footer {
+  background: #282828;
   color: #e0e0e0;
-  padding: 20px 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .primary-footer  small {
-  float: left;
   font-size: 12px;
-  margin-left: 20px;
+}
+
+.primary-footer .copyright {
+  float: left;
+}
+
+.primary-footer .email {
+  float: right;
 }
 
 /*
@@ -283,7 +297,7 @@ a {
 .conclusion {
   background-image: url("../images/homepage/pond_sunset.jpg");
   background-size: 100% auto;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
 }
 
 .content-box-bg,
@@ -375,4 +389,16 @@ a {
 .bio p:not(:last-child),
 .bio-conclusion p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+
+/*
+ ========================================
+ Technical Bulletins page
+ ========================================
+*/
+
+.bulletin-contents {
+  background: #fff;
+  min-height: 500px;
 }
