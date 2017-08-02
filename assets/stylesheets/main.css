@@ -107,6 +107,22 @@ h5 {
   padding-right: 30px;
 }
 
+
+/*
+ ========================================
+ Columns
+ ========================================
+*/
+
+.col-1-2 {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  width: 50%;
+  padding: 0;
+}
+
+
 /*
  ========================================
  Rows
@@ -343,7 +359,7 @@ a {
 
 .about-contents-bg {
   background-image: url("../images/about/ponds_plane.jpg");
-  background-size: 100% auto;
+  background-size: auto 100%;
   margin: 0 auto;
   width: 1080px;
 }
@@ -353,32 +369,20 @@ a {
   padding: 30px;
 }
 
-.about-contents section:not(:last-child) {
-  margin-bottom: 30px;
+.intro img,
+.location-map {
+  height: 340px;
 }
 
-.intro img {
-  float: left;
-  width: 48%;
-}
-
-.intro-text {
-  float: right;
+.intro-text,
+.bio-conclusion-text {
   padding-left: 30px;
-  padding-top: 30px;
-  width: 50%;
-}
-
-.bio img {
-  float: right;
-  width: 48%;
+  padding-top: 10px;
 }
 
 .bio-text {
-  display: inline-block;
   padding-right: 30px;
-  padding-top: 30px;
-  width: 50%;
+  padding-top: 40px;
 }
 
 .bio-header {
@@ -388,7 +392,16 @@ a {
 .intro p:not(:last-child),
 .bio p:not(:last-child),
 .bio-conclusion p:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.bio-conclusion .contact-info p {
+  margin-bottom: 10px;
 }
 
 
