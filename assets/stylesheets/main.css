@@ -131,7 +131,8 @@ h5 {
   display: inline-block;
   float: left;
   vertical-align: top;
-  width: 33%;
+  margin: 0 1.5%;
+  width: 30%;
   padding: 0;
 }
 
@@ -442,3 +443,82 @@ a {
 .bulletin:hover img {
   border: 1px solid #4caf50;
 }
+
+
+/*
+ ========================================
+ Fish page
+ ========================================
+*/
+
+.fish-contents {
+  background: #fff;
+  padding: 20px;
+}
+
+.sub-menu-bar {
+  background: #efefef;
+}
+
+.sub-menu-bar li {
+  display: inline-block;
+}
+
+.tabs {
+  min-height: 200px;
+}
+
+.fish-listing {
+  border: 1px solid #d8d8d8;
+  margin-bottom: 30px;
+  min-height: 430px;
+  padding: 20px;
+  text-align: center;
+}
+
+.fish-listing img {
+  height: 100px;
+  max-width: 260px;
+}
+
+.fish-listing .subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin-bottom: 20px;
+  min-height: 65px;
+}
+
+.unit-prices-tbl {
+  border: 1px solid #404040;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 0 auto;
+  min-width: 200px;
+}
+
+.unit-prices-tbl td {
+  border-bottom: 1px solid #404040;
+  padding: 5px;
+  width: 50%;
+}
+
+.unit-prices-tbl tr:not(:last-child) .qty {
+  border-bottom: 1px solid #707070;
+}
+
+.unit-prices-tbl .qty {
+  background: #404040;
+  color: #e0e0e0;
+}
+
+.fish-description {
+  text-align: left;
+}
+
+.availability-update {
+  color: red;
+}
+
