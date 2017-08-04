@@ -408,13 +408,12 @@ a {
   margin-bottom: 30px;
 }
 
-.contact-info {
-  margin-left: 20px;
+.bio-conclusion-text {
   margin-top: 20px;
 }
 
-.bio-conclusion .contact-info p {
-  margin-bottom: 10px;
+.bio-conclusion .contact-info {
+  margin-top: 20px;
 }
 
 
@@ -534,39 +533,54 @@ a {
   margin-bottom: 20px;
 }
 
-.table-container {
-  margin-bottom: 20px;
-  min-height: 65px;
+.fish-description {
+  text-align: left;
 }
 
-.unit-prices-tbl {
-  border: 1px solid #404040;
-  border-collapse: collapse;
-  font-size: 12px;
-  margin: 0 auto;
+.fish-listing .base-table {
   min-width: 200px;
 }
 
-.unit-prices-tbl td {
-  border-bottom: 1px solid #404040;
-  padding: 5px;
+.fish-listing .base-table td {
   width: 50%;
-}
-
-.unit-prices-tbl tr:not(:last-child) .qty {
-  border-bottom: 1px solid #707070;
-}
-
-.unit-prices-tbl .qty {
-  background: #404040;
-  color: #e0e0e0;
-}
-
-.fish-description {
-  text-align: left;
 }
 
 .availability-update {
   color: red;
 }
 
+
+/*
+ ========================================
+ Tables
+ ========================================
+*/
+
+.table-container {
+  margin-bottom: 20px;
+  min-height: 65px;
+}
+
+.base-table {
+  border: 1px solid #404040;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 0 auto;
+  min-width: 400px;
+  text-align: center;
+}
+
+.base-table th {
+  background: #404040;
+  color: #e0e0e0;
+  padding: 5px;
+}
+
+.base-table tr:not(:last-child) th {
+  border-bottom: 1px solid #707070;
+}
+
+.base-table td {
+  border-bottom: 1px solid #404040;
+  padding: 5px;
+}
