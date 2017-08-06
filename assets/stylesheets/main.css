@@ -525,6 +525,12 @@ a {
   text-align: left;
 }
 
+.table-container {
+  margin-bottom: 20px;
+  min-height: 65px;
+}
+
+
 .fish-listing .base-table {
   min-width: 200px;
 }
@@ -543,11 +549,6 @@ a {
  Tables
  ========================================
 */
-
-.table-container {
-  margin-bottom: 20px;
-  min-height: 65px;
-}
 
 .base-table {
   border: 1px solid #404040;
@@ -651,6 +652,32 @@ a {
   line-height: 12px;
 }
 
+.ff-img-full {
+  display: block;
+  margin: 0 auto;
+}
+
+.ff-stats h3 {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.analysis,
+.ingredients {
+  padding: 10px;
+}
+
+.analysis .base-table {
+  margin: 0;
+  min-width: 300px;
+}
+
+.analysis .base-table th {
+  width: 33%;
+}
+
 
 /*
  ========================================
@@ -670,4 +697,36 @@ a {
 
 .std-btn:hover {
   opacity: 0.9;
+}
+
+
+/*
+ ========================================
+ Dialogs
+ ========================================
+*/
+
+.ui-dialog-titlebar {
+  display: none;
+}
+
+.dialog-close-btn {
+  color: #a0a0a0;
+  float: right;
+  font-size: 30px;
+}
+
+.dialog-close-btn:hover {
+  cursor: pointer;
+}
+
+
+.ui-dialog {
+  background: #fff;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.ui-widget-overlay {
+  background: rgba(0,0,0,0.5);
 }
