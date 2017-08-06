@@ -464,30 +464,13 @@ a {
   padding: 30px 0;
 }
 
-.introduction p:not(:last-child) {
+.introduction p {
   margin-bottom: 20px;
 }
 
 .introduction-text {
   margin: 0 auto;
   width: 750px;
-}
-
-.introduction-text p:first-child {
-}
-
-.introduction .order-btn {
-  background: #4caf50;
-  color: #f0f0f0;
-  display: block;
-  margin: 20px auto 0 auto;
-  padding: 5px;
-  text-align: center;
-  width: 150px;
-}
-
-.introduction .order-btn:hover {
-  opacity: 0.9;
 }
 
 .freight-options {
@@ -588,4 +571,103 @@ a {
 .base-table td {
   border-bottom: 1px solid #404040;
   padding: 5px;
+}
+
+
+
+/*
+ ========================================
+ Fish food page
+ ========================================
+*/
+
+.ff-listing {
+  background: #fff;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.ff-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+.ff-info {
+  display: inline-block;
+  padding: 10px 30px 0 30px;
+  width: 75%;
+}
+
+.ff-header {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.ff-id {
+  display: inline-block;
+  font-size: 32px;
+}
+
+.ff-name {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 20px;
+}
+
+.ff-description {
+  display: inline-block;
+  list-style-type: square;
+  padding-left: 30px;
+  vertical-align: top;
+  width: 80%;
+}
+
+.ff-pricing {
+  display: inline-block;
+  text-align: right;
+  width: 20%;
+}
+
+.ff-pricing .add-cart-btn {
+  float: right;
+  margin: 10px 0 0 0;
+}
+
+.ff-price {
+  float: right;
+  font-size: 32px;
+}
+
+.ff-shipping {
+  float: right;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.ff-shipping p {
+  line-height: 12px;
+}
+
+
+/*
+ ========================================
+ Buttons
+ ========================================
+*/
+
+.std-btn {
+  background: #4caf50;
+  color: #f0f0f0;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  width: 120px;
+}
+
+.std-btn:hover {
+  opacity: 0.9;
 }
