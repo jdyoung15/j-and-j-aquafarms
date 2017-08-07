@@ -582,8 +582,11 @@ a {
  ========================================
 */
 
-.ff-listing {
+.ff-listings {
   background: #fff;
+}
+
+.ff-listing {
   border-bottom: 1px solid #d8d8d8;
   padding-bottom: 30px;
   padding-top: 30px;
@@ -655,6 +658,7 @@ a {
 .ff-img-full {
   display: block;
   margin: 0 auto;
+  max-height: 350px;
 }
 
 .ff-stats h3 {
@@ -705,6 +709,10 @@ a {
  Dialogs
  ========================================
 */
+
+.ui-dialog {
+  position: fixed;
+}
 
 .ui-dialog-titlebar {
   display: none;
