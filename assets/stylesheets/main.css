@@ -592,10 +592,20 @@ a {
   padding-top: 30px;
 }
 
-.ff-img {
+.ff-img-container {
   display: inline-block;
   vertical-align: top;
   width: 25%;
+}
+
+.ff-img {
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  height: 180px;
+}
+
+.ingredients-link {
+  text-align: center;
 }
 
 .ff-info {
@@ -656,6 +666,7 @@ a {
 }
 
 .ff-img-full {
+  border: 1px solid #d8d8d8;
   display: block;
   margin: 0 auto;
   max-height: 350px;
