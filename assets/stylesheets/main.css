@@ -588,10 +588,47 @@ a {
   padding-bottom: 20px;
 }
 
-.selector-label {
+.ff-filters span,
+.which-ff {
   margin-left: 50px;
 }
 
+.ff-table {
+  font-size: 12px;
+  margin: 30px auto 0 auto;
+}
+
+.ff-table th,
+.ff-table td {
+  height: 75px;
+  padding: 5px;
+  text-align: center; 
+  vertical-align: middle;
+  width: 120px;
+}
+
+.ff-table th {
+  font-weight: 400;
+}
+
+.ff-table thead tr,
+.ff-table tr:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+
+.ff-table td,
+.ff-table thead th:not(:first-child) {
+  border-left: 1px solid #efefef;
+}
+
+.ff-table a {
+  color: #404040;
+}
+
+.ff-table a:hover {
+  color: #707070;
+}
+    
 .ff-listings {
   background: #fff;
 }
