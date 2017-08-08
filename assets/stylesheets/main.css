@@ -582,6 +582,16 @@ a {
  ========================================
 */
 
+.ff-filters {
+  background: #f5f5f5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.selector-label {
+  margin-left: 50px;
+}
+
 .ff-listings {
   background: #fff;
 }
