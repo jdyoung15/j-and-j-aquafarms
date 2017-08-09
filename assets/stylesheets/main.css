@@ -616,13 +616,33 @@ a {
 
 .ff-filters {
   background: #f5f5f5;
+  line-height: 32px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .ff-filters span,
-.which-ff {
-  margin-left: 50px;
+.ff-filters select,
+.ff-filters .which-ff {
+  float: left;
+}
+
+.ff-filters select {
+  margin-right: 50px;
+}
+
+.ff-filters select {
+  height: 32px;
+  margin-left: 5px;
+}
+
+.ff-filters .view-cart-btn {
+  float: right;
+  margin: 0 30px 0 0 ;
+}
+
+.view-cart-btn:hover {
+  cursor: pointer;
 }
 
 .ff-table {
@@ -724,9 +744,19 @@ a {
   width: 20%;
 }
 
+.ff-pricing form input,
+.ff-filters form input {
+  border: 0;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .ff-pricing .add-cart-btn {
   float: right;
   margin: 10px 0 0 0;
+}
+
+.ff-pricing .add-cart-btn:hover {
+  cursor: pointer;
 }
 
 .ff-price {
