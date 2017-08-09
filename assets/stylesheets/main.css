@@ -582,6 +582,38 @@ a {
  ========================================
 */
 
+.ff-introduction {
+  background: #fff;
+  padding: 30px;
+}
+
+.ff-introduction-text {
+  display: inline-block;
+  padding-right: 50px;
+  width: 66.67%
+}
+
+.ff-introduction-text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.ff-shipping-text {
+  background: #f5f5f5;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+  width: 33.33%
+}
+
+.ff-shipping-text ul {
+  list-style-type: square;
+  margin-left: 30px;
+}
+
+.ff-shipping-text li {
+  margin-top: 5px;
+}
+
 .ff-filters {
   background: #f5f5f5;
   padding-top: 20px;
@@ -719,7 +751,7 @@ a {
   max-height: 350px;
 }
 
-.ff-stats h3 {
+.dialog h3 {
   border-bottom: 1px solid #efefef;
   margin-bottom: 20px;
   margin-top: 20px;
