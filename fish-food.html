@@ -9,6 +9,7 @@
     <script src="assets/scripts/jquery.js"></script>
     <script src="assets/scripts/jquery-ui.js"></script>
   </head>
+
   <body>
 
     <header class="primary-header container">
@@ -41,1188 +42,1168 @@
       </div>
     </header>
 
-    <section class="ff-introduction container">
-      <div class="ff-introduction-text">
+    <section class="ff-intro container bg-white">
+
+      <article class="ff-intro-text">
         <p>At J and J Aquafarms, 32 years of demanding field use have resulted in the best choice for your prized pond or aquarium fish: Pescapro!</p>
         <p>Pescapro fish foods are professional grade and formulated to meet the precise demands of serious fish culturists. They contain the essential micronutrients and protein quality necessary for healthy growth and breeding in recirculating or flow-through aquatic environments.</p>
-
         <p>The web has enabled unprecedented availability of fresh, high-end Pro- quality aquatic rations to the individual fish grower. Because J and J Aquafarms turns over tons of food per month, Pescapro is guaranteed fresh with a full compliment of active vitamins, unlike other foods with degraded nutrients that have been shelf-stored for months.</p>
+        <p>Featuring our specially formulated J&J Aquafarms <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> with an all natural binder that is stable for 15 minutes!</p>
 
-        <p>Featuring our specially formulated J&J Aquafarms <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> with an all natural binder that is stable for 15 minutes!</p>
+        <p><a class="link-green" href="mailto:info@jandjaquafarms.com">Email us</a> for a discount on bulk orders!</p>
+      </article><!--
 
-        <p><a class="base-link" href="mailto:info@jandjaquafarms.com">Email us</a> for a discount on bulk orders!</p>
-      </div><!--
-
-      --><aside class="ff-shipping-text">
-        <h3>Shipping</h3>
-          <ul>
+      --><aside class="ff-shipping-text bg-grey">
+        <h3 class="ff-shipping-header">Shipping</h3>
+          <ul class="list-square-bullets">
             <li>2-4 days</li>
-            <li>Orders of different types of food will require <a class="base-link" href="mailto:info@jandjaquafarms.com">contacting us</a> for a shipping discount</li>
-            <li>West Coast Special Shipping Discount: use of Regional Rate boxes enable sizeable discounts for CA, NV, OR, ID, CO, AZ. <a class="base-link" href="mailto:info@jandjaquafarms.com">Request a quote!</a></li>
-            <li>We can ship to Canada and Mexico (max. box weight 20 lb). <a class="base-link" href="mailto:info@jandjaquafarms.com">Email us</a> for non-USA shipping quotes. Or try <a class="base-link" href="http://www.shiptotheborder.com">Shiptotheborder</a> to save $ using a US address.</li>
+            <li>Orders of different types of food will require <a class="link-green" href="mailto:info@jandjaquafarms.com">contacting us</a> for a shipping discount</li>
+            <li>West Coast Special Shipping Discount: use of Regional Rate boxes enable sizeable discounts for CA, NV, OR, ID, CO, AZ. <a class="link-green" href="mailto:info@jandjaquafarms.com">Request a quote!</a></li>
+            <li>We can ship to Canada and Mexico (max. box weight 20 lb). <a class="link-green" href="mailto:info@jandjaquafarms.com">Email us</a> for non-USA shipping quotes. Or try <a class="link-green" href="http://www.shiptotheborder.com">Shiptotheborder</a> to save $ using a US address.</li>
           </ul>
       </aside>
 
     </section>
 
 
-    <section class="ff-filters container group">
-      <span class="selector-label">Fish food type:</span>
-      <select class="ff-filter ff-types">
-        <option value="ff-listing">Any</option>
-        <option value="floating">Floating</option>
-        <option value="sinking">Sinking</option>
-        <option value="floating-sinking">Floating/sinking</option>
-        <option value="medicated-floating">Medicated floating</option>
-        <option value="medicated-sinking">Medicated sinking</option>
-      </select>
-      <span class="selector-label">Fish type:</span>
-      <select class="ff-filter fish-types">
-        <option value="ff-listing">Any</option>
-        <option value="koi-1-12">Koi Goldfish 1-12"</option>
-        <option value="koi-8-36">Koi 8-36"</option>
-        <option value="tropicals-over-3">African Cichlids, Tilapia, Tropicals over 3"</option>
-        <option value="tropicals-over-8">Oscar Pacu Arowana Tilapia Tropicals over 8"</option>
-        <option value="tropicals-small"><2" Koi, Angels, Discus, Saltwater, Sm. tropical</option>
-        <option value="fry-small-fish">Fry, Small Fish (<1")</option>
-      </select>
-      <a class="opener base-link which-ff" data-id="which-ff-dialog" href="#">Fish food reference</a>
-			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="business" value="john@jandjaquafarms.com">
-        <input class="std-btn view-cart-btn" type="submit" value="View cart">
-        <input type="hidden" name="display" value="1">
-      </form>
-    </section>
+    <section class="ff-listings-container">
 
-    <section class="ff-listings container">
+      <header class="ff-filters bg-grey container">
+        <span>Fish food type:</span>
+        <select class="ff-filter" id="ff-types">
+          <option value="ff-listing">Any</option>
+          <option value="floating">Floating</option>
+          <option value="sinking">Sinking</option>
+          <option value="floating-sinking">Floating/sinking</option>
+          <option value="medicated-floating">Medicated floating</option>
+          <option value="medicated-sinking">Medicated sinking</option>
+        </select>
+        <span>Fish type:</span>
+        <select class="ff-filter" id="fish-types">
+          <option value="ff-listing">Any</option>
+          <option value="koi-1-12">Koi Goldfish 1-12"</option>
+          <option value="koi-8-36">Koi 8-36"</option>
+          <option value="tropicals-over-3">African Cichlids, Tilapia, Tropicals over 3"</option>
+          <option value="tropicals-over-8">Oscar Pacu Arowana Tilapia Tropicals over 8"</option>
+          <option value="tropicals-small"><2&quot; Koi, Angels, Discus, Saltwater, Sm. tropical</option>
+          <option value="fry-small-fish">Fry, Small Fish (<1&quot;)</option>
+        </select>
+        <a class="opener link-green link-ff-reference" data-id="ff-reference-dialog" href="#">Fish food reference</a>
+        <form class="form-view-cart" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_cart">
+          <input type="hidden" name="business" value="john@jandjaquafarms.com">
+          <input class="btn-green" type="submit" value="View cart">
+          <input type="hidden" name="display" value="1">
+        </form>
+      </header>
 
-      <div id="ff45" class="ff-listing floating floating-sinking koi-1-12 tropicals-over-3 tropicals-small">
-        <a href="#" class="opener ff-img-container" data-id="ff45-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff45.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF45
-        		</h3>
-        		<h3 class="ff-name">
-		  				Cichlid Titanium Fish Pellets - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>1.5 mm (<1/16&quot;) floating pellet</li>
-		  			<li>For top and center-feeding fish 1" to 6" - Fresh or saltwater</li>
-		  			<li>Extruded pellets initially float, then sink slowly</li>
-		  			<li>For sinking cichlid food: <a class="base-link" href="#sf45">SF45</a></li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$11.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name4" value="FF45 Cichlid Titanium Fish Pellets 3 lb. 45% 1/16">
-      				  <input type="hidden" name="item_number" value="FF45">
-      				  <input type="hidden" name="amount" value="11.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+      <section class="ff-listings bg-white container">
 
-      <div id="ff45b" class="ff-listing floating floating-sinking koi-1-12 tropicals-over-3 tropicals-small">
-        <a href="#" class="opener ff-img-container" data-id="ff45-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff45.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF45B
-        		</h3>
-        		<h3 class="ff-name">
-		  				Cichlid Titanium Fish Pellets - Bulk 11 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>1.5 mm (<1/16&quot;) floating pellet</li>
-		  			<li>For top and center-feeding fish 1" to 6" - Fresh or saltwater</li>
-		  			<li>Extruded pellets initially float, then sink slowly</li>
-		  			<li>For sinking cichlid food: <a class="base-link" href="#sf45">SF45</a></li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$29.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.60</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="FF45B Cichlid Titanium Fish Pellets Bulk 11 lb.45% 1/16&quot;">
-      				  <input type="hidden" name="item_number5" value="FF45B">
-      				  <input type="hidden" name="amount" value="29.99">
-      				  <input type="hidden" name="shipping" value="13.60">
-      				  <input type="hidden" name="shipping2" value="10.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff45" class="ff-listing border-bottom-grey floating floating-sinking koi-1-12 tropicals-over-3 tropicals-small">
+          <a href="#" class="opener ff-img-container" data-id="ff45-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff45.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF45
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Titanium Fish Pellets - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>1.5 mm (<1/16&quot;) floating pellet</li>
+              <li>For top and center-feeding fish 1" to 6" - Fresh or saltwater</li>
+              <li>Extruded pellets initially float, then sink slowly</li>
+              <li>For sinking cichlid food: <a class="link-green" href="#sf45">SF45</a></li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <span class="ff-price">
+                $11.99
+              </span>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name4" value="FF45 Cichlid Titanium Fish Pellets 3 lb. 45% 1/16">
+                <input type="hidden" name="item_number" value="FF45">
+                <input type="hidden" name="amount" value="11.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35-1-8" class="ff-listing floating koi-1-12 tropicals-over-3">
-        <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35_1_8.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF35 1/8
-        		</h3>
-        		<h3 class="ff-name">
-              Floating Koi & Tropical Pellets 1/8" - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>35% protein</li>
-		  			<li>3.5 mm (1/8") floating pellet</li>
-		  			<li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
-		  			<li>For top-feeding koi and tropical fish 4 to 12 inches</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$8.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
-      				  <input type="hidden" name="item_name" value="Floating 1/8&quot; pellets">
-      				  <input type="hidden" name="item_number" value="FF35 1/8">
-      				  <input type="hidden" name="amount" value="8.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code2" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff45b" class="ff-listing border-bottom-grey floating floating-sinking koi-1-12 tropicals-over-3 tropicals-small">
+          <a href="#" class="opener ff-img-container" data-id="ff45-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff45.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF45B
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Titanium Fish Pellets - Bulk 11 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>1.5 mm (<1/16&quot;) floating pellet</li>
+              <li>For top and center-feeding fish 1" to 6" - Fresh or saltwater</li>
+              <li>Extruded pellets initially float, then sink slowly</li>
+              <li>For sinking cichlid food: <a class="link-green" href="#sf45">SF45</a></li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $29.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.60</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="FF45B Cichlid Titanium Fish Pellets Bulk 11 lb.45% 1/16&quot;">
+                <input type="hidden" name="item_number5" value="FF45B">
+                <input type="hidden" name="amount" value="29.99">
+                <input type="hidden" name="shipping" value="13.60">
+                <input type="hidden" name="shipping2" value="10.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35b-1-8" class="ff-listing floating koi-1-12 tropicals-over-3">
-        <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35_1_8.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF35B 1/8
-        		</h3>
-        		<h3 class="ff-name">
-              Floating Koi & Tropical Pellets 1/8" - Bulk 8 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>35% protein</li>
-		  			<li>3.5 mm (1/8") floating pellet</li>
-		  			<li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
-		  			<li>For top-feeding koi and tropical fish 4 to 12 inches</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$13.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.65</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
-      				  <input type="hidden" name="item_name" value="Floating 1/8&quot; pellets bulk">
-      				  <input type="hidden" name="item_number" value="FF35 1/8">
-      				  <input type="hidden" name="amount" value="13.99">
-      				  <input type="hidden" name="shipping" value="13.65">
-      				  <input type="hidden" name="shipping22" value="10.00">
-      				  <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code2" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35-1-8" class="ff-listing border-bottom-grey floating koi-1-12 tropicals-over-3">
+          <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35_1_8.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35 1/8
+              </h3>
+              <h3 class="ff-name">
+                Floating Koi & Tropical Pellets 1/8" - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>35% protein</li>
+              <li>3.5 mm (1/8") floating pellet</li>
+              <li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
+              <li>For top-feeding koi and tropical fish 4 to 12 inches</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $8.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
+                <input type="hidden" name="item_name" value="Floating 1/8&quot; pellets">
+                <input type="hidden" name="item_number" value="FF35 1/8">
+                <input type="hidden" name="amount" value="8.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code2" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35bb-1-8" class="ff-listing floating koi-1-12 tropicals-over-3">
-        <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35_1_8.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF35BB 1/8
-        		</h3>
-        		<h3 class="ff-name">
-              Floating Koi & Tropical Pellets 1/8" - Bulk 13 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>35% protein</li>
-		  			<li>3.5 mm (1/8") floating pellet</li>
-		  			<li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
-		  			<li>For top-feeding koi and tropical fish 4 to 12 inches</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$19.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Floating Koi Pellets - 13 lb Bulk (1/8&quot;)">
-      				  <input type="hidden" name="item_number3" value="FF35BB 1/8">
-      				  <input type="hidden" name="amount" value="19.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn4" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35b-1-8" class="ff-listing border-bottom-grey floating koi-1-12 tropicals-over-3">
+          <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35_1_8.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35B 1/8
+              </h3>
+              <h3 class="ff-name">
+                Floating Koi & Tropical Pellets 1/8" - Bulk 8 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>35% protein</li>
+              <li>3.5 mm (1/8") floating pellet</li>
+              <li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
+              <li>For top-feeding koi and tropical fish 4 to 12 inches</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $13.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.65</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
+                <input type="hidden" name="item_name" value="Floating 1/8&quot; pellets bulk">
+                <input type="hidden" name="item_number" value="FF35 1/8">
+                <input type="hidden" name="amount" value="13.99">
+                <input type="hidden" name="shipping" value="13.65">
+                <input type="hidden" name="shipping22" value="10.00">
+                <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code2" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35b-1-4" class="ff-listing floating koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="ff35-1-4-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35_1_4.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF35B 1/4
-        		</h3>
-        		<h3 class="ff-name">
-              Floating Koi Pellets 1/4" - Bulk 8 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>35% protein</li>
-		  			<li>5.5 mm (1/4") floating pellet</li>
-		  			<li>Excellent diet for larger tropicals like Arawana, Pacu, Oscar</li>
-		  			<li>For koi and tropical fish 8 to 36 inches</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$13.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.85</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Floating Koi Pellets - Bulk (1/4&quot;)">
-      				  <input type="hidden" name="item_number32" value="FF35B 1/4">
-      				  <input type="hidden" name="amount" value="13.99">
-      				  <input type="hidden" name="shipping" value="13.65">
-      				  <input type="hidden" name="shipping2" value="10.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn4" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35bb-1-8" class="ff-listing border-bottom-grey floating koi-1-12 tropicals-over-3">
+          <a href="#" class="opener ff-img-container" data-id="ff35-1-8-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35_1_8.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35BB 1/8
+              </h3>
+              <h3 class="ff-name">
+                Floating Koi & Tropical Pellets 1/8" - Bulk 13 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>35% protein</li>
+              <li>3.5 mm (1/8") floating pellet</li>
+              <li>Excellent diet for medium to large tropicals like Arawana, Pacu, Oscar</li>
+              <li>For top-feeding koi and tropical fish 4 to 12 inches</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $19.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Floating Koi Pellets - 13 lb Bulk (1/8&quot;)">
+                <input type="hidden" name="item_number3" value="FF35BB 1/8">
+                <input type="hidden" name="amount" value="19.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn4" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35bb-1-4" class="ff-listing floating koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="ff35-1-4-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35_1_4.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-        		  FF35BB 1/4
-        		</h3>
-        		<h3 class="ff-name">
-              Floating Koi Pellets 1/4" - Bulk 12 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>35% protein</li>
-		  			<li>5.5 mm (1/4") floating pellet</li>
-		  			<li>Excellent diet for larger tropicals like Arawana, Pacu, Oscar</li>
-		  			<li>For koi and tropical fish 8 to 36 inches</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$19.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Floating Koi Pellets - 12 lb Bulk (1/4&quot;)">
-      				  <input type="hidden" name="item_number3" value="FF35BB 1/4">
-      				  <input type="hidden" name="amount" value="19.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn4" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35b-1-4" class="ff-listing border-bottom-grey floating koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="ff35-1-4-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35_1_4.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35B 1/4
+              </h3>
+              <h3 class="ff-name">
+                Floating Koi Pellets 1/4" - Bulk 8 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>35% protein</li>
+              <li>5.5 mm (1/4") floating pellet</li>
+              <li>Excellent diet for larger tropicals like Arawana, Pacu, Oscar</li>
+              <li>For koi and tropical fish 8 to 36 inches</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $13.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.85</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Floating Koi Pellets - Bulk (1/4&quot;)">
+                <input type="hidden" name="item_number32" value="FF35B 1/4">
+                <input type="hidden" name="amount" value="13.99">
+                <input type="hidden" name="shipping" value="13.65">
+                <input type="hidden" name="shipping2" value="10.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn4" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf40m" class="ff-listing medicated-sinking koi-1-12 koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF40M
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Sinking Pellets - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>40% protein</li>
-		  			<li>5 mm diameter</li>
-		  			<li>For lethargic or bottom feeding fish</li>
-            <li>Treats three 18" koi or tropical fish</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$19.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-						  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Medicated Sinking Pellets">
-      				  <input type="hidden" name="item_number" value="SF40M">
-      				  <input type="hidden" name="amount" value="19.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35bb-1-4" class="ff-listing border-bottom-grey floating koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="ff35-1-4-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35_1_4.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35BB 1/4
+              </h3>
+              <h3 class="ff-name">
+                Floating Koi Pellets 1/4" - Bulk 12 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>35% protein</li>
+              <li>5.5 mm (1/4") floating pellet</li>
+              <li>Excellent diet for larger tropicals like Arawana, Pacu, Oscar</li>
+              <li>For koi and tropical fish 8 to 36 inches</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $19.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Floating Koi Pellets - 12 lb Bulk (1/4&quot;)">
+                <input type="hidden" name="item_number3" value="FF35BB 1/4">
+                <input type="hidden" name="amount" value="19.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn4" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf40mbb" class="ff-listing medicated-sinking koi-1-12 koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF40MBB
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Sinking Pellets - Bulk 20 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>40% protein</li>
-		  			<li>5 mm diameter</li>
-		  			<li>For lethargic or bottom feeding fish</li>
-            <li>Treats twenty 18' koi or 80 10" koi</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$69.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Medicated Sinking Bulk">
-      				  <input type="hidden" name="item_number" value="SF40MB">
-      				  <input type="hidden" name="amount" value="69.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="sf40m" class="ff-listing border-bottom-grey medicated-sinking koi-1-12 koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF40M
+              </h3>
+              <h3 class="ff-name">
+                Medicated Sinking Pellets - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>40% protein</li>
+              <li>5 mm diameter</li>
+              <li>For lethargic or bottom feeding fish</li>
+              <li>Treats three 18" koi or tropical fish</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $19.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Medicated Sinking Pellets">
+                <input type="hidden" name="item_number" value="SF40M">
+                <input type="hidden" name="amount" value="19.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="so-med" class="ff-listing medicated-floating medicated-sinking tropicals-over-3 tropicals-small">
-        <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SO Med
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Pellets Special Order - 9 to 11 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>Any >1.0 mm feed medicated with terramycin</li>
-		  			<li>1/16" FF45, 1/8" SF45, SF45-3.0</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$59.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.65</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-		  				<a class="std-btn add-cart-btn" href="mailto:info@jandjaquafarms.com">Order by email</a>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="sf40mbb" class="ff-listing border-bottom-grey medicated-sinking koi-1-12 koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF40MBB
+              </h3>
+              <h3 class="ff-name">
+                Medicated Sinking Pellets - Bulk 20 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>40% protein</li>
+              <li>5 mm diameter</li>
+              <li>For lethargic or bottom feeding fish</li>
+              <li>Treats twenty 18' koi or 80 10" koi</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $69.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Medicated Sinking Bulk">
+                <input type="hidden" name="item_number" value="SF40MB">
+                <input type="hidden" name="amount" value="69.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35m-1-4" class="ff-listing medicated-floating koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              FF35M 1/4
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Floating Pellets 1/4"- 2 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>35% protein</li>
-		  			<li>5.5 mm (1/4") pellets</li>
-		  			<li>For top feeding fish</li>
-		  			<li>Treats two 18" koi</li>
-            <li>Email us if you want this in 1/8"</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$19.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name2" value="Medicated Floating Bulk 2 lb.">
-      				  <input type="hidden" name="item_number" value="FF35M">
-      				  <input type="hidden" name="amount" value="19.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="so-med" class="ff-listing border-bottom-grey medicated-floating medicated-sinking tropicals-over-3 tropicals-small">
+          <a href="#" class="opener ff-img-container" data-id="sf40m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SO Med
+              </h3>
+              <h3 class="ff-name">
+                Medicated Pellets Special Order - 9 to 11 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>Any >1.0 mm feed medicated with terramycin</li>
+              <li>1/16" FF45, 1/8" SF45, SF45-3.0</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+                <p class="ff-price">
+                  $59.99
+                </p>
+                <div class="ff-shipping">
+                  <p>Shipping: $13.65</p>
+                  <p>2nd item shipping: $10.00</p>
+                </div>
+                <a class="btn-green add-cart-btn" href="mailto:info@jandjaquafarms.com">Order by email</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div id="ff35mb-1-4" class="ff-listing medicated-floating koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              FF35MB 1/4
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Floating Pellets 1/4"- Bulk 12 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>35% protein</li>
-		  			<li>5.5 mm (1/4") pellets</li>
-		  			<li>For top feeding fish</li>
-		  			<li>Treats eight 18" koi</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$45.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Medicated Floating Bulk 12 lb.">
-      				  <input type="hidden" name="item_number" value="FF35MB">
-      				  <input type="hidden" name="amount" value="45.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35m-1-4" class="ff-listing border-bottom-grey medicated-floating koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35M 1/4
+              </h3>
+              <h3 class="ff-name">
+                Medicated Floating Pellets 1/4"- 2 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>35% protein</li>
+              <li>5.5 mm (1/4") pellets</li>
+              <li>For top feeding fish</li>
+              <li>Treats two 18" koi</li>
+              <li>Email us if you want this in 1/8"</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $19.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name2" value="Medicated Floating Bulk 2 lb.">
+                <input type="hidden" name="item_number" value="FF35M">
+                <input type="hidden" name="amount" value="19.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="ff35mb-1-8" class="ff-listing medicated-floating koi-1-12">
-        <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/ff35m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              FF35MB 1/8
-        		</h3>
-        		<h3 class="ff-name">
-              Medicated Floating Pellets 1/8"- Bulk 13 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Will <a class="base-link" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
-            <li><a href="#" class="opener base-link" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
-		  			<li>35% protein</li>
-		  			<li>3.5 mm (1/8") pellets</li>
-		  			<li>For top feeding fish</li>
-		  			<li>Treats eight 18" koi</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$45.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Medicated Floating Bulk 13 lb.">
-      				  <input type="hidden" name="item_number" value="FF35Mb">
-      				  <input type="hidden" name="amount" value="45.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35mb-1-4" class="ff-listing border-bottom-grey medicated-floating koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35MB 1/4
+              </h3>
+              <h3 class="ff-name">
+                Medicated Floating Pellets 1/4"- Bulk 12 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>35% protein</li>
+              <li>5.5 mm (1/4") pellets</li>
+              <li>For top feeding fish</li>
+              <li>Treats eight 18" koi</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $45.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Medicated Floating Bulk 12 lb.">
+                <input type="hidden" name="item_number" value="FF35MB">
+                <input type="hidden" name="amount" value="45.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="cr52m" class="ff-listing floating-sinking fry-small-fish">
-        <a href="#" class="opener ff-img-container ff-img-container" data-id="cr52m-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/cr52m.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              CR52M
-        		</h3>
-        		<h3 class="ff-name">
-              Fry and Small Fish Mash Plankton Subsitute - 2 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-            <li>Limited availability, please contact us</li>
-		  			<li>52% protein</li>
-		  			<li>Finely ground 0.25 mm (<1/64&quot;) particles</li>
-		  			<li>Excellent as a plankton subsitute for newly-hatched fry (to 1/2 inch)</li> 
-            <li>Stays suspended in the water column like natural plankton. Will make aquarium water appear cloudy for an hour or so</li>
-            <li>Make your own CR52M from CR52S with a small coffee grinder</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$19.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $2.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="Fry and Small Fish Mash">
-      				  <input type="hidden" name="item_number" value="CR52M">
-      				  <input type="hidden" name="amount" value="19.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="2.00">
-      				  <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code2" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="ff35mb-1-8" class="ff-listing border-bottom-grey medicated-floating koi-1-12">
+          <a href="#" class="opener ff-img-container" data-id="ff35m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/ff35m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                FF35MB 1/8
+              </h3>
+              <h3 class="ff-name">
+                Medicated Floating Pellets 1/8"- Bulk 13 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Will <a class="link-green" href="medicated_bulletin.pdf" target="_blank">medicated food</a> work for me?</li>
+              <li><a href="#" class="opener link-green" data-id="sf40m-dialog">2.7 active grams terramycin per kg</a></li>
+              <li>35% protein</li>
+              <li>3.5 mm (1/8") pellets</li>
+              <li>For top feeding fish</li>
+              <li>Treats eight 18" koi</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $45.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Medicated Floating Bulk 13 lb.">
+                <input type="hidden" name="item_number" value="FF35Mb">
+                <input type="hidden" name="amount" value="45.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="cr52s" class="ff-listing floating sinking floating-sinking fry-small-fish">
-        <a href="#" class="opener ff-img-container" data-id="cr52s-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/cr52s.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              CR52S
-        		</h3>
-        		<h3 class="ff-name">
-              Fry and Small Fish Starter - 2 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>52% protein</li>
-		  			<li>0.5 mm (<1/32") particles</li>
-		  			<li>Excellent as a growth ration for one-week old and up fry (to 1")</li>
-            <li>Does not "cloud" the water like the mash does. Food particles stay intact and suspended in the water column for smaller fry and tropical fish to find.</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
-		  					$14.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $2.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
-      				  <input type="hidden" name="item_name" value="Fry and Small Fish Starter">
-      				  <input type="hidden" name="item_number" value="CR52S">
-      				  <input type="hidden" name="amount" value="14.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="2.00">
-      				  <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="no_note" value="1">
-      				  <input type="hidden" name="currency_code2" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+        <div id="cr52m" class="ff-listing border-bottom-grey floating-sinking fry-small-fish">
+          <a href="#" class="opener ff-img-container ff-img-container" data-id="cr52m-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/cr52m.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                CR52M
+              </h3>
+              <h3 class="ff-name">
+                Fry and Small Fish Mash Plankton Subsitute - 2 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>Limited availability, please contact us</li>
+              <li>52% protein</li>
+              <li>Finely ground 0.25 mm (<1/64&quot;) particles</li>
+              <li>Excellent as a plankton subsitute for newly-hatched fry (to 1/2 inch)</li> 
+              <li>Stays suspended in the water column like natural plankton. Will make aquarium water appear cloudy for an hour or so</li>
+              <li>Make your own CR52M from CR52S with a small coffee grinder</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $19.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $2.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="Fry and Small Fish Mash">
+                <input type="hidden" name="item_number" value="CR52M">
+                <input type="hidden" name="amount" value="19.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="2.00">
+                <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code2" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf40" class="ff-listing sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF40
-        		</h3>
-        		<h3 class="ff-name">
-              40% Koi Growth Sinking Pellets - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>40% protein</li>
-		  			<li>5 mm (3/16") diameter</li>
-		  			<li>Excellent growth and conditioning for koi and tropicals</li>
-            <li>For bottom-feeding fish over 4 inches</li>
-            <li>Extruded pellets do not disintegrate</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="cr52s" class="ff-listing border-bottom-grey floating sinking floating-sinking fry-small-fish">
+          <a href="#" class="opener ff-img-container" data-id="cr52s-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/cr52s.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                CR52S
+              </h3>
+              <h3 class="ff-name">
+                Fry and Small Fish Starter - 2 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>52% protein</li>
+              <li>0.5 mm (<1/32") particles</li>
+              <li>Excellent as a growth ration for one-week old and up fry (to 1")</li>
+              <li>Does not "cloud" the water like the mash does. Food particles stay intact and suspended in the water column for smaller fry and tropical fish to find.</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
+                $14.99
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $2.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value=" john@jandjaquafarms.com ">
+                <input type="hidden" name="item_name" value="Fry and Small Fish Starter">
+                <input type="hidden" name="item_number" value="CR52S">
+                <input type="hidden" name="amount" value="14.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="2.00">
+                <input type="hidden" name="return3" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="currency_code2" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
+
+        <div id="sf40" class="ff-listing border-bottom-grey sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF40
+              </h3>
+              <h3 class="ff-name">
+                40% Koi Growth Sinking Pellets - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>40% protein</li>
+              <li>5 mm (3/16") diameter</li>
+              <li>Excellent growth and conditioning for koi and tropicals</li>
+              <li>For bottom-feeding fish over 4 inches</li>
+              <li>Extruded pellets do not disintegrate</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $10.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="SF40 Sinking Pellets 3 lb.40% 3/16&quot;">
-      				  <input type="hidden" name="item_number4" value="SF40">
-      				  <input type="hidden" name="amount" value="10.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF40 Sinking Pellets 3 lb.40% 3/16&quot;">
+                <input type="hidden" name="item_number4" value="SF40">
+                <input type="hidden" name="amount" value="10.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf40b" class="ff-listing sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF40B
-        		</h3>
-        		<h3 class="ff-name">
-              40% Koi Growth Sinking Pellets - Bulk 13 lb 
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>40% protein</li>
-		  			<li>5 mm (3/16") diameter</li>
-		  			<li>Excellent growth and conditioning for koi and tropicals</li>
-            <li>For bottom-feeding koi and fish over 6 inches</li>
-            <li>Great for winterizing pond fish</li>
-            <li>Extruded pellets do not disintegrate</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf40b" class="ff-listing border-bottom-grey sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF40B
+              </h3>
+              <h3 class="ff-name">
+                40% Koi Growth Sinking Pellets - Bulk 13 lb 
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>40% protein</li>
+              <li>5 mm (3/16") diameter</li>
+              <li>Excellent growth and conditioning for koi and tropicals</li>
+              <li>For bottom-feeding koi and fish over 6 inches</li>
+              <li>Great for winterizing pond fish</li>
+              <li>Extruded pellets do not disintegrate</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $31.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.65</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name3" value="SF40B Sinking 13 lb. Bulk">
-      				  <input type="hidden" name="item_number" value="SF40B">
-      				  <input type="hidden" name="amount" value="31.99">
-      				  <input type="hidden" name="shipping" value="13.65">
-      				  <input type="hidden" name="shipping2" value="10.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.65</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name3" value="SF40B Sinking 13 lb. Bulk">
+                <input type="hidden" name="item_number" value="SF40B">
+                <input type="hidden" name="amount" value="31.99">
+                <input type="hidden" name="shipping" value="13.65">
+                <input type="hidden" name="shipping2" value="10.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf40bb" class="ff-listing sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf40.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF40BB
-        		</h3>
-        		<h3 class="ff-name">
-              40% Koi Growth Sinking Pellets - Bulk 20 lb 
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>40% protein</li>
-		  			<li>5 mm (3/16") diameter</li>
-		  			<li>Excellent growth and conditioning for koi and tropicals</li>
-            <li>For bottom-feeding koi and fish over 6 inches</li>
-            <li>Great for winterizing pond fish</li>
-            <li>Extruded pellets do not disintegrate</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf40bb" class="ff-listing border-bottom-grey sinking koi-1-12 koi-8-36 tropicals-over-3 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf40-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf40.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF40BB
+              </h3>
+              <h3 class="ff-name">
+                40% Koi Growth Sinking Pellets - Bulk 20 lb 
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>40% protein</li>
+              <li>5 mm (3/16") diameter</li>
+              <li>Excellent growth and conditioning for koi and tropicals</li>
+              <li>For bottom-feeding koi and fish over 6 inches</li>
+              <li>Great for winterizing pond fish</li>
+              <li>Extruded pellets do not disintegrate</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $39.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name3" value="SF40BB Sinking 20 lb. Bulk">
-      				  <input type="hidden" name="item_number" value="SF40BB">
-      				  <input type="hidden" name="amount" value="39.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name3" value="SF40BB Sinking 20 lb. Bulk">
+                <input type="hidden" name="item_number" value="SF40BB">
+                <input type="hidden" name="amount" value="39.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45l" class="ff-listing sinking koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf45l-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45l.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45L
-        		</h3>
-        		<h3 class="ff-name">
-              45% Koi Rapid-Gro Pellets - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>6 mm (1/4") diameter</li>
-		  			<li>Excellent growth and conditioning for koi and tropicals</li>
-            <li>For bottom-feeding fish over 6 inches</li>
-            <li>Extruded pellets do not disintegrate</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45l" class="ff-listing border-bottom-grey sinking koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf45l-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45l.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45L
+              </h3>
+              <h3 class="ff-name">
+                45% Koi Rapid-Gro Pellets - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>6 mm (1/4") diameter</li>
+              <li>Excellent growth and conditioning for koi and tropicals</li>
+              <li>For bottom-feeding fish over 6 inches</li>
+              <li>Extruded pellets do not disintegrate</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $12.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="SF45L Sinking Pellets 3 lb.45% 1/4&quot;">
-      				  <input type="hidden" name="item_number4" value="SF40L">
-      				  <input type="hidden" name="amount" value="12.99">
-      				  <input type="hidden" name="shipping" value="6.65">
-      				  <input type="hidden" name="shipping2" value="5.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF45L Sinking Pellets 3 lb.45% 1/4&quot;">
+                <input type="hidden" name="item_number4" value="SF40L">
+                <input type="hidden" name="amount" value="12.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45lb" class="ff-listing sinking koi-8-36 tropicals-over-8">
-        <a href="#" class="opener ff-img-container" data-id="sf45l-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45l.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45LB
-        		</h3>
-        		<h3 class="ff-name">
-              45% Koi Rapid-Gro Pellets - Bulk 20 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>6 mm (1/4") diameter</li>
-		  			<li>Excellent growth and conditioning for koi and tropicals</li>
-            <li>For bottom-feeding fish over 6 inches</li>
-            <li>Extruded pellets do not disintegrate</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45lb" class="ff-listing border-bottom-grey sinking koi-8-36 tropicals-over-8">
+          <a href="#" class="opener ff-img-container" data-id="sf45l-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45l.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45LB
+              </h3>
+              <h3 class="ff-name">
+                45% Koi Rapid-Gro Pellets - Bulk 20 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>6 mm (1/4") diameter</li>
+              <li>Excellent growth and conditioning for koi and tropicals</li>
+              <li>For bottom-feeding fish over 6 inches</li>
+              <li>Extruded pellets do not disintegrate</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $49.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $18.85</p>
-		  					<p>2nd item shipping: $14.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="SF45LB Sinking 20 lb. Bulk">
-      				  <input type="hidden" name="item_number" value="SF45LB">
-      				  <input type="hidden" name="amount" value="49.99">
-      				  <input type="hidden" name="shipping" value="18.85">
-      				  <input type="hidden" name="shipping2" value="14.00">
-      				  <input type="hidden" name="return2" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $18.85</p>
+                <p>2nd item shipping: $14.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF45LB Sinking 20 lb. Bulk">
+                <input type="hidden" name="item_number" value="SF45LB">
+                <input type="hidden" name="amount" value="49.99">
+                <input type="hidden" name="shipping" value="18.85">
+                <input type="hidden" name="shipping2" value="14.00">
+                <input type="hidden" name="return2" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45" class="ff-listing sinking koi-1-12 tropicals-over-3 tropicals-small">
-        <a href="#" class="opener ff-img-container" data-id="sf45-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45
-        		</h3>
-        		<h3 class="ff-name">
-              Cichlid Gold Sinker - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>2 mm (3/32") diameter</li>
-		  			<li>Cichlid , Koi, tropical, saltwater fish 1" to 6"</li>
-            <li>Extruded pellets do not disintegrate</li>
-            <li>Best for carnivorous/omnivorous fish at all water depths</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45" class="ff-listing border-bottom-grey sinking koi-1-12 tropicals-over-3 tropicals-small">
+          <a href="#" class="opener ff-img-container" data-id="sf45-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Gold Sinker - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>2 mm (3/32") diameter</li>
+              <li>Cichlid , Koi, tropical, saltwater fish 1" to 6"</li>
+              <li>Extruded pellets do not disintegrate</li>
+              <li>Best for carnivorous/omnivorous fish at all water depths</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $11.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-    					  <input type="hidden" name="add" value="1">
-    					  <input type="hidden" name="cmd" value="_cart">
-    					  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-    					  <input type="hidden" name="item_name" value="SF45 Cichlid Gold Sink 3 lb. 45% 3/32">
-    					  <input type="hidden" name="item_number" value="SF45">
-    					  <input type="hidden" name="amount" value="11.99">
-    					  <input type="hidden" name="shipping" value="6.65">
-    					  <input type="hidden" name="shipping2" value="5.00">
-    					  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-    					  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-    					  <input type="hidden" name="cn" value="Comments">
-    					  <input type="hidden" name="currency_code" value="USD">
-    					  <input type="hidden" name="bn" value="PP-ShopCartBF">
-    					</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF45 Cichlid Gold Sink 3 lb. 45% 3/32">
+                <input type="hidden" name="item_number" value="SF45">
+                <input type="hidden" name="amount" value="11.99">
+                <input type="hidden" name="shipping" value="6.65">
+                <input type="hidden" name="shipping2" value="5.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45b" class="ff-listing sinking koi-1-12 tropicals-over-3 tropicals-small">
-        <a href="#" class="opener ff-img-container" data-id="sf45-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45B
-        		</h3>
-        		<h3 class="ff-name">
-              Cichlid Gold Sinker - Bulk 11 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>2 mm (3/32") diameter</li>
-		  			<li>Cichlid , Koi, tropical, saltwater fish 1" to 6"</li>
-            <li>Extruded pellets do not disintegrate</li>
-            <li>Best for carnivorous/omnivorous fish at all water depths</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45b" class="ff-listing border-bottom-grey sinking koi-1-12 tropicals-over-3 tropicals-small">
+          <a href="#" class="opener ff-img-container" data-id="sf45-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45B
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Gold Sinker - Bulk 11 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>2 mm (3/32") diameter</li>
+              <li>Cichlid , Koi, tropical, saltwater fish 1" to 6"</li>
+              <li>Extruded pellets do not disintegrate</li>
+              <li>Best for carnivorous/omnivorous fish at all water depths</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $34.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.65</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="SF45B Cichlid Gold Sink 11 lb.45% 3/32&quot;">
-      				  <input type="hidden" name="item_number5" value="SF45B">
-      				  <input type="hidden" name="amount" value="34.99">
-      				  <input type="hidden" name="shipping" value="13.65">
-      				  <input type="hidden" name="shipping2" value="10.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.65</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF45B Cichlid Gold Sink 11 lb.45% 3/32&quot;">
+                <input type="hidden" name="item_number5" value="SF45B">
+                <input type="hidden" name="amount" value="34.99">
+                <input type="hidden" name="shipping" value="13.65">
+                <input type="hidden" name="shipping2" value="10.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45-3-0" class="ff-listing sinking koi-1-12 tropicals-over-3">
-        <a href="#" class="opener ff-img-container" data-id="sf45-3-0-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45_3_0.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45-3.0
-        		</h3>
-        		<h3 class="ff-name">
-              Cichlid Platinum Sink 3.0 - 3 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>3.0 mm (1/8") diameter</li>
-		  			<li>Cichlid , Koi, tropical, saltwater fish 3" to 10"</li>
-            <li>Extruded pellets do not disintegrate</li>
-            <li>Best for carnivorous/omnivorous fish at all water depths</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45-3-0" class="ff-listing border-bottom-grey sinking koi-1-12 tropicals-over-3">
+          <a href="#" class="opener ff-img-container" data-id="sf45-3-0-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45_3_0.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45-3.0
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Platinum Sink 3.0 - 3 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>3.0 mm (1/8") diameter</li>
+              <li>Cichlid , Koi, tropical, saltwater fish 3" to 10"</li>
+              <li>Extruded pellets do not disintegrate</li>
+              <li>Best for carnivorous/omnivorous fish at all water depths</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $11.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $6.65</p>
-		  					<p>2nd item shipping: $5.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $6.65</p>
+                <p>2nd item shipping: $5.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
                 <input type="hidden" name="add" value="1">
                 <input type="hidden" name="cmd" value="_cart">
                 <input type="hidden" name="business" value="john@jandjaquafarms.com">
@@ -1237,67 +1218,67 @@
                 <input type="hidden" name="currency_code" value="USD">
                 <input type="hidden" name="bn" value="PP-ShopCartBF">
               </form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+            </aside>
+          </div>
+        </div>
 
-      <div id="sf45b-3-0" class="ff-listing sinking koi-1-12 tropicals-over-3">
-        <a href="#" class="opener ff-img-container" data-id="sf45-3-0-dialog">
-          <img class="ff-img" src="assets/images/order/fish_food/sf45_3_0.jpg">
-          <p class="base-link ingredients-link">Ingredients</p>
-        </a><!--
-		  	--><div class="ff-info">
-		  		<div class="ff-header">
-        		<h3 class="ff-id">
-              SF45B-3.0
-        		</h3>
-        		<h3 class="ff-name">
-              Cichlid Platinum Sink 3.0 - Bulk 11 lb
-        		</h3>
-		  		</div>
-        	<ul class="ff-description">
-		  			<li>45% protein</li>
-		  			<li>3.0 mm (1/8") diameter</li>
-		  			<li>Cichlid , Koi, tropical, saltwater fish 3" to 10"</li>
-            <li>Extruded pellets do not disintegrate</li>
-            <li>Best for carnivorous/omnivorous fish at all water depths</li>
-        	</ul><!--
-		  		--><div class="ff-pricing">
-		  				<p class="ff-price">
+        <div id="sf45b-3-0" class="ff-listing border-bottom-grey sinking koi-1-12 tropicals-over-3">
+          <a href="#" class="opener ff-img-container" data-id="sf45-3-0-dialog">
+            <img class="ff-img border-grey" src="assets/images/order/fish_food/sf45_3_0.jpg">
+            <p class="link-green link-ff-ingredients">Ingredients</p>
+          </a><!--
+          --><div class="ff-info-container">
+            <header class="ff-header">
+              <h2 class="ff-id">
+                SF45B-3.0
+              </h3>
+              <h3 class="ff-name">
+                Cichlid Platinum Sink 3.0 - Bulk 11 lb
+              </h3>
+            </header>
+            <ul class="ff-description list-square-bullets">
+              <li>45% protein</li>
+              <li>3.0 mm (1/8") diameter</li>
+              <li>Cichlid , Koi, tropical, saltwater fish 3" to 10"</li>
+              <li>Extruded pellets do not disintegrate</li>
+              <li>Best for carnivorous/omnivorous fish at all water depths</li>
+            </ul><!--
+            --><aside class="ff-pricing">
+              <p class="ff-price">
                 $34.99
-		  				</p>
-		  				<div class="ff-shipping">
-		  					<p>Shipping: $13.65</p>
-		  					<p>2nd item shipping: $10.00</p>
-		  				</div>
-							<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input class="std-btn add-cart-btn" type="submit" value="Add to cart">
-      				  <input type="hidden" name="add" value="1">
-      				  <input type="hidden" name="cmd" value="_cart">
-      				  <input type="hidden" name="business" value="john@jandjaquafarms.com">
-      				  <input type="hidden" name="item_name" value="SF45B-3.0 Cichlid Platinum Sink 11 lb.45% 1/8&quot;">
-      				  <input type="hidden" name="amount" value="34.99">
-      				  <input type="hidden" name="shipping" value="13.65">
-      				  <input type="hidden" name="shipping2" value="10.00">
-      				  <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
-      				  <input type="hidden" name="cn" value="Comments">
-      				  <input type="hidden" name="currency_code" value="USD">
-      				  <input type="hidden" name="bn" value="PP-ShopCartBF">
-      				</form>
-		  			</div>
-		  		</div>
-		  	</div>
-      </div>
+              </p>
+              <div class="ff-shipping">
+                <p>Shipping: $13.65</p>
+                <p>2nd item shipping: $10.00</p>
+              </div>
+              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input class="btn-green add-cart-btn" type="submit" value="Add to cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="john@jandjaquafarms.com">
+                <input type="hidden" name="item_name" value="SF45B-3.0 Cichlid Platinum Sink 11 lb.45% 1/8&quot;">
+                <input type="hidden" name="amount" value="34.99">
+                <input type="hidden" name="shipping" value="13.65">
+                <input type="hidden" name="shipping2" value="10.00">
+                <input type="hidden" name="return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cancel_return" value="http://www.jandjaquafarms.com">
+                <input type="hidden" name="cn" value="Comments">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="bn" value="PP-ShopCartBF">
+              </form>
+            </aside>
+          </div>
+        </div>
+
+      </section>
 
     </section>
 
     <div class="dialogs">
 
-      <div class="dialog" id="which-ff-dialog">
-        <div class="dialog-close-btn">x</div>
-        <table class="table-2-hdr ff-table">
+      <div class="modal-dialog" id="ff-reference-dialog">
+        <div class="btn-close">x</div>
+        <table class="tbl-2-hdr tbl-ff-reference">
           <thead>
             <tr>
               <th></th>
@@ -1357,516 +1338,494 @@
         </table>
       </div>
 
-      <div class="dialog" id="ff45-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/ff45.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>45%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>16%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>10000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>5000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>250 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p> Fish Meal, Soybean Meal,Wheat flour Blood Meal, Stabilized Fish Oil (D), Wheat Germ, Dried Whey, Lecithin, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+      <div class="modal-dialog" id="ff45-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/ff45.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>45%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>16%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>10000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>5000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>250 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p> Fish Meal, Soybean Meal,Wheat flour Blood Meal, Stabilized Fish Oil (D), Wheat Germ, Dried Whey, Lecithin, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="ff35-1-8-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/ff35_1_8.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>35%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>7%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>5%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>9%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>8000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>450 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>200 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Wheat Middlings, Wheat Flour, Fish Meal, soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+      <div class="modal-dialog" id="ff35-1-8-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/ff35_1_8.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>7%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>5%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>9%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>8000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>450 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>200 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Wheat Middlings, Wheat Flour, Fish Meal, soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="ff35-1-4-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/ff35_1_4.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>35%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>7%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>5%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>9%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>8000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>450 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>200 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Wheat Middlings, Wheat Flour, Fish Meal, soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+      <div class="modal-dialog" id="ff35-1-4-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/ff35_1_4.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>7%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>5%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>9%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>8000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>450 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>200 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Wheat Middlings, Wheat Flour, Fish Meal, soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="sf40m-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/sf40m.jpg">
-        <div class="terramycin">
-          <h3>Terramycin</h3>
+      <div class="modal-dialog" id="sf40m-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/sf40m.jpg">
+        <div class="ff-terramycin">
+          <h3 class="header-dialog border-bottom-grey">Terramycin</h3>
           2.7 active grams terramycin per kg. the higest recommended amount for battling bacterial infections from Aeromonas and Columnaris, the cause of most fish bacterial infections. Antibiotic is bound to the pellet with a natural, edible, binder that lasts for at least 10 minutes in water, enough time for your fish to ingest and get medicated. Save those prized fish!
         </div>
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Terramycin</td>
-                <td>2.7 active grams/kilogram</td>
-              </tr>
-              <tr>
-              <tr>
-                <th>Crude protein</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>10%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>not more than 12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>not more than 2%</td>
-              </tr>
-              <tr>
-                <th>Phosphorous</td>
-                <td>not less than 0.9%</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Soybean Meal, Wheat flour, Stabilized Fish Oil (D), Wheat middlings, Poultry By-product Meal, Hydrolized Feather Meal, Corn Gulten Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
-          </div>
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Terramycin</td>
+              <td>2.7 active grams/kilogram</td>
+            </tr>
+            <tr>
+            <tr>
+              <th>Crude protein</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>not more than 12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>not more than 2%</td>
+            </tr>
+            <tr>
+              <th>Phosphorous</td>
+              <td>not less than 0.9%</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Soybean Meal, Wheat flour, Stabilized Fish Oil (D), Wheat middlings, Poultry By-product Meal, Hydrolized Feather Meal, Corn Gulten Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
         </div>
       </div>
 
-      <div class="dialog" id="ff35m-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/ff35m.jpg">
-        <div class="terramycin">
-          <h3>Terramycin</h3>
+      <div class="modal-dialog" id="ff35m-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/ff35m.jpg">
+        <div class="ff-terramycin">
+          <h3 class="header-dialog border-bottom-grey">Terramycin</h3>
           2.7 active grams terramycin per kg. the higest recommended amount for battling bacterial infections from Aeromonas and Columnaris, the cause of most fish bacterial infections. Antibiotic is bound to the pellet with a natural, edible, binder that lasts for at least 10 minutes in water, enough time for your fish to ingest and get medicated. Save those prized fish!
         </div>
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Terramycin</th>
-                <td>2.7 active grams/kilogram</td>
-              </tr>
-              <tr>
-                <th>Crude protein</td>
-                <td>35%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>7%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>5%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>9%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>8000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>450 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>200 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Wheat Middlings, Wheat Flour, Fish Meal, Soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyle 2-polyphosphate (C), Choline Chloride, Cobalt Suffate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Terramycin</th>
+              <td>2.7 active grams/kilogram</td>
+            </tr>
+            <tr>
+              <th>Crude protein</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>7%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>5%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>9%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>8000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>450 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>200 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Wheat Middlings, Wheat Flour, Fish Meal, Soybean Meal, Blood Meal, Poultry By-product Meal, Hydrolized Feather Meal, Stabilized Fish Oil (D), Calcium Phosphate, Lecithin, Salt, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyle 2-polyphosphate (C), Choline Chloride, Cobalt Suffate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="cr52m-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/cr52m.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>52%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>14%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Phosphorus</td>
-                <td>1.4%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>10000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>500 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>380 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Soybean Meal, Blood Meal, Stabilized Fish Oil, Wheat flour, Wheat Germ, Dried Whey, Lecithin, Lignin Sulfonate, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), Ascorbic Acid, L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganous Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+      <div class="modal-dialog" id="cr52m-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/cr52m.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>52%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>14%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Phosphorus</td>
+              <td>1.4%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>10000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>500 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>380 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Soybean Meal, Blood Meal, Stabilized Fish Oil, Wheat flour, Wheat Germ, Dried Whey, Lecithin, Lignin Sulfonate, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), Ascorbic Acid, L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganous Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="cr52s-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/cr52s.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>52%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>14%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Phosphorus</td>
-                <td>1.4%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>10000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>500 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>380 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Soybean Meal, Blood Meal, Stabilized Fish Oil, Wheat flour, Wheat Germ, Dried Whey, Lecithin, Lignin Sulfonate, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), Ascorbic Acid, L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganous Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
-          </div>
+      <div class="modal-dialog" id="cr52s-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/cr52s.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>52%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>14%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Phosphorus</td>
+              <td>1.4%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>10000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>500 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>380 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Soybean Meal, Blood Meal, Stabilized Fish Oil, Wheat flour, Wheat Germ, Dried Whey, Lecithin, Lignin Sulfonate, Vitamin A Acetate, D-Activated Animal Sterol, Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), Ascorbic Acid, L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganous Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant), Added Mineral Matter not more than 2.50%.</p>
         </div>
       </div>
 
-      <div class="dialog" id="sf40-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/sf40.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>10%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Phosphorus</td>
-                <td>0.9%</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Soybean Meal, Wheat flour, Stabilized Fish Oil (D), Wheat middlings, Poultry By-product Meal, Hydrolized Feather Meal, Corn Gulten Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
-          </div>
+      <div class="modal-dialog" id="sf40-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/sf40.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Phosphorus</td>
+              <td>0.9%</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Soybean Meal, Wheat flour, Stabilized Fish Oil (D), Wheat middlings, Poultry By-product Meal, Hydrolized Feather Meal, Corn Gulten Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
         </div>
       </div>
 
-      <div class="dialog" id="sf45l-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/sf45l.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>40%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>10%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-              <tr>
-                <th>Vitamin A</td>
-                <td>10000 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin D</td>
-                <td>500 IU/KG</td>
-              </tr>
-              <tr>
-                <th>Vitamin E</td>
-                <td>250 IU/KG</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Wheat flour, Blood Meal, Stabilized Fish Oil (D), Hydrolized Feather Meal, Poultry By-product Meal, Wheat Germ, Dried Whey, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant). Added Mineral Mater not more than 2.5%</p>
-          </div>
+      <div class="modal-dialog" id="sf45l-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/sf45l.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+            <tr>
+              <th>Vitamin A</td>
+              <td>10000 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin D</td>
+              <td>500 IU/KG</td>
+            </tr>
+            <tr>
+              <th>Vitamin E</td>
+              <td>250 IU/KG</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Wheat flour, Blood Meal, Stabilized Fish Oil (D), Hydrolized Feather Meal, Poultry By-product Meal, Wheat Germ, Dried Whey, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamin, Biotin. DL Alphatocopherol (E), L-ascorbyl 2-polyphosphate (C), Choline Chloride, Cobalt Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant). Added Mineral Mater not more than 2.5%</p>
         </div>
       </div>
 
-      <div class="dialog" id="sf45-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/sf45.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>45%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>19%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Wheat Flour, Stabilized Fish Oil, Poultry By-product Meal, Blood Meal, Hydrolized Feather Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), L-ascorbyle 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
-          </div>
+      <div class="modal-dialog" id="sf45-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/sf45.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>45%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>19%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Wheat Flour, Stabilized Fish Oil, Poultry By-product Meal, Blood Meal, Hydrolized Feather Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), L-ascorbyle 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
         </div>
       </div>
 
-      <div class="dialog" id="sf45-3-0-dialog">
-        <div class="dialog-close-btn">x</div>
-        <img class="ff-img-full" src="assets/images/order/fish_food/sf45_3_0.jpg">
-        <div class="ff-stats">
-          <div class="col-1-2 analysis">
-            <h3>Guaranteed Analysis</h3>
-            <table class="base-table">
-              <tr>
-                <th>Crude protein</td>
-                <td>45%</td>
-              </tr>
-              <tr>
-                <th>Crude fat</td>
-                <td>19%</td>
-              </tr>
-              <tr>
-                <th>Crude fiber</td>
-                <td>3%</td>
-              </tr>
-              <tr>
-                <th>Ash</td>
-                <td>12%</td>
-              </tr>
-              <tr>
-                <th>Sodium</td>
-                <td>2%</td>
-              </tr>
-            </table>
-          </div><!--
-          --><div class="col-1-2 ingredients">
-            <h3>Ingredients</h3>
-            <p>Fish Meal, Wheat Flour, Stabilized Fish Oil, Poultry By-product Meal, Blood Meal, Hydrolized Feather Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), L-ascorbyle 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
-          </div>
+      <div class="modal-dialog" id="sf45-3-0-dialog">
+        <div class="btn-close">x</div>
+        <img class="ff-img-full border-grey" src="assets/images/order/fish_food/sf45_3_0.jpg">
+        <div class="ff-guaranteed-analysis col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Guaranteed Analysis</h3>
+          <table class="tbl-2-col tbl-guaranteed-analysis">
+            <tr>
+              <th>Crude protein</td>
+              <td>45%</td>
+            </tr>
+            <tr>
+              <th>Crude fat</td>
+              <td>19%</td>
+            </tr>
+            <tr>
+              <th>Crude fiber</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <th>Ash</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th>Sodium</td>
+              <td>2%</td>
+            </tr>
+          </table>
+        </div><!--
+        --><div class="ff-ingredients col-1-2">
+          <h3 class="header-dialog border-bottom-grey">Ingredients</h3>
+          <p>Fish Meal, Wheat Flour, Stabilized Fish Oil, Poultry By-product Meal, Blood Meal, Hydrolized Feather Meal, Poultry Oil, Vitamin A Acetate, D-Activated Animal Sterol (D3), Vitamin B12 Supplement, Riboflavin Supplement, Niacin, Folic acid, Menadione Sodium Bisulphite Complex, Calcium Pantothenate, Pyridoxine, Hydrochloride, Thiamin, Biotin. DL Alphatocopherol(E), L-ascorbyle 2-polyphosphate (C), Betaine, Zinc Sulfate, Copper Sulfate, Ferrous Sulfate, Manganese Sulfate, Ethytonediamine Dihydroiodide, Ethoxyquin (Anti-Oxidant)</p>
         </div>
       </div>
 
@@ -1879,58 +1838,64 @@
       </div>
     </footer>
 
-  <script>
-		$( ".dialog" ).dialog({ 
-      autoOpen: false,
-      draggable: false,
-      modal: true,
-      position: { my: "center", at: "center", of: window},
-      resizable: false
-    });
-
-    $( ".opener" ).click(function() {
-      var id = '#' + $(this).data('id');
-      $(id).dialog("open");
-
-      // Close popup when user clicks the "x" button
-      $(".dialog-close-btn").click(function() {
-        $(id).dialog("close");
-      });
-      
-      // Close popup when user clicks outside the popup box
-      $( ".ui-widget-overlay").click( function() {
-        $(id).dialog("close");
+    <script>
+      $(".modal-dialog").dialog({ 
+        autoOpen: false,
+        draggable: false,
+        modal: true,
+        position: { my: "center", at: "center", of: window },
+        resizable: false
       });
 
-      // Prevent page from reloading to anchor "#"
-      return false;
-    });	
+      $(".opener").click(function() {
+        var id = '#' + $(this).data('id');
+        $(id).dialog("open");
 
-    // Update fish food listings with selected filter options
-    $( ".ff-filter" ).change(function() {
-      var ffType = $(".ff-types").val();
-      var fishType = $(".fish-types").val();
-      var desiredTypes = "." + ffType + "." + fishType;
+        // Close popup when user clicks the "x" button
+        $(".btn-close").click(function() {
+          $(id).dialog("close");
+        });
+        
+        // Close popup when user clicks outside the popup box
+        $(".ui-widget-overlay").click(function() {
+          $(id).dialog("close");
+        });
 
-      $( ".ff-listing" ).hide();
-      $( desiredTypes ).css("opacity", "0");
-      $( desiredTypes ).show();
-      $( desiredTypes ).animate({"opacity": "1"}, 700);
-    });
+        // Prevent page from reloading to anchor "#"
+        return false;
+      }); 
 
-    // In fish food table dialog, when link is clicked, close dialog and redirect to that specific listing.
-    $( ".ff-table a" ).click( function() {
-      // Reset filters to "Any" option
-      $( ".ff-filter :nth-child(1)" ).prop('selected', true);
-      // Show all listings (in case any had previously been filtered)
-      $( ".ff-listing" ).css("opacity", "0");
-      $( ".ff-listing" ).show();
-      $( ".ff-listing" ).animate({"opacity": "1"}, 700);
-      // Close fish food table dialog
-      $( "#which-ff-dialog" ).dialog("close");
-    });
-      
-  </script>
+      // Update fish food listings with selected filter options
+      $(".ff-filter").change(function() {
+        // Value from fish food type select
+        var ffType = $("#ff-types").val();
+        // Value from fish type select
+        var fishType = $("#fish-types").val();
+        var desiredTypes = "." + ffType + "." + fishType;
+
+        // Hide all listings, and then fade in appropriate listings
+        $(".ff-listing").hide();
+        fadeIn(desiredTypes);
+      });
+
+      // In fish food table dialog, when link is clicked, close dialog and redirect to that specific listing.
+      $( ".tbl-2-hdr a" ).click( function() {
+        // Reset filters to "Any" option
+        $( ".ff-filter :nth-child(1)" ).prop('selected', true);
+
+        // Show all listings (in case any had previously been filtered)
+        fadeIn(".ff-listing");
+
+        // Close fish food table dialog
+        $( "#ff-reference-dialog" ).dialog("close");
+      });
+
+      function fadeIn(className) {
+        $(className).css("opacity", "0");
+        $(className).show();
+        $(className).animate({"opacity": "1"}, 700);
+      }
+    </script>
 
   </body>
 

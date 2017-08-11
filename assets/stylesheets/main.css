@@ -62,6 +62,188 @@ body {
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
+/*
+ ========================================
+ Backgrounds
+ ========================================
+*/
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-grey {
+  background: #f5f5f5;
+}
+
+/*
+ ========================================
+ Overlays
+ ========================================
+*/
+
+.overlay-white-bg {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+.overlay-pic-bg {
+  background-color: rgba(256, 256, 256, 0.86);
+}
+
+/*
+ ========================================
+ Alignments
+ ========================================
+*/
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+
+/*
+ ========================================
+ Borders  
+ ========================================
+*/
+
+.border-bottom-grey {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.border-grey {
+  border: 1px solid #d8d8d8;
+}
+
+/*
+ ========================================
+ Lists
+ ========================================
+*/
+
+ul {
+  padding-left: 30px;
+}
+
+.list-square-bullets {
+  list-style-type: square;
+}
+
+/*
+ ========================================
+ Buttons
+ ========================================
+*/
+
+.btn-green {
+  background: #4caf50;
+  color: #f0f0f0;
+  padding: 5px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.btn-green:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-close {
+  color: #a0a0a0;
+  float: right;
+  font-size: 30px;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+}
+
+
+/*
+ ========================================
+ Tables
+ ========================================
+*/
+
+table {
+  font-size: 12px;
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.tbl-2-col {
+  border: 1px solid #404040;
+}
+
+.tbl-2-col th {
+  background: #404040;
+  color: #e0e0e0;
+}
+
+.tbl-2-col tr:not(:last-child) th {
+  border-bottom: 1px solid #707070;
+}
+
+.tbl-2-col tr:not(:last-child) td {
+  border-bottom: 1px solid #404040;
+}
+
+.tbl-2-hdr thead tr,
+.tbl-2-hdr tbody tr:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+
+.tbl-2-hdr th,
+.tbl-2-hdr td {
+  height: 75px;
+  width: 120px;
+}
+
+.tbl-2-hdr th:not(:last-child),
+.tbl-2-hdr td:not(:last-child) {
+  border-right: 1px solid #efefef;
+}
+
+.tbl-2-hdr th {
+  font-weight: 400;
+}
+
+
+/*
+ ========================================
+ Dialogs
+ ========================================
+*/
+
+.ui-dialog {
+  background: #fff;
+  min-width: 50%;
+  min-height: 50%;
+  position: fixed;
+}
+
+.ui-dialog-titlebar {
+  display: none;
+}
+
+.ui-widget-overlay {
+  background: rgba(0,0,0,0.5);
+}
+
 /*
  ========================================
  Typography
@@ -71,6 +253,10 @@ body {
 h1 {
   font-size: 36px;
   line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 h3 {
@@ -100,15 +286,21 @@ h5 {
           box-sizing: border-box;
 }
 
-.container,
-.grid {
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
   width: 1080px;
 }
 
-.container {
-  padding-left: 30px;
-  padding-right: 30px;
+.content-section {
+  margin: 0 auto;
+  padding: 35px;
+  width: 960px;
+}
+
+.content-section p:not(:last-child) {
+  margin-bottom: 25px;
 }
 
 
@@ -133,17 +325,6 @@ h5 {
   padding: 0;
 }
 
-/*
- ========================================
- Rows
- ========================================
-*/
-
-.row {
-  min-width: 1080px;
-  background: #fff;
-}
-  
 
 /*
  ========================================
@@ -293,12 +474,13 @@ a {
   text-decoration: none;
 }
 
-.base-link {
+.link-green {
   color: #4caf50;
 }
 
-.base-link:hover {
+.link-green:hover {
   color: #006600;
+  cursor: pointer;
 }
 
   
@@ -313,14 +495,9 @@ a {
   padding-top: 40px;
 }
 
-.initial-quote p,
-.revised-quote p {
+.quote {
   font-style: italic;
   text-align: center;
-}
-
-.new-quote {
-  font-weight: 500;
 }
 
 .exposition {
@@ -328,44 +505,14 @@ a {
   background-size: 100% auto;
 }
 
+.new-quote {
+  font-weight: 500;
+}
+
 .conclusion {
   background-image: url("../images/homepage/pond_sunset.jpg");
   background-size: 100% auto;
   padding-bottom: 100px;
-}
-
-.content-box-bg,
-.content-box-fg {
-  margin: 0 auto;
-  padding: 35px;
-  width: 960px;
-}
-
-.content-box-bg {
-  background: #f1f1f1;
-  opacity: 0.7;
-}
-
-.content-box-fg {
-  background: #fff;
-  opacity: 0.9;
-}
-
-.exposition p:not(:last-child),
-.conclusion p:not(:last-child) {
-  margin-bottom: 25px;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.left-text {
-  text-align: left;
-}
-
-.right-text {
-  text-align: right;
 }
 
 
@@ -375,50 +522,48 @@ a {
  ========================================
 */
 
-.about-contents-bg {
+.about-bg {
   background-image: url("../images/about/ponds_plane.jpg");
   background-size: auto 100%;
   margin: 0 auto;
   width: 1080px;
 }
 
-.about-contents {
-  background-color: rgba(241, 241, 241, 0.8);
-  padding: 30px;
+.about-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.about-contents h4 {
-  font-weight: 400;
+.about-container p:not(:last-child) {
+  margin-bottom: 30px;
 }
 
-.intro img,
+.about-img-1,
+.about-img-2,
 .location-map {
   height: 340px;
 }
 
-.intro-text,
-.bio-conclusion-text {
+.about-intro,
+.about-conclusion {
   padding-left: 30px;
   padding-top: 10px;
 }
 
-.bio-text {
+.about-bio {
   padding-right: 30px;
   padding-top: 40px;
 }
 
-.intro p:not(:last-child),
-.bio p:not(:last-child),
-.bio-conclusion p:not(:last-child) {
-  margin-bottom: 30px;
+.about-conclusion .tbl-contact-us {
+  font-size: 12px;
+  margin: 20px auto 0 auto;
+  width: 80%;
 }
 
-.bio-conclusion-text {
-  margin-top: 20px;
-}
-
-.bio-conclusion .contact-info {
-  margin-top: 20px;
+.header-meet-us,
+.header-contact-us {
+  font-weight: 400;
 }
 
 
@@ -428,9 +573,9 @@ a {
  ========================================
 */
 
-.bulletin-contents {
-  background: #fff;
-  padding: 20px;
+.bulletins {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .bulletin {
@@ -440,7 +585,6 @@ a {
 }
 
 .bulletin img {
-  border: 1px solid #e0e0e0;
   height: 150px;
 }
 
@@ -459,27 +603,18 @@ a {
  ========================================
 */
 
-.introduction {
-  background: #fff;
-  padding: 30px 0;
-}
-
-.introduction p {
-  margin-bottom: 20px;
-}
-
-.introduction-text {
+.order-fish-btn {
+  display: block;
   margin: 0 auto;
-  width: 750px;
+  width: 120px;
 }
 
 .freight-options {
-  background: #f5f5f5;
-  padding: 30px 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .freight-option {
-  background: #fff;
   border-radius: 10px;
   min-height: 210px;
   padding: 20px;
@@ -495,12 +630,10 @@ a {
 }
 
 .fish-listings {
-  background: #fff;
-  padding: 30px 20px 0 20px;
+  padding-top: 30px;
 }
 
 .fish-listing {
-  border: 1px solid #d8d8d8;
   margin-bottom: 30px;
   min-height: 430px;
   padding: 20px;
@@ -516,27 +649,54 @@ a {
   font-weight: 400;
 }
 
-.fish-listing .subtitle {
+.latin-name {
   font-style: italic;
   margin-bottom: 20px;
+}
+
+.fish-price {
+  font-size: 24px;
+  line-height: 28px;
+  height: 28px;
+  padding-right: 5px;
+}
+
+.fish-qty {
+  font-size: 12px;
+  line-height: 28px;
+  height: 28px;
+  padding-left: 5px;
 }
 
 .fish-description {
   text-align: left;
 }
 
-.table-container {
-  margin-bottom: 20px;
-  min-height: 65px;
+.tbl-container {
+  margin: 20px 0 20px 0;
+  min-height: 75px;
 }
 
-
-.fish-listing .base-table {
-  min-width: 200px;
+.tbl-fish-prices {
+  margin: 0 auto 20px auto;
 }
 
-.fish-listing .base-table td {
+.tbl-fish-prices th,
+.tbl-fish-prices td {
+  vertical-align: text-bottom;
   width: 50%;
+}
+
+.tbl-fish-prices th {
+  font-size: 24px;
+  padding-right: 3px;
+  text-align: right;
+}
+
+.tbl-fish-prices td {
+  font-size: 12px;
+  padding-left: 3px;
+  text-align: left;
 }
 
 .availability-update {
@@ -546,147 +706,82 @@ a {
 
 /*
  ========================================
- Tables
- ========================================
-*/
-
-.base-table {
-  border: 1px solid #404040;
-  border-collapse: collapse;
-  font-size: 12px;
-  margin: 0 auto;
-  min-width: 400px;
-  text-align: center;
-}
-
-.base-table th {
-  background: #404040;
-  color: #e0e0e0;
-  padding: 5px;
-}
-
-.base-table tr:not(:last-child) th {
-  border-bottom: 1px solid #707070;
-}
-
-.base-table td {
-  border-bottom: 1px solid #404040;
-  padding: 5px;
-}
-
-
-
-/*
- ========================================
  Fish food page
  ========================================
 */
 
-.ff-introduction {
-  background: #fff;
-  padding: 30px;
+.ff-intro {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.ff-introduction-text {
+.ff-intro-text {
   display: inline-block;
-  padding-right: 50px;
-  width: 66.67%
+  margin-right: 7%;
+  width: 60%
 }
 
-.ff-introduction-text p:not(:last-child) {
+.ff-intro-text p:not(:last-child) {
   margin-bottom: 10px;
 }
 
 .ff-shipping-text {
-  background: #f5f5f5;
   display: inline-block;
-  padding: 10px;
+  padding: 20px 10px 20px 10px;
   vertical-align: top;
-  width: 33.33%
-}
-
-.ff-shipping-text ul {
-  list-style-type: square;
-  margin-left: 30px;
+  width: 33%
 }
 
 .ff-shipping-text li {
   margin-top: 5px;
 }
 
+.ff-shipping-header {
+  margin-bottom: 10px;
+}
+
 .ff-filters {
-  background: #f5f5f5;
   line-height: 32px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.ff-filters span,
-.ff-filters select,
-.ff-filters .which-ff {
-  float: left;
+.ff-filter,
+.link-ff-reference,
+.form-view-cart {
+  display: inline-block;
 }
 
-.ff-filters select {
+.ff-filter,
+.link-ff-reference {
   margin-right: 50px;
 }
 
-.ff-filters select {
+.ff-filter {
   height: 32px;
   margin-left: 5px;
 }
 
-.ff-filters .view-cart-btn {
-  float: right;
-  margin: 0 30px 0 0 ;
-}
-
-.view-cart-btn:hover {
-  cursor: pointer;
-}
-
-.ff-table {
+.tbl-ff-reference {
   font-size: 12px;
-  margin: 30px auto 0 auto;
+  margin-top: 20px;
 }
 
-.ff-table th,
-.ff-table td {
+.tbl-ff-reference th,
+.tbl-ff-reference td {
   height: 75px;
-  padding: 5px;
-  text-align: center; 
-  vertical-align: middle;
   width: 120px;
 }
 
-.ff-table th {
-  font-weight: 400;
-}
-
-.ff-table thead tr,
-.ff-table tr:not(:last-child) {
-  border-bottom: 1px solid #efefef;
-}
-
-.ff-table td,
-.ff-table thead th:not(:first-child) {
-  border-left: 1px solid #efefef;
-}
-
-.ff-table a {
+.tbl-ff-reference a {
   color: #404040;
 }
 
-.ff-table a:hover {
+.tbl-ff-reference a:hover {
   color: #707070;
-}
-    
-.ff-listings {
-  background: #fff;
 }
 
 .ff-listing {
-  border-bottom: 1px solid #d8d8d8;
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -698,42 +793,36 @@ a {
 }
 
 .ff-img {
-  border: 1px solid #d8d8d8;
   width: 100%;
   height: 180px;
 }
 
-.ingredients-link {
+.link-ff-ingredients {
   text-align: center;
 }
 
-.ff-info {
+.ff-info-container {
   display: inline-block;
   padding: 10px 30px 0 30px;
   width: 75%;
 }
 
 .ff-header {
-  display: inline-block;
   margin-bottom: 10px;
-  width: 100%;
 }
 
 .ff-id {
   display: inline-block;
-  font-size: 32px;
 }
 
 .ff-name {
   display: inline-block;
   line-height: 32px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .ff-description {
   display: inline-block;
-  list-style-type: square;
-  padding-left: 30px;
   vertical-align: top;
   width: 80%;
 }
@@ -748,15 +837,6 @@ a {
 .ff-filters form input {
   border: 0;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.ff-pricing .add-cart-btn {
-  float: right;
-  margin: 10px 0 0 0;
-}
-
-.ff-pricing .add-cart-btn:hover {
-  cursor: pointer;
 }
 
 .ff-price {
@@ -774,87 +854,38 @@ a {
   line-height: 12px;
 }
 
+.ff-pricing .add-cart-btn {
+  float: right;
+  margin-top: 10px;
+}
+
 .ff-img-full {
-  border: 1px solid #d8d8d8;
   display: block;
   margin: 0 auto;
   max-height: 350px;
 }
 
-.dialog h3 {
-  border-bottom: 1px solid #efefef;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding-bottom: 10px;
-}
-
-.analysis,
-.ingredients {
+.ff-guaranteed-analysis,
+.ff-ingredients,
+.ff-terramycin {
   padding: 10px;
+  margin-top: 20px;
 }
 
-.analysis .base-table {
-  margin: 0;
+.ff-guaranteed-analysis h3,
+.ff-ingredients h3,
+.ff-terramycin h3 {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tbl-guaranteed-analysis {
+  font-size: 12px;
   min-width: 300px;
 }
 
-.analysis .base-table th {
-  width: 33%;
+.tbl-guaranteed-analysis th {
+  width: 30%;
 }
 
 
-/*
- ========================================
- Buttons
- ========================================
-*/
-
-.std-btn {
-  background: #4caf50;
-  color: #f0f0f0;
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
-  text-align: center;
-  width: 120px;
-}
-
-.std-btn:hover {
-  opacity: 0.9;
-}
-
-
-/*
- ========================================
- Dialogs
- ========================================
-*/
-
-.ui-dialog {
-  position: fixed;
-}
-
-.ui-dialog-titlebar {
-  display: none;
-}
-
-.dialog-close-btn {
-  color: #a0a0a0;
-  float: right;
-  font-size: 30px;
-}
-
-.dialog-close-btn:hover {
-  cursor: pointer;
-}
-
-
-.ui-dialog {
-  background: #fff;
-  min-width: 50%;
-  min-height: 50%;
-}
-
-.ui-widget-overlay {
-  background: rgba(0,0,0,0.5);
-}
