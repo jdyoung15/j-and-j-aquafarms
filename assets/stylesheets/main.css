@@ -124,6 +124,10 @@ body {
   border: 1px solid #d8d8d8;
 }
 
+.border-dark-grey {
+  border: 1px solid #404040;
+}
+
 /*
  ========================================
  Lists
