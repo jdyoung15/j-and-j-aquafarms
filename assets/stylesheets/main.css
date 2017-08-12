@@ -329,6 +329,13 @@ h5 {
   padding: 0;
 }
 
+.col-1-5 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.83%;
+  width: 15%;
+  padding: 0;
+}
 
 /*
  ========================================
@@ -892,4 +899,37 @@ a {
   width: 30%;
 }
 
+
+/*
+ ========================================
+ Aquaponics pages
+ ========================================
+*/
+
+.build-own-aquaponics,
+.cart-aquaponics,
+.shs-aquaponics {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.hdr-aquaponics-section {
+  margin-bottom: 20px;
+}
+
+.img-aquaponics-preview {
+  height: 110px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.lightbox .lb-image {
+  height : 75vh !important;
+  width: auto !important;
+}
+
+.subhdr-aquaponics-year {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
 
