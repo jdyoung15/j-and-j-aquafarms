@@ -275,6 +275,10 @@ h5 {
   font-size: 12px;
 }
 
+p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 
 /*
  ========================================
@@ -291,20 +295,15 @@ h5 {
 }
 
 .container {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
   margin: 0 auto;
   width: 1080px;
 }
 
 .content-section {
   margin: 0 auto;
-  padding: 35px;
+  padding: 30px;
   width: 960px;
-}
-
-.content-section p:not(:last-child) {
-  margin-bottom: 25px;
 }
 
 
@@ -511,12 +510,18 @@ a {
 */
 
 .initial-quote {
-  padding-top: 40px;
+  padding-bottom: 0;
 }
 
 .quote {
   font-style: italic;
   text-align: center;
+}
+
+.exposition, 
+.revised-quote {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .exposition {
@@ -531,6 +536,7 @@ a {
 .conclusion {
   background-image: url("../images/homepage/pond-sunset.jpg");
   background-size: 100% auto;
+  padding-top: 0;
   padding-bottom: 100px;
 }
 
@@ -548,13 +554,7 @@ a {
   width: 1080px;
 }
 
-.about-container {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .about-container p:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .about-img-1,
@@ -592,11 +592,6 @@ a {
  ========================================
 */
 
-.bulletins {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 .bulletin {
   color: #404040;
   padding: 18px;
@@ -622,23 +617,12 @@ a {
  ========================================
 */
 
-.fish-introduction {
-  padding-top: 30px;
-}
-
 .fish-introduction-text {
   padding-right: 50px; 
 }
 
-.fish-introduction-text p {
-  margin-bottom: 20px;
-}
-
 .freight-options {
   padding: 10px;
-}
-
-.freight-option {
 }
 
 .freight-option:not(:last-child) {
@@ -650,10 +634,6 @@ a {
   margin-bottom: 5px;
 }
 
-.freight-option p:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .order-fish-btn {
   display: block;
   font-size: 24px;
@@ -661,10 +641,6 @@ a {
   width: 400px;
   height: 50px;
   padding: 10px;
-}
-
-.fish-listings {
-  padding-top: 30px;
 }
 
 .fish-listing {
@@ -744,17 +720,8 @@ a {
  ========================================
 */
 
-.ff-intro {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .ff-intro-text {
   padding-right: 40px;
-}
-
-.ff-intro-text p:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .ff-shipping-text {
@@ -809,6 +776,12 @@ a {
 .tbl-ff-reference a:hover {
   color: #707070;
 }
+
+.ff-listings {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 
 .ff-listing {
   padding-bottom: 30px;
@@ -924,28 +897,20 @@ a {
  ========================================
 */
 
-.aquaponics-intro {
-  padding: 30px;
-}
-
 .aquaponics-intro-text {
   padding-right: 20px;
 }
 
-.aquaponics-intro-text p:not(:first-child) {
-  margin-top: 20px;
+.aquaponics-intro-text p:nth-child(2) {
+  margin-bottom: 10px;
 }
 
 .aquaponics-questions {
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .aquaponics-intro-img {
   height: 360px;
-}
-
-.aquaponics-materials {
-  padding: 30px;
 }
 
 .aquaponics-material-section {
@@ -962,25 +927,14 @@ a {
   color: #909090;
 }
 
-.build-own-aquaponics,
-.cart-aquaponics,
-.shs-aquaponics,
-.chs-aquaponics,
-.clovis-aquaponics,
-.avenal-aquaponics {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .hdr-aquaponics-section {
-  margin-bottom: 20px;
   padding-bottom: 10px;
 }
 
 .img-aquaponics-preview {
   height: 110px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .lightbox .lb-image {
@@ -990,6 +944,6 @@ a {
 
 .subhdr-aquaponics-year {
   font-weight: 400;
-  margin: 10px;
+  margin-top: 20px;
 }
 
