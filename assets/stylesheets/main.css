@@ -512,7 +512,7 @@ a {
 }
 
 .exposition {
-  background-image: url("../images/homepage/pond_banner.jpg");
+  background-image: url("../images/homepage/pond-banner.jpg");
   background-size: 100% auto;
 }
 
@@ -521,7 +521,7 @@ a {
 }
 
 .conclusion {
-  background-image: url("../images/homepage/pond_sunset.jpg");
+  background-image: url("../images/homepage/pond-sunset.jpg");
   background-size: 100% auto;
   padding-bottom: 100px;
 }
@@ -534,7 +534,7 @@ a {
 */
 
 .about-bg {
-  background-image: url("../images/about/ponds_plane.jpg");
+  background-image: url("../images/about/ponds-plane.jpg");
   background-size: auto 100%;
   margin: 0 auto;
   width: 1080px;
