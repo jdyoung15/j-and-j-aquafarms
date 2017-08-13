@@ -135,11 +135,11 @@ body {
 */
 
 ul {
-  padding-left: 30px;
 }
 
 .list-square-bullets {
   list-style-type: square;
+  padding-left: 30px;
 }
 
 /*
@@ -626,9 +626,8 @@ a {
 }
 
 .freight-option {
-  border-radius: 10px;
-  min-height: 210px;
-  padding: 20px;
+  min-height: 200px;
+  padding: 10px;
 }
 
 .freight-option h3 {
@@ -905,6 +904,44 @@ a {
  Aquaponics pages
  ========================================
 */
+
+.aquaponics-intro {
+  padding: 30px;
+}
+
+.aquaponics-intro-text {
+  padding-right: 20px;
+}
+
+.aquaponics-intro-text p:not(:first-child) {
+  margin-top: 20px;
+}
+
+.aquaponics-questions {
+  margin-top: 10px;
+}
+
+.aquaponics-intro-img {
+  height: 360px;
+}
+
+.aquaponics-materials {
+  padding: 30px;
+}
+
+.aquaponics-material-section {
+  background: #fff;
+  min-height: 200px;
+  padding: 10px;
+}
+
+.aquaponics-material-list {
+  margin-top: 10px;
+}
+
+.aquaponics-material-section h4 {
+  color: #909090;
+}
 
 .build-own-aquaponics,
 .cart-aquaponics,
