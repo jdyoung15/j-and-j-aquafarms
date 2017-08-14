@@ -421,6 +421,7 @@ p:not(:last-child) {
 
 .logo {
   color: #e0e0e0;
+  display: inline-block;
 }
 
 .nav-row {
@@ -537,7 +538,7 @@ a {
   background-image: url("../images/homepage/pond-sunset.jpg");
   background-size: 100% auto;
   padding-top: 0;
-  padding-bottom: 100px;
+  padding-bottom: 140px;
 }
 
 
@@ -644,7 +645,7 @@ a {
 }
 
 .fish-listing {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   min-height: 440px;
   padding: 20px;
   text-align: center;
