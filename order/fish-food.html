@@ -6,8 +6,6 @@
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
     <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.css">
-    <script src="../assets/scripts/jquery.js"></script>
-    <script src="../assets/scripts/jquery-ui.js"></script>
   </head>
 
   <body>
@@ -1847,64 +1845,10 @@
       </div>
     </footer>
 
-    <script>
-      $(".modal-dialog").dialog({ 
-        autoOpen: false,
-        draggable: false,
-        modal: true,
-        position: { my: "center", at: "center", of: window },
-        resizable: false
-      });
-
-      $(".opener").click(function() {
-        var id = '#' + $(this).data('id');
-        $(id).dialog("open");
-
-        // Close popup when user clicks the "x" button
-        $(".btn-close").click(function() {
-          $(id).dialog("close");
-        });
-        
-        // Close popup when user clicks outside the popup box
-        $(".ui-widget-overlay").click(function() {
-          $(id).dialog("close");
-        });
-
-        // Prevent page from reloading to anchor "#"
-        return false;
-      }); 
-
-      // Update fish food listings with selected filter options
-      $(".ff-filter").change(function() {
-        // Value from fish food type select
-        var ffType = $("#ff-types").val();
-        // Value from fish type select
-        var fishType = $("#fish-types").val();
-        var desiredTypes = "." + ffType + "." + fishType;
-
-        // Hide all listings, and then fade in appropriate listings
-        $(".ff-listing").hide();
-        fadeIn(desiredTypes);
-      });
-
-      // In fish food table dialog, when link is clicked, close dialog and redirect to that specific listing.
-      $( ".tbl-2-hdr a" ).click( function() {
-        // Reset filters to "Any" option
-        $( ".ff-filter :nth-child(1)" ).prop('selected', true);
-
-        // Show all listings (in case any had previously been filtered)
-        fadeIn(".ff-listing");
-
-        // Close fish food table dialog
-        $( "#ff-reference-dialog" ).dialog("close");
-      });
-
-      function fadeIn(className) {
-        $(className).css("opacity", "0");
-        $(className).show();
-        $(className).animate({"opacity": "1"}, 700);
-      }
-    </script>
+    <script src="../assets/scripts/jquery.js"></script>
+    <script src="../assets/scripts/jquery-ui.js"></script>
+    <script src="../assets/scripts/modal-dialog.js"></script>
+    <script src="../assets/scripts/order/fish-food.js"></script>
 
   </body>
 

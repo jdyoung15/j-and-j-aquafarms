@@ -413,7 +413,7 @@ p:not(:last-child) {
 .primary-header {
   background: #282828;
   color: #e0e0e0;
-  margin-top: 20px;
+  margin-top: 30px;
   min-width: 1080px;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -443,7 +443,7 @@ p:not(:last-child) {
 .primary-footer {
   background: #282828;
   color: #e0e0e0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -645,7 +645,7 @@ a {
 
 .fish-listing {
   margin-bottom: 10px;
-  min-height: 430px;
+  min-height: 440px;
   padding: 20px;
   text-align: center;
 }
