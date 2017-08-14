@@ -586,6 +586,56 @@ a {
   font-weight: 400;
 }
 
+/*
+ ========================================
+ Order landing page
+ ========================================
+*/
+
+.order-option {
+  padding: 30px;
+}
+
+.order-option-img {
+  background-size: cover;
+  display: block;
+  height: 270px;
+  padding: 50px 30px;
+}
+
+.order-option-img:hover .order-option-overlay {
+  border: 1px solid #4caf50;
+}
+
+.order-option-img:hover .order-option-overlay {
+  color: #4caf50;
+}
+
+.order-plants {
+  background-image: url("../images/order/index/order-plants.jpg");
+}
+
+.order-fish {
+  background-image: url("../images/order/index/order-fish.jpg");
+}
+
+.order-fish-food {
+  background-image: url("../images/order/index/order-fish-food.jpg");
+}
+
+.order-bulletin {
+  background-image: url("../images/order/index/order-bulletin.jpg");
+}
+
+.order-option-overlay {
+  background: rgba(256,256,256,0.95);
+  border: 1px solid transparent;
+}
+
+.order-option-title {
+  color: #404040;
+  line-height: 170px;
+}
 
 /*
  ========================================
