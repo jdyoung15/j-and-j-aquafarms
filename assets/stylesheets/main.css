@@ -60,6 +60,8 @@ body {
   background: linear-gradient(to right, #001a66, #e6ecff);
   color: #404040;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
@@ -77,6 +79,14 @@ body {
   background: #f5f5f5;
 }
 
+.bg-dark-grey {
+  background: #282828;
+}
+
+.bg-img {
+  background-size: cover;
+}
+
 /*
  ========================================
  Overlays
@@ -90,6 +100,11 @@ body {
 .overlay-pic-bg {
   background-color: rgba(256, 256, 256, 0.86);
 }
+
+.overlay-high-opacity {
+  background: rgba(256, 256, 256, 0.95);
+}
+
 
 /*
  ========================================
@@ -133,9 +148,6 @@ body {
  Lists
  ========================================
 */
-
-ul {
-}
 
 .list-square-bullets {
   list-style-type: square;
@@ -264,16 +276,33 @@ h2 {
 }
 
 h3 {
+  color: #909090;
   font-size: 20px;
 }
 
 h4 {
   font-size: 16px;
+  font-weight: 400;
 }
 
 h5 {
   font-size: 12px;
 }
+
+.quote {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 400;
+}
+
+
+/*
+ ========================================
+ Text
+ ========================================
+*/
 
 p:not(:last-child) {
   margin-bottom: 20px;
@@ -294,17 +323,26 @@ p:not(:last-child) {
           box-sizing: border-box;
 }
 
-.container {
-  padding: 30px;
+.container,
+.text-container,
+.row {
   margin: 0 auto;
+}
+
+.container,
+.text-container {
+  padding: 30px;
+}
+
+.container,
+.row {
   width: 1080px;
 }
 
-.content-section {
-  margin: 0 auto;
-  padding: 30px;
+.text-container {
   width: 960px;
 }
+
 
 
 /*
@@ -313,35 +351,49 @@ p:not(:last-child) {
  ========================================
 */
 
-.col-1-2 {
+.col-1-2,
+.col-1-3,
+.col-2-3,
+.col-1-5,
+.col-4-5,
+.col-1-4,
+.col-3-4 {
   display: inline-block;
   vertical-align: top;
+}
+  
+.col-1-2 {
   width: 50%;
-  padding: 0;
 }
 
 .col-1-3 {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 0.5%;
   width: 32%;
-  padding: 0;
 }
 
 .col-2-3 {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 0.5%;
   width: 66%;
-  padding: 0;
 }
 
 .col-1-5 {
-  display: inline-block;
-  vertical-align: top;
   margin: 0 0.65%;
   width: 15%;
-  padding: 0;
+}
+
+.col-4-5 {
+  margin: 0 1.5%;
+  width: 80%;
+}
+
+.col-1-4 {
+  margin: 0 0.5%;
+  width: 24%;
+}
+
+.col-3-4 {
+  margin: 0 0.5%;
+  width: 74%;
 }
 
 /*
@@ -411,10 +463,7 @@ p:not(:last-child) {
 */
 
 .primary-header {
-  background: #282828;
   color: #e0e0e0;
-  margin-top: 30px;
-  min-width: 1080px;
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -424,12 +473,7 @@ p:not(:last-child) {
   display: inline-block;
 }
 
-.nav-row {
-  height: 42px
-}
-
 .tagline {
-  color: #e0e0e0;
   float: left;
   line-height: 42px;
   margin-left: 20px;
@@ -442,11 +486,9 @@ p:not(:last-child) {
 */
 
 .primary-footer {
-  background: #282828;
   color: #e0e0e0;
   margin-bottom: 30px;
   padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .primary-footer  small {
@@ -506,38 +548,20 @@ a {
 
 /*
  ========================================
- Home page
+ Homepage
  ========================================
 */
 
 .initial-quote {
-  padding-bottom: 0;
-}
-
-.quote {
-  font-style: italic;
-  text-align: center;
-}
-
-.exposition, 
-.revised-quote {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 30px;
 }
 
 .exposition {
   background-image: url("../images/homepage/pond-banner.jpg");
-  background-size: 100% auto;
-}
-
-.new-quote {
-  font-weight: 500;
 }
 
 .conclusion {
   background-image: url("../images/homepage/pond-sunset.jpg");
-  background-size: 100% auto;
-  padding-top: 0;
   padding-bottom: 140px;
 }
 
@@ -550,40 +574,27 @@ a {
 
 .about-bg {
   background-image: url("../images/about/ponds-plane.jpg");
-  background-size: auto 100%;
-  margin: 0 auto;
-  width: 1080px;
-}
-
-.about-container p:not(:last-child) {
 }
 
 .about-img-1,
 .about-img-2,
-.location-map {
+.about-map {
   height: 340px;
 }
 
-.about-intro,
-.about-conclusion {
-  padding-left: 30px;
-  padding-top: 10px;
+.about-text-section {
+  padding: 25px;
 }
 
-.about-bio {
-  padding-right: 30px;
-  padding-top: 40px;
+.about-map {
+  border-top: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
 }
 
-.about-conclusion .tbl-contact-us {
+.tbl-contact-us {
   font-size: 12px;
   margin: 20px auto 0 auto;
   width: 80%;
-}
-
-.header-meet-us,
-.header-contact-us {
-  font-weight: 400;
 }
 
 /*
@@ -593,21 +604,17 @@ a {
 */
 
 .order-option {
-  padding: 30px;
+  padding: 5px;
 }
 
-.order-option-img {
-  background-size: cover;
+.order-option-bg-img {
   display: block;
-  height: 270px;
+  height: 300px;
   padding: 50px 30px;
 }
 
-.order-option-img:hover .order-option-overlay {
+.order-option-bg-img:hover .order-option-title {
   border: 1px solid #4caf50;
-}
-
-.order-option-img:hover .order-option-overlay {
   color: #4caf50;
 }
 
@@ -627,38 +634,10 @@ a {
   background-image: url("../images/order/index/order-bulletin.jpg");
 }
 
-.order-option-overlay {
-  background: rgba(256,256,256,0.95);
-  border: 1px solid transparent;
-}
-
 .order-option-title {
+  border: 1px solid transparent;
   color: #404040;
   line-height: 170px;
-}
-
-/*
- ========================================
- Technical Bulletins page
- ========================================
-*/
-
-.bulletin {
-  color: #404040;
-  padding: 18px;
-  text-align: center;
-}
-
-.bulletin img {
-  height: 150px;
-}
-
-.bulletin:hover img {
-  border: 1px solid #4caf50;
-}
-
-.bulletin h4 {
-  font-weight: 400;
 }
 
 
@@ -676,13 +655,12 @@ a {
   padding: 10px;
 }
 
-.freight-option:not(:last-child) {
-  margin-bottom: 10px;
+.freight-options h3 {
+  margin-bottom: 5px;
 }
 
-.freight-options h3 {
-  color: #909090;
-  margin-bottom: 5px;
+.freight-options h3:not(:first-child) {
+  margin-top: 10px;
 }
 
 .order-fish-btn {
@@ -694,20 +672,16 @@ a {
   padding: 10px;
 }
 
-.fish-listing {
+.listing-card {
   margin-bottom: 15px;
   min-height: 440px;
   padding: 20px;
   text-align: center;
 }
 
-.fish-listing img {
+.listing-card img {
   height: 100px;
   max-width: 260px;
-}
-
-.fish-listing h4 {
-  font-weight: 400;
 }
 
 .latin-name {
@@ -715,21 +689,7 @@ a {
   margin-bottom: 20px;
 }
 
-.fish-price {
-  font-size: 24px;
-  line-height: 28px;
-  height: 28px;
-  padding-right: 5px;
-}
-
-.fish-qty {
-  font-size: 12px;
-  line-height: 28px;
-  height: 28px;
-  padding-left: 5px;
-}
-
-.fish-description {
+.listing-card-desc {
   text-align: left;
 }
 
@@ -783,25 +743,19 @@ a {
   margin-top: 5px;
 }
 
-.ff-shipping-header {
-  color: #909090;
-}
-
-.ff-filters {
+.hdr-listings {
   line-height: 32px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.ff-filter,
-.link-ff-reference,
-.form-view-cart {
-  display: inline-block;
+.hdr-listings > * {
+  float: left;
 }
 
 .ff-filter,
 .link-ff-reference {
-  margin-right: 50px;
+  margin-right: 60px;
 }
 
 .ff-filter {
@@ -828,106 +782,78 @@ a {
   color: #707070;
 }
 
-.ff-listings {
-  padding-top: 0;
-  padding-bottom: 0;
+.listing-row {
+  padding: 30px;
 }
 
-
-.ff-listing {
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
-.ff-img-container {
-  display: inline-block;
-  vertical-align: top;
-  width: 25%;
-}
-
-.ff-img {
+.listing-row-img {
   width: 100%;
   height: 180px;
 }
 
-.link-ff-ingredients {
+.link-ingredients {
   text-align: center;
 }
 
-.ff-info-container {
-  display: inline-block;
-  padding: 10px 30px 0 30px;
-  width: 75%;
+.listing-row-info {
+  padding: 10px;
 }
 
-.ff-header {
+.listing-row-header {
   margin-bottom: 10px;
 }
 
-.ff-id {
-  display: inline-block;
+.listing-row-id {
+  float: left;
 }
 
-.ff-name {
-  display: inline-block;
+.listing-row-name {
+  float: left;
   line-height: 32px;
   margin-left: 20px;
 }
 
-.ff-description {
-  display: inline-block;
-  vertical-align: top;
-  width: 80%;
-}
-
-.ff-pricing {
-  display: inline-block;
+.listing-row-pricing {
   text-align: right;
-  width: 20%;
 }
 
-.ff-pricing form input,
-.ff-filters form input {
+.listing-row-pricing form input,
+.hdr-listings form input {
   border: 0;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.ff-price {
+.listing-row-price {
   float: right;
-  font-size: 32px;
 }
 
-.ff-shipping {
+.listing-row-shipping {
   float: right;
   font-size: 12px;
   margin-top: 10px;
 }
 
-.ff-shipping p {
-  line-height: 12px;
+.listing-row-shipping h5 {
+  line-height: 1em;
 }
 
-.ff-pricing .add-cart-btn {
+.listing-row-pricing .add-cart-btn {
   float: right;
   margin-top: 10px;
 }
 
-.ff-img-full {
+.dialog-img {
   display: block;
   margin: 0 auto;
   max-height: 350px;
 }
 
-.ff-guaranteed-analysis,
-.ff-ingredients,
-.ff-terramycin {
+.dialog-text-section {
   padding: 10px;
   margin-top: 20px;
 }
 
-.ff-guaranteed-analysis h3,
-.ff-ingredients h3,
-.ff-terramycin h3 {
+.dialog-text-section h3 {
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -939,6 +865,26 @@ a {
 
 .tbl-guaranteed-analysis th {
   width: 30%;
+}
+
+/*
+ ========================================
+ Technical Bulletins page
+ ========================================
+*/
+
+.bulletin {
+  color: #404040;
+  padding: 20px;
+  text-align: center;
+}
+
+.bulletin img {
+  height: 150px;
+}
+
+.bulletin:hover img {
+  border: 1px solid #4caf50;
 }
 
 
