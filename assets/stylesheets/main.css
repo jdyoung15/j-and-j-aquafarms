@@ -60,10 +60,6 @@ body {
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.listing-row-pricing form input, .hdr-listings form input {
-  border: 0;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
 /*  ========================================
  * Backgrounds
  * ========================================  */
@@ -73,7 +69,7 @@ body {
 .bg-grey {
   background: #f5f5f5; }
 
-.bg-dark-grey {
+.bg-charcoal {
   background: #282828; }
 
 .bg-img {
@@ -82,10 +78,10 @@ body {
 /*  ========================================
  * Overlays
  * ========================================  */
-.overlay-white-bg {
+.overlay-low-opacity {
   background-color: rgba(241, 241, 241, 0.7); }
 
-.overlay-pic-bg {
+.overlay-med-opacity {
   background-color: rgba(255, 255, 255, 0.86); }
 
 .overlay-high-opacity {
@@ -163,12 +159,12 @@ table {
     border-bottom: 1px solid #404040; }
 
 .tbl-2-hdr thead tr, .tbl-2-hdr tbody tr:not(:last-child) {
-  border-bottom: 1px solid #efefef; }
+  border-bottom: 1px solid #f5f5f5; }
 .tbl-2-hdr th, .tbl-2-hdr td {
   height: 75px;
   width: 120px; }
   .tbl-2-hdr th:not(:last-child), .tbl-2-hdr td:not(:last-child) {
-    border-right: 1px solid #efefef; }
+    border-right: 1px solid #f5f5f5; }
 .tbl-2-hdr th {
   font-weight: 400; }
 
@@ -372,6 +368,13 @@ a {
   .link-green:hover {
     color: #006600;
     cursor: pointer; }
+
+/*  ========================================
+ * Forms
+ * ========================================  */
+.listing-row-pricing form input, .hdr-listings form input {
+  border: 0;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*  ========================================
  * Homepage

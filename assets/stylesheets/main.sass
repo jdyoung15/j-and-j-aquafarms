@@ -86,20 +86,21 @@ body
 .bg-grey
   background: $light-grey
 
-.bg-dark-grey
+.bg-charcoal
   background: #282828
 
 .bg-img
   background-size: cover
 
+
 /*  ========================================
     Overlays
     ========================================  */
 
-.overlay-white-bg
+.overlay-low-opacity
   background-color: rgba(241, 241, 241, 0.7)
 
-.overlay-pic-bg
+.overlay-med-opacity
   background-color: rgba($white, 0.86)
 
 .overlay-high-opacity
@@ -189,12 +190,12 @@ table
 
 .tbl-2-hdr 
   thead tr, tbody tr:not(:last-child) 
-    border-bottom: 1px solid #efefef
+    border-bottom: 1px solid $light-grey
   th, td 
     height: 75px
     width: 120px
     &:not(:last-child)
-      border-right: 1px solid #efefef
+      border-right: 1px solid $light-grey
   th 
     font-weight: 400
 
@@ -361,7 +362,7 @@ p:not(:last-child)
       color: $green
 
 .dropdown:hover .dropbtn
-  color: #4caf50
+  color: $green
 
 
 /*  ========================================
@@ -388,7 +389,7 @@ p:not(:last-child)
     ========================================  */
 
 .primary-footer
-  color: #e0e0e0
+  color: $off-white
   margin-bottom: 30px
   padding-top: 20px
   small
@@ -468,8 +469,8 @@ form input
   padding: 25px
 
 .about-map
-  border-top: 1px solid #d8d8d8
-  border-right: 1px solid #d8d8d8
+  border-top: 1px solid $med-grey
+  border-right: 1px solid $med-grey
 
 .tbl-contact-us
   font-size: 12px
@@ -506,7 +507,7 @@ form input
   color: $dark-grey
   line-height: 170px
   .order-option-bg-img:hover &
-    border: 1px solid #4caf50
+    border: 1px solid $green
     color: $green
 
 
@@ -605,7 +606,7 @@ form input
     height: 75px
     width: 120px
   a
-    color: #404040
+    color: $dark-grey
     &:hover
       color: #707070
 
@@ -673,7 +674,7 @@ form input
     ========================================  */
 
 .bulletin
-  color: #404040
+  color: $dark-grey
   padding: 20px
   text-align: center
   &:hover img
@@ -697,7 +698,7 @@ form input
   height: 360px
 
 .aquaponics-material-section
-  background: #fff
+  background: $white
   min-height: 200px
   padding: 10px
   h4

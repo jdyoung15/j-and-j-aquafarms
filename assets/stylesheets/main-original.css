@@ -79,7 +79,7 @@ body {
   background: #f5f5f5;
 }
 
-.bg-dark-grey {
+.bg-charcoal {
   background: #282828;
 }
 
@@ -93,11 +93,11 @@ body {
  ========================================
 */
 
-.overlay-white-bg {
+.overlay-low-opacity {
   background-color: rgba(241, 241, 241, 0.7);
 }
 
-.overlay-pic-bg {
+.overlay-med-opacity {
   background-color: rgba(256, 256, 256, 0.86);
 }
 
