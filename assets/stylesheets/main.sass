@@ -1,0 +1,724 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+
+/*  ========================================
+    Variables
+    ========================================  */
+
+$dark-blue: #001a66
+$light-blue: #e6ecff
+$green: #4caf50
+$light-grey: #f5f5f5
+$med-grey: #d8d8d8
+$dark-grey: #404040
+$white: #fff
+$off-white: #e0e0e0
+$font-primary: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+/*  ========================================
+    Custom styles
+    ========================================  */
+
+body
+  background: $dark-blue
+  background: -webkit-linear-gradient(to right, $dark-blue, $light-blue)
+  background: -moz-linear-gradient(to right, $dark-blue, $light-blue)
+  background: linear-gradient(to right, $dark-blue, $light-blue)
+  color: $dark-grey
+  font: $font-primary
+  padding-top: 30px
+  padding-bottom: 30px
+
+
+/*  ========================================
+    Backgrounds
+    ========================================  */
+
+.bg-white
+  background: $white
+
+.bg-grey
+  background: $light-grey
+
+.bg-dark-grey
+  background: #282828
+
+.bg-img
+  background-size: cover
+
+/*  ========================================
+    Overlays
+    ========================================  */
+
+.overlay-white-bg
+  background-color: rgba(241, 241, 241, 0.7)
+
+.overlay-pic-bg
+  background-color: rgba($white, 0.86)
+
+.overlay-high-opacity
+  background: rgba($white, 0.95)
+
+
+/*  ========================================
+    Alignments
+    ========================================  */
+
+.center-text
+  text-align: center
+
+.left-text
+  text-align: left
+
+.right-text
+  text-align: right
+
+
+/*  ========================================
+    Borders  
+    ========================================  */
+
+.border-bottom-grey
+  border-bottom: 1px solid $med-grey
+
+.border-grey
+  border: 1px solid $med-grey 
+
+.border-dark-grey
+  border: 1px solid $dark-grey
+
+
+/*  ========================================
+    Lists
+    ========================================  */
+
+.list-square-bullets
+  list-style-type: square
+  padding-left: 30px
+
+
+/*  ========================================
+    Buttons
+    ========================================  */
+
+.btn-green
+  background: $green
+  color: $off-white
+  padding: 5px
+  text-align: center
+  min-width: 120px
+  &:hover 
+    cursor: pointer
+    opacity: 0.9
+
+.btn-close 
+  color: #a0a0a0
+  float: right
+  font-size: 30px
+  &:hover 
+    cursor: pointer
+
+
+/*  ========================================
+    Tables
+    ========================================  */
+
+table 
+  font-size: 12px
+  text-align: center
+  th, td 
+    padding: 5px
+    vertical-align: middle
+
+.tbl-2-col 
+  border: 1px solid $dark-grey
+  th 
+    background: $dark-grey
+    color: $off-white
+  tr:not(:last-child) 
+    th 
+      border-bottom: 1px solid #707070
+    td 
+      border-bottom: 1px solid $dark-grey
+
+.tbl-2-hdr 
+  thead tr, tbody tr:not(:last-child) 
+    border-bottom: 1px solid #efefef
+  th, td 
+    height: 75px
+    width: 120px
+    &:not(:last-child)
+      border-right: 1px solid #efefef
+  th 
+    font-weight: 400
+
+
+/*  ========================================
+    Dialogs
+    ========================================  */
+
+.ui-dialog 
+  background: $white
+  min-width: 50%
+  min-height: 50%
+  position: fixed
+
+.ui-dialog-titlebar 
+  display: none
+
+.ui-widget-overlay 
+  background: rgba(0, 0, 0, 0.5)
+
+
+/*  ========================================
+    Typography
+    ========================================  */
+
+h1 
+  font-size: 36px
+  line-height: 44px
+
+h2 
+  font-size: 32px
+
+h3 
+  color: #909090
+  font-size: 20px
+
+h4 
+  font-size: 16px
+  font-weight: 400
+
+h5 
+  font-size: 12px
+
+.quote 
+  font-style: italic
+
+strong 
+  font-weight: 400
+
+
+/*  ========================================
+    Text
+    ========================================  */
+
+p:not(:last-child)
+  margin-bottom: 20px
+
+
+/*  ========================================
+    Grid
+    ========================================  */
+
+*,
+*:before,
+*:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.container
+  margin: 0 auto
+  padding: 30px
+  width: 1080px
+
+.text-container
+  margin: 0 auto
+  padding: 30px
+  width: 960px
+
+.row
+  margin: 0 auto
+  width: 1080px
+
+
+/*  ========================================
+    Columns
+    ========================================  */
+
+%col
+  display: inline-block
+  vertical-align: top
+  
+.col-1-2
+  @extend %col
+  width: 50%
+
+.col-1-3
+  @extend %col
+  margin: 0 0.5%
+  width: 32%
+
+.col-2-3
+  @extend %col
+  margin: 0 0.5%
+  width: 66%
+
+.col-1-5
+  @extend %col
+  margin: 0 0.65%
+  width: 15%
+
+.col-4-5
+  @extend %col
+  margin: 0 1.5%
+  width: 80%
+
+.col-1-4
+  @extend %col
+  margin: 0 0.5%
+  width: 24%
+
+.col-3-4
+  @extend %col
+  margin: 0 0.5%
+  width: 74%
+
+
+/*  ========================================
+    Navigation
+    ========================================  */
+
+.nav
+  float: right
+  text-align: right
+  text-transform: uppercase
+  li
+    display: inline-block
+  a
+    color: $off-white
+    display: block
+    padding: 10px
+    &:hover
+      color: $green
+  .active
+    color: $green
+
+.dropdown-content
+  display: none
+  position: absolute
+  background-color: $light-grey
+  min-width: 160px
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 1
+  .dropdown:hover &
+    display: block
+  a
+    color: $dark-grey
+    display: block
+    padding: 10px
+    text-align: left
+    text-decoration: none
+    &:hover
+      background-color: #f1f1f1
+      color: $green
+
+.dropdown:hover .dropbtn
+  color: #4caf50
+
+
+/*  ========================================
+    Primary header
+    ========================================  */
+
+.primary-header
+  color: $off-white
+  padding-top: 20px
+  padding-bottom: 10px
+
+.logo
+  color: $off-white
+  display: inline-block
+
+.tagline
+  float: left
+  line-height: 42px
+  margin-left: 20px
+
+
+/*  ========================================
+    Primary footer 
+    ========================================  */
+
+.primary-footer
+  color: #e0e0e0
+  margin-bottom: 30px
+  padding-top: 20px
+  small
+    font-size: 12px
+  .copyright
+    float: left
+  .email
+    float: right
+
+
+/*  ========================================
+    Clearfix
+    ========================================  */
+
+.group
+  clear: both
+  *zoom: 1
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+
+/*  ========================================
+    Links
+    ========================================  */
+
+a
+  text-decoration: none
+
+.link-green
+  color: #4caf50
+  &:hover
+    color: #006600
+    cursor: pointer
+  
+
+/*  ========================================
+    Forms
+    ========================================  */
+
+form input
+  .listing-row-pricing &, .hdr-listings &
+    border: 0
+    font: $font-primary
+
+
+/*  ========================================
+    Homepage
+    ========================================  */
+
+.initial-quote
+  padding-top: 30px
+
+.exposition
+  background-image: url("../images/homepage/pond-banner.jpg")
+
+.conclusion
+  background-image: url("../images/homepage/pond-sunset.jpg")
+  padding-bottom: 140px
+
+
+/*  ========================================
+    About page
+    ========================================  */
+
+.about-bg
+  background-image: url("../images/about/ponds-plane.jpg")
+
+.about-img-1,
+.about-img-2,
+.about-map
+  height: 340px
+
+.about-text-section
+  padding: 25px
+
+.about-map
+  border-top: 1px solid #d8d8d8
+  border-right: 1px solid #d8d8d8
+
+.tbl-contact-us
+  font-size: 12px
+  margin: 20px auto 0 auto
+  width: 80%
+
+
+/*  ========================================
+    Order landing page
+    ========================================  */
+
+.order-option
+  padding: 5px
+
+.order-option-bg-img
+  display: block
+  height: 300px
+  padding: 50px 30px
+
+.order-plants
+  background-image: url("../images/order/index/order-plants.jpg")
+
+.order-fish
+  background-image: url("../images/order/index/order-fish.jpg")
+
+.order-fish-food
+  background-image: url("../images/order/index/order-fish-food.jpg")
+
+.order-bulletin
+  background-image: url("../images/order/index/order-bulletin.jpg")
+
+.order-option-title
+  border: 1px solid transparent
+  color: $dark-grey
+  line-height: 170px
+  .order-option-bg-img:hover &
+    border: 1px solid #4caf50
+    color: $green
+
+
+/*  ========================================
+    Fish page
+    ========================================  */
+
+.fish-introduction-text
+  padding-right: 50px
+
+.freight-options
+  padding: 10px
+  h3
+    margin-bottom: 5px
+    &:not(:first-child)
+      margin-top: 10px
+
+.order-fish-btn
+  display: block
+  font-size: 24px
+  margin: 50px auto 0 auto
+  width: 400px
+  height: 50px
+  padding: 10px
+
+.listing-card
+  margin-bottom: 15px
+  min-height: 440px
+  padding: 20px
+  text-align: center
+  img
+    height: 100px
+    max-width: 260px
+
+.latin-name
+  font-style: italic
+  margin-bottom: 20px
+
+.listing-card-desc
+  text-align: left
+
+.tbl-container
+  margin: 20px 0 20px 0
+  min-height: 75px
+
+.tbl-fish-prices
+  margin: 0 auto 20px auto
+  th, td
+    vertical-align: text-bottom
+    width: 50%
+  th
+    font-size: 24px
+    padding-right: 3px
+    text-align: right
+  td
+    font-size: 12px
+    padding-left: 3px
+    text-align: left
+
+.availability-update
+  color: red
+
+
+/*  ========================================
+    Fish food page
+    ========================================  */
+
+.ff-intro-text
+  padding-right: 40px
+
+
+.ff-shipping-text
+  padding: 10px
+  li
+    margin-top: 5px
+
+.hdr-listings
+  line-height: 32px
+  padding-top: 20px
+  padding-bottom: 20px
+  & > *
+    float: left
+
+.ff-filter,
+.link-ff-reference
+  margin-right: 60px
+
+.ff-filter
+  height: 32px
+  margin-left: 5px
+
+.tbl-ff-reference
+  font-size: 12px
+  margin-top: 20px
+  th, td
+    height: 75px
+    width: 120px
+  a
+    color: #404040
+    &:hover
+      color: #707070
+
+.listing-row
+  padding: 30px
+
+.listing-row-img
+  width: 100%
+  height: 180px
+
+.link-ingredients
+  text-align: center
+
+.listing-row-info
+  padding: 10px
+
+.listing-row-header
+  margin-bottom: 10px
+
+.listing-row-id
+  float: left
+
+.listing-row-name
+  float: left
+  line-height: 32px
+  margin-left: 20px
+
+.listing-row-pricing
+  text-align: right
+  .add-cart-btn
+    float: right
+    margin-top: 10px
+
+.listing-row-price
+  float: right
+
+.listing-row-shipping
+  float: right
+  font-size: 12px
+  margin-top: 10px
+  h5
+    line-height: 1em
+
+.dialog-img
+  display: block
+  margin: 0 auto
+  max-height: 350px
+
+.dialog-text-section
+  padding: 10px
+  margin-top: 20px
+  h3
+    padding-bottom: 10px
+    margin-bottom: 20px
+
+.tbl-guaranteed-analysis
+  font-size: 12px
+  min-width: 300px
+  th
+    width: 30%
+
+
+/*  ========================================
+    Technical Bulletins page
+    ========================================  */
+
+.bulletin
+  color: #404040
+  padding: 20px
+  text-align: center
+  &:hover img
+    border: 1px solid $green
+  img
+    height: 150px
+
+/*  ========================================
+    Aquaponics pages
+    ========================================  */
+
+.aquaponics-intro-text
+  padding-right: 20px
+  p:nth-child(2)
+    margin-bottom: 10px
+
+.aquaponics-questions
+  margin-bottom: 20px
+
+.aquaponics-intro-img
+  height: 360px
+
+.aquaponics-material-section
+  background: #fff
+  min-height: 200px
+  padding: 10px
+  h4
+    color: #909090
+
+.aquaponics-material-list
+  margin-top: 10px
+
+.hdr-aquaponics-section
+  padding-bottom: 10px
+
+.img-aquaponics-preview
+  height: 110px
+  width: 100%
+  margin-top: 10px
+
+.lightbox .lb-image
+  height : 75vh !important
+  width: auto !important
+
+.subhdr-aquaponics-year
+  font-weight: 400
+  margin-top: 20px
+

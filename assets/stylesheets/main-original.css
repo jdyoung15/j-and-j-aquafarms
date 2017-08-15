@@ -1,0 +1,946 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+  
+/*
+ ========================================
+ Custom styles
+ ========================================
+*/
+
+body {
+  background: #001a66;
+  background: -webkit-linear-gradient(to right, #001a66, #e6ecff);
+  background: -moz-linear-gradient(to right, #001a66, #e6ecff);
+  background: linear-gradient(to right, #001a66, #e6ecff);
+  color: #404040;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+/*
+ ========================================
+ Backgrounds
+ ========================================
+*/
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-grey {
+  background: #f5f5f5;
+}
+
+.bg-dark-grey {
+  background: #282828;
+}
+
+.bg-img {
+  background-size: cover;
+}
+
+/*
+ ========================================
+ Overlays
+ ========================================
+*/
+
+.overlay-white-bg {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+.overlay-pic-bg {
+  background-color: rgba(256, 256, 256, 0.86);
+}
+
+.overlay-high-opacity {
+  background: rgba(256, 256, 256, 0.95);
+}
+
+
+/*
+ ========================================
+ Alignments
+ ========================================
+*/
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+
+/*
+ ========================================
+ Borders  
+ ========================================
+*/
+
+.border-bottom-grey {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.border-grey {
+  border: 1px solid #d8d8d8;
+}
+
+.border-dark-grey {
+  border: 1px solid #404040;
+}
+
+/*
+ ========================================
+ Lists
+ ========================================
+*/
+
+.list-square-bullets {
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+/*
+ ========================================
+ Buttons
+ ========================================
+*/
+
+.btn-green {
+  background: #4caf50;
+  color: #f0f0f0;
+  padding: 5px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.btn-green:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-close {
+  color: #a0a0a0;
+  float: right;
+  font-size: 30px;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+}
+
+
+/*
+ ========================================
+ Tables
+ ========================================
+*/
+
+table {
+  font-size: 12px;
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.tbl-2-col {
+  border: 1px solid #404040;
+}
+
+.tbl-2-col th {
+  background: #404040;
+  color: #e0e0e0;
+}
+
+.tbl-2-col tr:not(:last-child) th {
+  border-bottom: 1px solid #707070;
+}
+
+.tbl-2-col tr:not(:last-child) td {
+  border-bottom: 1px solid #404040;
+}
+
+.tbl-2-hdr thead tr,
+.tbl-2-hdr tbody tr:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+
+.tbl-2-hdr th,
+.tbl-2-hdr td {
+  height: 75px;
+  width: 120px;
+}
+
+.tbl-2-hdr th:not(:last-child),
+.tbl-2-hdr td:not(:last-child) {
+  border-right: 1px solid #efefef;
+}
+
+.tbl-2-hdr th {
+  font-weight: 400;
+}
+
+
+/*
+ ========================================
+ Dialogs
+ ========================================
+*/
+
+.ui-dialog {
+  background: #fff;
+  min-width: 50%;
+  min-height: 50%;
+  position: fixed;
+}
+
+.ui-dialog-titlebar {
+  display: none;
+}
+
+.ui-widget-overlay {
+  background: rgba(0,0,0,0.5);
+}
+
+/*
+ ========================================
+ Typography
+ ========================================
+*/
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  color: #909090;
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+.quote {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 400;
+}
+
+
+/*
+ ========================================
+ Text
+ ========================================
+*/
+
+p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+/*
+ ========================================
+ Grid
+ ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container,
+.text-container,
+.row {
+  margin: 0 auto;
+}
+
+.container,
+.text-container {
+  padding: 30px;
+}
+
+.container,
+.row {
+  width: 1080px;
+}
+
+.text-container {
+  width: 960px;
+}
+
+
+
+/*
+ ========================================
+ Columns
+ ========================================
+*/
+
+.col-1-2,
+.col-1-3,
+.col-2-3,
+.col-1-5,
+.col-4-5,
+.col-1-4,
+.col-3-4 {
+  display: inline-block;
+  vertical-align: top;
+}
+  
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-3 {
+  margin: 0 0.5%;
+  width: 32%;
+}
+
+.col-2-3 {
+  margin: 0 0.5%;
+  width: 66%;
+}
+
+.col-1-5 {
+  margin: 0 0.65%;
+  width: 15%;
+}
+
+.col-4-5 {
+  margin: 0 1.5%;
+  width: 80%;
+}
+
+.col-1-4 {
+  margin: 0 0.5%;
+  width: 24%;
+}
+
+.col-3-4 {
+  margin: 0 0.5%;
+  width: 74%;
+}
+
+/*
+ ========================================
+ Navigation
+ ========================================
+*/
+
+.nav {
+  float: right;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  color: #e0e0e0;
+  display: block;
+  padding: 10px;
+}
+
+.nav a:hover {
+  color: #4caf50;
+}
+
+.nav .active {
+  color: #4caf50;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #404040;
+  display: block;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #4caf50;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #4caf50;
+}
+
+/*
+ ========================================
+ Primary header
+ ========================================
+*/
+
+.primary-header {
+  color: #e0e0e0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  color: #e0e0e0;
+  display: inline-block;
+}
+
+.tagline {
+  float: left;
+  line-height: 42px;
+  margin-left: 20px;
+}
+
+/*
+ ========================================
+ Primary footer 
+ ========================================
+*/
+
+.primary-footer {
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.primary-footer  small {
+  font-size: 12px;
+}
+
+.primary-footer .copyright {
+  float: left;
+}
+
+.primary-footer .email {
+  float: right;
+}
+
+/*
+ ========================================
+ Clearfix
+ ========================================
+*/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+
+/*
+ ========================================
+ Links
+ ========================================
+*/
+
+a {
+  text-decoration: none;
+}
+
+.link-green {
+  color: #4caf50;
+}
+
+.link-green:hover {
+  color: #006600;
+  cursor: pointer;
+}
+
+  
+
+/*
+ ========================================
+ Homepage
+ ========================================
+*/
+
+.initial-quote {
+  padding-top: 30px;
+}
+
+.exposition {
+  background-image: url("../images/homepage/pond-banner.jpg");
+}
+
+.conclusion {
+  background-image: url("../images/homepage/pond-sunset.jpg");
+  padding-bottom: 140px;
+}
+
+
+/*
+ ========================================
+ About page
+ ========================================
+*/
+
+.about-bg {
+  background-image: url("../images/about/ponds-plane.jpg");
+}
+
+.about-img-1,
+.about-img-2,
+.about-map {
+  height: 340px;
+}
+
+.about-text-section {
+  padding: 25px;
+}
+
+.about-map {
+  border-top: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+}
+
+.tbl-contact-us {
+  font-size: 12px;
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+/*
+ ========================================
+ Order landing page
+ ========================================
+*/
+
+.order-option {
+  padding: 5px;
+}
+
+.order-option-bg-img {
+  display: block;
+  height: 300px;
+  padding: 50px 30px;
+}
+
+.order-option-bg-img:hover .order-option-title {
+  border: 1px solid #4caf50;
+  color: #4caf50;
+}
+
+.order-plants {
+  background-image: url("../images/order/index/order-plants.jpg");
+}
+
+.order-fish {
+  background-image: url("../images/order/index/order-fish.jpg");
+}
+
+.order-fish-food {
+  background-image: url("../images/order/index/order-fish-food.jpg");
+}
+
+.order-bulletin {
+  background-image: url("../images/order/index/order-bulletin.jpg");
+}
+
+.order-option-title {
+  border: 1px solid transparent;
+  color: #404040;
+  line-height: 170px;
+}
+
+
+/*
+ ========================================
+ Fish page
+ ========================================
+*/
+
+.fish-introduction-text {
+  padding-right: 50px; 
+}
+
+.freight-options {
+  padding: 10px;
+}
+
+.freight-options h3 {
+  margin-bottom: 5px;
+}
+
+.freight-options h3:not(:first-child) {
+  margin-top: 10px;
+}
+
+.order-fish-btn {
+  display: block;
+  font-size: 24px;
+  margin: 50px auto 0 auto;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+}
+
+.listing-card {
+  margin-bottom: 15px;
+  min-height: 440px;
+  padding: 20px;
+  text-align: center;
+}
+
+.listing-card img {
+  height: 100px;
+  max-width: 260px;
+}
+
+.latin-name {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.listing-card-desc {
+  text-align: left;
+}
+
+.tbl-container {
+  margin: 20px 0 20px 0;
+  min-height: 75px;
+}
+
+.tbl-fish-prices {
+  margin: 0 auto 20px auto;
+}
+
+.tbl-fish-prices th,
+.tbl-fish-prices td {
+  vertical-align: text-bottom;
+  width: 50%;
+}
+
+.tbl-fish-prices th {
+  font-size: 24px;
+  padding-right: 3px;
+  text-align: right;
+}
+
+.tbl-fish-prices td {
+  font-size: 12px;
+  padding-left: 3px;
+  text-align: left;
+}
+
+.availability-update {
+  color: red;
+}
+
+
+/*
+ ========================================
+ Fish food page
+ ========================================
+*/
+
+.ff-intro-text {
+  padding-right: 40px;
+}
+
+.ff-shipping-text {
+  padding: 10px;
+}
+
+.ff-shipping-text li {
+  margin-top: 5px;
+}
+
+.hdr-listings {
+  line-height: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hdr-listings > * {
+  float: left;
+}
+
+.ff-filter,
+.link-ff-reference {
+  margin-right: 60px;
+}
+
+.ff-filter {
+  height: 32px;
+  margin-left: 5px;
+}
+
+.tbl-ff-reference {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.tbl-ff-reference th,
+.tbl-ff-reference td {
+  height: 75px;
+  width: 120px;
+}
+
+.tbl-ff-reference a {
+  color: #404040;
+}
+
+.tbl-ff-reference a:hover {
+  color: #707070;
+}
+
+.listing-row {
+  padding: 30px;
+}
+
+.listing-row-img {
+  width: 100%;
+  height: 180px;
+}
+
+.link-ingredients {
+  text-align: center;
+}
+
+.listing-row-info {
+  padding: 10px;
+}
+
+.listing-row-header {
+  margin-bottom: 10px;
+}
+
+.listing-row-id {
+  float: left;
+}
+
+.listing-row-name {
+  float: left;
+  line-height: 32px;
+  margin-left: 20px;
+}
+
+.listing-row-pricing {
+  text-align: right;
+}
+
+.listing-row-pricing form input,
+.hdr-listings form input {
+  border: 0;
+  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.listing-row-price {
+  float: right;
+}
+
+.listing-row-shipping {
+  float: right;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.listing-row-shipping h5 {
+  line-height: 1em;
+}
+
+.listing-row-pricing .add-cart-btn {
+  float: right;
+  margin-top: 10px;
+}
+
+.dialog-img {
+  display: block;
+  margin: 0 auto;
+  max-height: 350px;
+}
+
+.dialog-text-section {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dialog-text-section h3 {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tbl-guaranteed-analysis {
+  font-size: 12px;
+  min-width: 300px;
+}
+
+.tbl-guaranteed-analysis th {
+  width: 30%;
+}
+
+/*
+ ========================================
+ Technical Bulletins page
+ ========================================
+*/
+
+.bulletin {
+  color: #404040;
+  padding: 20px;
+  text-align: center;
+}
+
+.bulletin img {
+  height: 150px;
+}
+
+.bulletin:hover img {
+  border: 1px solid #4caf50;
+}
+
+
+/*
+ ========================================
+ Aquaponics pages
+ ========================================
+*/
+
+.aquaponics-intro-text {
+  padding-right: 20px;
+}
+
+.aquaponics-intro-text p:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.aquaponics-questions {
+  margin-bottom: 20px;
+}
+
+.aquaponics-intro-img {
+  height: 360px;
+}
+
+.aquaponics-material-section {
+  background: #fff;
+  min-height: 200px;
+  padding: 10px;
+}
+
+.aquaponics-material-list {
+  margin-top: 10px;
+}
+
+.aquaponics-material-section h4 {
+  color: #909090;
+}
+
+.hdr-aquaponics-section {
+  padding-bottom: 10px;
+}
+
+.img-aquaponics-preview {
+  height: 110px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.lightbox .lb-image {
+  height : 75vh !important;
+  width: auto !important;
+}
+
+.subhdr-aquaponics-year {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
