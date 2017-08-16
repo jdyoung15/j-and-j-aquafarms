@@ -79,7 +79,7 @@ body {
  * Overlays
  * ========================================  */
 .overlay-low-opacity {
-  background-color: rgba(241, 241, 241, 0.7); }
+  background-color: rgba(245, 245, 245, 0.7); }
 
 .overlay-med-opacity {
   background-color: rgba(255, 255, 255, 0.86); }
@@ -336,7 +336,6 @@ p:not(:last-child) {
  * ========================================  */
 .primary-footer {
   color: #e0e0e0;
-  margin-bottom: 30px;
   padding-top: 20px; }
   .primary-footer small {
     font-size: 12px; }
