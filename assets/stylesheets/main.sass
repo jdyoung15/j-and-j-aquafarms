@@ -67,14 +67,15 @@ $font-primary: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sa
     ========================================  */
 
 body
-  background: $dark-blue
-  background: -webkit-linear-gradient(to right, $dark-blue, $light-blue)
-  background: -moz-linear-gradient(to right, $dark-blue, $light-blue)
-  background: linear-gradient(to right, $dark-blue, $light-blue)
+  //background: $dark-blue
+  //background: -webkit-linear-gradient(to right, $dark-blue, $light-blue)
+  //background: -moz-linear-gradient(to right, $dark-blue, $light-blue)
+  //background: linear-gradient(to right, $dark-blue, $light-blue) 
+  background: $white
   color: $dark-grey
   font: $font-primary
-  padding-top: 30px
-  padding-bottom: 30px
+  //padding-top: 30px
+  //padding-bottom: 30px
 
 
 /*  ========================================
@@ -86,9 +87,6 @@ body
 
 .bg-grey
   background: $light-grey
-
-.bg-charcoal
-  background: $charcoal
 
 .bg-img
   background-size: cover
@@ -139,6 +137,9 @@ body
 /*  ========================================
     Lists
     ========================================  */
+
+a
+  color: $dark-grey
 
 .list-square-bullets
   list-style-type: square
@@ -269,7 +270,7 @@ p:not(:last-child)
 .container
   margin: 0 auto
   padding: 30px
-  width: 1080px
+  width: 960px 
 
 .text-container
   margin: 0 auto
@@ -278,7 +279,7 @@ p:not(:last-child)
 
 .row
   margin: 0 auto
-  width: 1080px
+  width: 960px 
 
 
 /*  ========================================
@@ -305,7 +306,7 @@ p:not(:last-child)
 
 .col-1-5
   @extend %col
-  margin: 0 0.65%
+  margin: 0 0.64%
   width: 15%
 
 .col-4-5
@@ -335,7 +336,6 @@ p:not(:last-child)
   li
     display: inline-block
   a
-    color: $off-white
     display: block
     padding: 10px
     &:hover
@@ -371,12 +371,12 @@ p:not(:last-child)
     ========================================  */
 
 .primary-header
-  color: $off-white
-  padding-top: 20px
-  padding-bottom: 10px
+  @extend .border-bottom-grey
+  padding-top: 1em
+  padding-bottom: 0.5em 
+  margin-bottom: 2em
 
 .logo
-  color: $off-white
   display: inline-block
 
 .tagline
@@ -390,8 +390,10 @@ p:not(:last-child)
     ========================================  */
 
 .primary-footer
-  color: $off-white
-  padding-top: 20px
+  border-top: 1px solid #d8d8d8
+  margin-top: 2em
+  padding-top: 1em
+  padding-bottom: 1em
   small
     font-size: 12px
   .copyright
@@ -442,15 +444,20 @@ form input
     Homepage
     ========================================  */
 
-.initial-quote
-  padding-top: 30px
+.homepage-content
+  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2)
+  margin-top: 2em
+  padding-bottom: 2em
 
-.exposition
-  background-image: url("../images/homepage/pond-banner.jpg")
+.homepage-img
+  display: block
+  margin: 0 auto
+  width: 100%
 
-.conclusion
-  background-image: url("../images/homepage/pond-sunset.jpg")
-  padding-bottom: 140px
+.homepage-text
+  @extend .center-text
+  margin: 2em auto 0 auto
+  width: 75%
 
 
 /*  ========================================
@@ -466,15 +473,11 @@ form input
   height: 340px
 
 .about-text-section
-  padding: 25px
-
-.about-map
-  border-top: 1px solid $med-grey
-  border-right: 1px solid $med-grey
+  padding: 1em
 
 .tbl-contact-us
   font-size: 12px
-  margin: 20px auto 0 auto
+  margin: 2em auto 0 auto
   width: 80%
 
 
@@ -487,8 +490,8 @@ form input
 
 .order-option-bg-img
   display: block
-  height: 300px
-  padding: 50px 30px
+  height: 10em
+  //padding: 50px 30px
 
 .order-plants
   background-image: url("../images/order/index/order-plants.jpg")
@@ -504,19 +507,21 @@ form input
 
 .order-option-title
   border: 1px solid transparent
-  color: $dark-grey
-  line-height: 170px
+  height: 100%
+  width: 100%
+  line-height: 10em
   .order-option-bg-img:hover &
-    border: 1px solid $green
-    color: $green
+    opacity: 0.8
 
 
 /*  ========================================
     Fish page
     ========================================  */
 
+.fish-introduction
+  margin-bottom: 2em
+
 .fish-introduction-text
-  padding-right: 50px
 
 .freight-options
   padding: 10px
@@ -534,6 +539,7 @@ form input
   padding: 10px
 
 .listing-card
+  @extend .border-grey
   margin-bottom: 15px
   min-height: 440px
   padding: 20px
@@ -575,10 +581,11 @@ form input
     Fish food page
     ========================================  */
 
+.ff-intro
+  margin-bottom: 2em
+
 .ff-intro-text
-  padding-right: 40px
-
-
+  padding-right: 1em
 .ff-shipping-text
   padding: 10px
   li
@@ -593,7 +600,7 @@ form input
 
 .ff-filter,
 .link-ff-reference
-  margin-right: 60px
+  margin-right: 2em
 
 .ff-filter
   height: 32px
@@ -686,6 +693,9 @@ form input
     Aquaponics pages
     ========================================  */
 
+.aquaponics-intro
+  margin-bottom: 2em
+
 .aquaponics-intro-text
   padding-right: 20px
   p:nth-child(2)
@@ -698,11 +708,10 @@ form input
   height: 360px
 
 .aquaponics-material-section
+  @extend .border-grey
   background: $white
   min-height: 200px
   padding: 10px
-  h4
-    color: #909090
 
 .aquaponics-material-list
   margin-top: 10px
@@ -721,5 +730,6 @@ form input
 
 .subhdr-aquaponics-year
   font-weight: 400
-  margin-top: 20px
+  margin-top: 1em
+  margin-left: 0.65%
 
