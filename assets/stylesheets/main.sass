@@ -61,32 +61,44 @@ $white: #fff
 $off-white: #e0e0e0
 $font-primary: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 
+/*  ========================================
+    Responsive
+    ========================================  */
+
+@mixin tablet
+  @media screen and (min-width: 560px)
+    @content
+
+@mixin desktop
+  @media screen and (min-width: 960px)
+    @content
+
 
 /*  ========================================
     Custom styles
     ========================================  */
 
 body
-  //background: $dark-blue
-  //background: -webkit-linear-gradient(to right, $dark-blue, $light-blue)
-  //background: -moz-linear-gradient(to right, $dark-blue, $light-blue)
-  //background: linear-gradient(to right, $dark-blue, $light-blue) 
   background: $white
   color: $dark-grey
   font: $font-primary
-  //padding-top: 30px
-  //padding-bottom: 30px
 
 
 /*  ========================================
     Backgrounds
     ========================================  */
 
-.bg-white
+@mixin bg-white
   background: $white
 
-.bg-grey
+.bg-white
+  @include bg-white
+
+@mixin bg-grey
   background: $light-grey
+
+.bg-grey
+  @include bg-grey
 
 .bg-img
   background-size: cover
@@ -127,6 +139,9 @@ body
 .border-bottom-grey
   border-bottom: 1px solid $med-grey
 
+.border-top-grey
+  border-top: 1px solid $med-grey
+
 .border-grey
   border: 1px solid $med-grey 
 
@@ -143,7 +158,7 @@ a
 
 .list-square-bullets
   list-style-type: square
-  padding-left: 30px
+  padding-left: 2rem
 
 
 /*  ========================================
@@ -253,7 +268,7 @@ strong
     ========================================  */
 
 p:not(:last-child)
-  margin-bottom: 20px
+  margin-bottom: 1em
 
 
 /*  ========================================
@@ -269,17 +284,20 @@ p:not(:last-child)
 
 .container
   margin: 0 auto
-  padding: 30px
-  width: 960px 
-
-.text-container
-  margin: 0 auto
-  padding: 30px
-  width: 960px
+  width: 300px
+  @include tablet
+    width: 560px
+    padding: 30px
+  @include desktop
+    width: 960px 
 
 .row
   margin: 0 auto
-  width: 960px 
+  width: 300px
+  @include tablet
+    width: 560px
+  @include desktop
+    width: 960px 
 
 
 /*  ========================================
@@ -289,15 +307,33 @@ p:not(:last-child)
 %col
   display: inline-block
   vertical-align: top
+
+@mixin col
+  display: inline-block
+  vertical-align: top
   
+@mixin col-1-2
+  @include col
+  margin-left: 0.5%
+  margin-right: 0.5%
+  width: 48%
+
 .col-1-2
-  @extend %col
-  width: 50%
+  @include col-1-2
+
+@mixin col-1-3
+  @include col
+  margin-left: 0.5%
+  margin-right: 0.5%
+  width: 32%
 
 .col-1-3
-  @extend %col
+  @include col-1-3
+
+@mixin col-2-3
+  @include col
   margin: 0 0.5%
-  width: 32%
+  width: 66%
 
 .col-2-3
   @extend %col
@@ -314,15 +350,22 @@ p:not(:last-child)
   margin: 0 1.5%
   width: 80%
 
-.col-1-4
-  @extend %col
-  margin: 0 0.5%
+@mixin col-1-4
+  @include col
+  margin-left: 0.5%
+  margin-right: 0.5%
   width: 24%
 
-.col-3-4
-  @extend %col
+.col-1-4
+  @include col-1-4
+
+@mixin col-3-4
+  @include col
   margin: 0 0.5%
   width: 74%
+
+.col-3-4
+  @include col-3-4
 
 
 /*  ========================================
@@ -330,9 +373,11 @@ p:not(:last-child)
     ========================================  */
 
 .nav
-  float: right
-  text-align: right
+  text-align: center
   text-transform: uppercase
+  @include desktop
+    float: right
+    text-align: right
   li
     display: inline-block
   a
@@ -374,15 +419,26 @@ p:not(:last-child)
   @extend .border-bottom-grey
   padding-top: 1em
   padding-bottom: 0.5em 
-  margin-bottom: 2em
+  margin-bottom: 1em
 
 .logo
-  display: inline-block
+  display: block
+  text-align: center
+  margin-bottom: 0.5em
+  @include tablet
+    margin-bottom: 0
+  @include desktop 
+    display: inline-block
 
 .tagline
-  float: left
-  line-height: 42px
-  margin-left: 20px
+  display: none
+  @include tablet
+    display: block
+    text-align: center
+  @include desktop 
+    float: left
+    line-height: 42px
+    margin-left: 1em
 
 
 /*  ========================================
@@ -445,9 +501,8 @@ form input
     ========================================  */
 
 .homepage-content
-  box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2)
-  margin-top: 2em
-  padding-bottom: 2em
+  @include desktop
+    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2)
 
 .homepage-img
   display: block
@@ -457,26 +512,53 @@ form input
 .homepage-text
   @extend .center-text
   margin: 2em auto 0 auto
-  width: 75%
+  width: 100%
+  @include desktop
+    width: 75%
 
 
 /*  ========================================
     About page
     ========================================  */
 
-.about-bg
-  background-image: url("../images/about/ponds-plane.jpg")
-
 .about-img-1,
-.about-img-2,
+.about-img-2-container,
 .about-map
-  height: 340px
+  display: block
+  margin: 0 auto
+  width: 100%
+  height: 200px
+  @include tablet
+    width: 75%
+    height: 300px
+  @include desktop
+    @include col-1-2
+    height: 340px
+
+.about-bio
+  display: flex
+  flex-wrap: wrap
+  section
+    order: 2
+  img
+    order: 1
+  @include desktop
+    display: block
+
+.about-img-2
+  width: 100%
+  height: 100%
 
 .about-text-section
-  padding: 1em
+  margin-top: 1em
+  margin-bottom: 1em
+  @include desktop
+    @include col-1-2
+    margin: 0
+    padding: 1em
 
 .tbl-contact-us
-  font-size: 12px
+  font-size: 0.75em
   margin: 2em auto 0 auto
   width: 80%
 
@@ -491,7 +573,6 @@ form input
 .order-option-bg-img
   display: block
   height: 10em
-  //padding: 50px 30px
 
 .order-plants
   background-image: url("../images/order/index/order-plants.jpg")
@@ -522,45 +603,58 @@ form input
   margin-bottom: 2em
 
 .fish-introduction-text
+  margin-top: 1em
+  margin-bottom: 1em
+  @include desktop
+    @include col-1-2
+    margin: 0
+    padding-right: 1em
 
 .freight-options
-  padding: 10px
+  padding: 1em
   h3
-    margin-bottom: 5px
+    margin-bottom: 0.5em 
     &:not(:first-child)
-      margin-top: 10px
+      margin-top: 0.5em
+  @include desktop
+    @include col-1-2
 
 .order-fish-btn
   display: block
-  font-size: 24px
-  margin: 50px auto 0 auto
-  width: 400px
-  height: 50px
-  padding: 10px
+  margin: 0 auto 1em auto
+  width: 50%
 
 .listing-card
-  @extend .border-grey
-  margin-bottom: 15px
-  min-height: 440px
-  padding: 20px
+  @extend .border-top-grey
+  padding-bottom: 1em
+  padding-top: 1em
   text-align: center
   img
     height: 100px
-    max-width: 260px
+    max-width: 100%
+  @include tablet
+    @include col-1-2
+    border: 1px solid $med-grey 
+    margin-bottom: 1em
+    min-height: 440px
+    padding-left: 0.5em
+    padding-right: 0.5em
+  @include desktop
+    @include col-1-3
 
 .latin-name
   font-style: italic
-  margin-bottom: 20px
 
 .listing-card-desc
   text-align: left
 
 .tbl-container
-  margin: 20px 0 20px 0
-  min-height: 75px
+  margin: 1em 0
+  @include tablet
+    min-height: 75px
 
 .tbl-fish-prices
-  margin: 0 auto 20px auto
+  margin: 0 auto
   th, td
     vertical-align: text-bottom
     width: 50%
@@ -582,29 +676,69 @@ form input
     ========================================  */
 
 .ff-intro
-  margin-bottom: 2em
+  margin-bottom: 1rem
 
 .ff-intro-text
-  padding-right: 1em
+  @include desktop
+    @include col-2-3
+    margin-top: 1rem
+    padding-right: 1em
+
 .ff-shipping-text
-  padding: 10px
+  margin-top: 1em
+  margin-bottom: 1em
+  padding: 0.5em
   li
-    margin-top: 5px
+    margin-top: 0.5em
+  @include desktop
+    @include col-1-3
 
 .hdr-listings
-  line-height: 32px
-  padding-top: 20px
-  padding-bottom: 20px
-  & > *
-    float: left
-
-.ff-filter,
-.link-ff-reference
-  margin-right: 2em
+  padding: 1em
+  span
+    display: block
+    @include desktop
+      float: left
+      line-height: 2rem
+  @include desktop
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
 
 .ff-filter
-  height: 32px
-  margin-left: 5px
+  @extend .bg-white
+  margin: 1em
+  width: 90%
+  height: 3rem
+  @include desktop
+    float: left
+    height: 2rem
+    margin: 0 1rem 0 0.5rem
+    width: 20%
+
+.link-ff-reference
+  display: block
+  margin: 1em auto
+  text-align: center
+  @include tablet
+    @include col-1-2
+  @include desktop
+    float: left
+    line-height: 2rem
+    margin: 0
+    margin-right: 1em
+    width: 15%
+
+.form-view-cart
+  display: block
+  margin: 1em auto
+  text-align: center
+  @include tablet
+    @include col-1-2
+  @include desktop
+    float: right
+    margin: 0 2rem 0 0
+    line-height: 2rem
+    width: 15%
 
 .tbl-ff-reference
   font-size: 12px
@@ -618,44 +752,123 @@ form input
       color: #707070
 
 .listing-row
-  padding: 30px
+  overflow: hidden
+  padding-top: 2em
+  padding-bottom: 2em
+  position: relative
+  &:not(:first-child)
+    @extend .border-top-grey
+
+.listing-row-link-img
+  @include tablet
+    @include col-1-2
+  @include desktop
+    @include col-1-4
+    float: left
 
 .listing-row-img
-  width: 100%
   height: 180px
+  width: 100%
+  @include tablet
+    width: 100%
+  @include desktop
+    height: 180px
+    width: 100%
 
 .link-ingredients
   text-align: center
 
 .listing-row-info
-  padding: 10px
+  @include tablet
+    @include col-1-2
+  @include desktop
+    @include col-3-4
+    padding: 10px
 
 .listing-row-header
-  margin-bottom: 10px
+  @include desktop
+    margin-bottom: 1rem
+    margin-right: 10rem
+    position: absolute
+    left: 27%
+    top: 15%
+    width: 73%
 
 .listing-row-id
-  float: left
+  margin-top: 1rem
+  text-align: center
+  @include desktop
+    margin: 0
+    float: left
 
 .listing-row-name
-  float: left
-  line-height: 32px
-  margin-left: 20px
+  margin-top: 0.5rem
+  margin-bottom: 2rem 
+  text-align: center
+  font-size: 1rem
+  @include tablet
+    font-size: 20px 
+  @include desktop
+    float: left
+    line-height: 2rem
+    margin: 0 0 0 2rem
+
+.listing-row-desc
+  margin-top: 1rem
+  @include tablet
+    @include col-1-2
+    margin-top: 0 
+  @include desktop
+    position: absolute
+    left: 27%
+    top: 30%
+    width: 55%
 
 .listing-row-pricing
-  text-align: right
-  .add-cart-btn
-    float: right
-    margin-top: 10px
+  @include bg-grey
+  margin-top: 2rem
+  padding: 1rem
+  @include tablet
+  @include desktop
+    @include bg-white
+    margin-top: 1rem 
+    padding: 0
+    position: absolute
+    right: 0
+    top: 25%
+    width: 15%
 
 .listing-row-price
-  float: right
+  float: left 
+  @include tablet
+  @include desktop
+    float: right
 
 .listing-row-shipping
-  float: right
+  float: left
+  margin-left: 1rem
   font-size: 12px
-  margin-top: 10px
   h5
     line-height: 1em
+  @include tablet
+  @include desktop
+    float: right
+    margin-left: 0
+    margin-top: 0.5rem
+    text-align: right
+
+.add-cart-btn
+  clear: both
+  margin: 1rem auto 0 auto
+  width: 100%
+  @include tablet
+    clear: none
+    margin-top: 0
+    float: right
+    @include col-1-2
+  @include desktop
+    float: right
+    margin-top: 0.5rem
 
 .dialog-img
   display: block
