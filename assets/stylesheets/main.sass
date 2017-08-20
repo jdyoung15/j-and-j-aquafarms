@@ -122,6 +122,11 @@ body
     Alignments
     ========================================  */
 
+@mixin horizontal-center
+  display: block
+  margin-left: auto
+  margin-right: auto
+
 .center-text
   text-align: center
 
@@ -138,6 +143,9 @@ body
 
 .border-bottom-grey
   border-bottom: 1px solid $med-grey
+
+@mixin border-top-grey
+  border-top: 1px solid $med-grey
 
 .border-top-grey
   border-top: 1px solid $med-grey
@@ -256,9 +264,6 @@ h4
 h5 
   font-size: 12px
 
-.quote 
-  font-style: italic
-
 strong 
   font-weight: 400
 
@@ -333,7 +338,7 @@ p:not(:last-child)
 @mixin col-2-3
   @include col
   margin: 0 0.5%
-  width: 66%
+  width: 65%
 
 .col-2-3
   @extend %col
@@ -491,7 +496,7 @@ a
     ========================================  */
 
 form input
-  .listing-row-pricing &, .hdr-listings &
+  .listing-row-pricing &, .ff-listings-hdr &
     border: 0
     font: $font-primary
 
@@ -502,20 +507,33 @@ form input
 
 .homepage-content
   @include desktop
-    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2)
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2)
 
 .homepage-img
-  display: block
-  margin: 0 auto
-  width: 100%
+  display: none
+  @include desktop
+    display: block
 
 .homepage-text
-  @extend .center-text
-  margin: 2em auto 0 auto
-  width: 100%
+  margin-top: 1.5rem
+  &:not(:last-child)
+    margin-bottom: 0
   @include desktop
-    width: 75%
+    margin-top: 0
+    padding: 1.5rem 15%
 
+.quote 
+  font-style: italic
+  font-size: 0.7rem
+  text-align: center
+  @include tablet
+    font-size: 1rem
+
+.exposition
+  text-align: left
+  @include desktop
+    @include bg-grey
+    text-align: center
 
 /*  ========================================
     About page
@@ -675,49 +693,50 @@ form input
     Fish food page
     ========================================  */
 
-.ff-intro
-  margin-bottom: 1rem
-
 .ff-intro-text
   @include desktop
     @include col-2-3
     margin-top: 1rem
-    padding-right: 1em
+    padding-right: 1rem
 
 .ff-shipping-text
-  margin-top: 1em
-  margin-bottom: 1em
-  padding: 0.5em
+  margin-top: 1rem
+  padding: 1rem
   li
-    margin-top: 0.5em
+    margin-top: 0.5rem
   @include desktop
     @include col-1-3
+    margin-top: 0
 
-.hdr-listings
-  padding: 1em
+.ff-listings-hdr
+  @include bg-grey
+  margin-top: 1rem
+  padding: 1rem
   span
     display: block
+    &:not(:first-child)
+      margin-top: 1rem
     @include desktop
       float: left
+      &:not(:first-child)
+        margin-top: 0
       line-height: 2rem
   @include desktop
-    padding-top: 0.5rem
-    padding-bottom: 0.5rem
 
 .ff-filter
-  @extend .bg-white
-  margin: 1em
-  width: 90%
+  @include bg-white
   height: 3rem
+  margin-top: 0.5rem
+  width: 100%
   @include desktop
     float: left
     height: 2rem
-    margin: 0 1rem 0 0.5rem
+    margin: 0 1rem
     width: 20%
 
 .link-ff-reference
-  display: block
-  margin: 1em auto
+  @include horizontal-center
+  margin-top: 1rem
   text-align: center
   @include tablet
     @include col-1-2
@@ -729,8 +748,8 @@ form input
     width: 15%
 
 .form-view-cart
-  display: block
-  margin: 1em auto
+  @include horizontal-center
+  margin-top: 1rem
   text-align: center
   @include tablet
     @include col-1-2
@@ -751,15 +770,31 @@ form input
     &:hover
       color: #707070
 
+.listing-rows
+  margin-top: 2rem
+  @include desktop
+    margin-top: 0
+
 .listing-row
-  overflow: hidden
-  padding-top: 2em
-  padding-bottom: 2em
-  position: relative
+  padding-top: 2rem
+  padding-bottom: 2rem
   &:not(:first-child)
-    @extend .border-top-grey
+    @include border-top-grey
+
+  @include desktop
+    overflow: hidden
+    position: relative
+
+.listing-row-header
+  @include desktop
+    position: absolute
+    left: 25%
+    top: 20%
+    width: 75%
 
 .listing-row-link-img
+  p
+    text-align: center
   @include tablet
     @include col-1-2
   @include desktop
@@ -768,56 +803,33 @@ form input
 
 .listing-row-img
   height: 180px
+  margin-top: 1rem
   width: 100%
-  @include tablet
-    width: 100%
-  @include desktop
-    height: 180px
-    width: 100%
-
-.link-ingredients
-  text-align: center
-
-.listing-row-info
-  @include tablet
-    @include col-1-2
-  @include desktop
-    @include col-3-4
-    padding: 10px
-
-.listing-row-header
-  @include desktop
-    margin-bottom: 1rem
-    margin-right: 10rem
-    position: absolute
-    left: 27%
-    top: 15%
-    width: 73%
 
 .listing-row-id
-  margin-top: 1rem
   text-align: center
-  @include desktop
-    margin: 0
+  @include tablet
     float: left
+  @include desktop
+    margin-left: 1rem
 
 .listing-row-name
   margin-top: 0.5rem
-  margin-bottom: 2rem 
   text-align: center
   font-size: 1rem
   @include tablet
-    font-size: 20px 
-  @include desktop
     float: left
+    font-size: 18px
     line-height: 2rem
-    margin: 0 0 0 2rem
+    margin-left: 1rem
+    margin-top: 0
+  @include desktop
+    font-size: 20px 
 
 .listing-row-desc
   margin-top: 1rem
   @include tablet
     @include col-1-2
-    margin-top: 0 
   @include desktop
     position: absolute
     left: 27%
@@ -826,16 +838,14 @@ form input
 
 .listing-row-pricing
   @include bg-grey
-  margin-top: 2rem
+  margin-top: 1rem
   padding: 1rem
-  @include tablet
   @include desktop
     @include bg-white
-    margin-top: 1rem 
     padding: 0
     position: absolute
-    right: 0
-    top: 25%
+    right: 0.5%
+    top: 30%
     width: 15%
 
 .listing-row-price
@@ -845,12 +855,15 @@ form input
     float: right
 
 .listing-row-shipping
-  float: left
-  margin-left: 1rem
-  font-size: 12px
+  float: right
+  font-size: 0.75rem
+  text-align: right
   h5
-    line-height: 1em
+    line-height: 0.75rem
   @include tablet
+    float: left
+    margin-left: 1rem
+    text-align: left
   @include desktop
     float: right
     margin-left: 0
@@ -858,8 +871,9 @@ form input
     text-align: right
 
 .add-cart-btn
+  @include horizontal-center
   clear: both
-  margin: 1rem auto 0 auto
+  margin-top: 2rem
   width: 100%
   @include tablet
     clear: none
@@ -894,13 +908,18 @@ form input
     ========================================  */
 
 .bulletin
-  color: $dark-grey
-  padding: 20px
+  display: block
+  padding: 1rem
   text-align: center
   &:hover img
     border: 1px solid $green
   img
+    @include horizontal-center
     height: 150px
+  @include tablet
+    @include col-1-2
+  @include desktop
+    @include col-1-3
 
 /*  ========================================
     Aquaponics pages
