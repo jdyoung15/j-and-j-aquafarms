@@ -1,3 +1,34 @@
+$(".modal-dialog").dialog({ 
+  autoOpen: false,
+  draggable: false,
+  modal: true,
+  resizable: false
+});
+
+$(".opener").click(function() {
+  // If desktop mode, show ingredients popup instead of ingredients html page.
+  if (screen.width >= 960) {
+    var ffIngredientId = $(this).data('id');
+    var dialogId = `#${ffIngredientId}-dialog`;
+    $(dialogId).dialog("open");
+    $(`${dialogId} .ff-ingredient-snippet`).load(`snippets/${ffIngredientId}.html`);
+
+
+    // Close dialog when user clicks the "x" button
+    $(".btn-close").click(function() {
+      $(dialogId).dialog("close");
+    });
+    
+    // Close dialog when user clicks outside the dialog box
+    $(".ui-widget-overlay").click(function() {
+      $(dialogId).dialog("close");
+    });
+
+    // Prevent page from reloading to ingredients page
+    return false;
+  }
+}); 
+
 // Update fish food listings with selected filter options
 $(".ff-filter").change(function() {
   // Value from fish food type select

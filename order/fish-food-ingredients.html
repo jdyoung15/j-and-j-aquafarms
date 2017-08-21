@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>J&J Aquafarms</title>
+    <link rel="stylesheet" href="../assets/stylesheets/main.css">
+  </head>
+  <body>
+
+    <header class="primary-header container">
+      <a href="../index.html">
+        <h1 class="logo">J & J Aquafarms</h1>
+      </a>
+      <div class="nav-row group">
+        <h5 class="tagline">
+          Consultant and Supplier for Aquaculture and Aquaponic systems
+        </h4>
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li class="dropdown">
+              <a href="index.html" class="dropbtn active">Order</a>
+              <div class="dropdown-content">
+                <a href="#">Plants</a>
+                <a href="fish.html" class="active">Fish</a>
+                <a href="fish-food.html">Fish Food</a>
+                <a href="bulletins.html">Technical Bulletins (Free)</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="../aquaponics/index.html" class="dropbtn">Aquaponics</a>
+              <div class="dropdown-content">
+                <a href="../aquaponics/build-own.html">Build your own</a>
+                <a href="../aquaponics/cart.html">CART</a>
+                <a href="../aquaponics/shs.html">Sanger HS</a>
+                <a href="../aquaponics/chs.html">Caruthers HS</a>
+                <a href="../aquaponics/clovis.html">Clovis</a>
+                <a href="../aquaponics/avenal.html">Avenal</a>
+              </div>
+            </li>
+            <li><a href="../index.html">Blog</a></li>
+            <li><a href="../index.html">Stay</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="ff-ingredient-snippet row">
+    </div>
+
+    <footer class="primary-footer container">
+      <div class="group">
+        <small class="copyright">&copy; J & J Aquafarms</small>
+        <small class="email">info@jandjaquafarms.com</small>
+      </div>
+    </footer>
+
+    <script src="../assets/scripts/jquery.js"></script>
+    <script>
+      var ffId = window.location.hash.substring(1);
+      $('.ff-ingredient-snippet').load(`snippets/${ffId}.html`);
+    </script>
+  </body>
+
+</html>
