@@ -681,8 +681,15 @@ a {
     .ff-filter {
       float: left;
       height: 2rem;
-      margin: 0 1rem;
-      width: 20%; } }
+      margin: 0 1rem 0 0.5rem; } }
+
+@media screen and (min-width: 960px) {
+  #ff-types {
+    width: 15%; } }
+
+@media screen and (min-width: 960px) {
+  #fish-types {
+    width: 30%; } }
 
 .link-ff-reference {
   display: block;
@@ -690,20 +697,24 @@ a {
   margin-right: auto;
   margin-top: 1rem;
   text-align: center; }
+  .link-ff-reference span {
+    display: inline-block; }
+    @media screen and (min-width: 960px) {
+      .link-ff-reference span {
+        display: none; } }
   @media screen and (min-width: 560px) {
     .link-ff-reference {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
       margin-right: 0.5%;
-      width: 48%; } }
+      width: 48%;
+      line-height: 2rem; } }
   @media screen and (min-width: 960px) {
     .link-ff-reference {
       float: left;
-      line-height: 2rem;
-      margin: 0;
-      margin-right: 1em;
-      width: 15%; } }
+      margin: 0 0 0 1rem;
+      width: auto; } }
 
 .form-view-cart {
   display: block;
@@ -721,9 +732,9 @@ a {
   @media screen and (min-width: 960px) {
     .form-view-cart {
       float: right;
-      margin: 0 2rem 0 0;
+      margin: 0;
       line-height: 2rem;
-      width: 15%; } }
+      width: auto; } }
 
 .tbl-ff-reference {
   font-size: 12px;
@@ -957,20 +968,45 @@ a {
   margin-bottom: 2em; }
 
 .aquaponics-intro-text {
-  padding-right: 20px; }
-  .aquaponics-intro-text p:nth-child(2) {
-    margin-bottom: 10px; }
+  margin-top: 1rem; }
+  @media screen and (min-width: 960px) {
+    .aquaponics-intro-text {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 48%;
+      float: left;
+      margin-top: 0;
+      padding-right: 20px; } }
 
 .aquaponics-questions {
   margin-bottom: 20px; }
 
 .aquaponics-intro-img {
-  height: 360px; }
+  width: 100%; }
+  @media screen and (min-width: 960px) {
+    .aquaponics-intro-img {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 48%;
+      float: right;
+      height: 360px; } }
 
 .aquaponics-material-section {
   background: #fff;
-  min-height: 200px;
-  padding: 10px; }
+  margin-bottom: 1rem;
+  padding: 0.5rem; }
+  @media screen and (min-width: 960px) {
+    .aquaponics-material-section {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 32%;
+      min-height: 200px; } }
 
 .aquaponics-material-list {
   margin-top: 10px; }

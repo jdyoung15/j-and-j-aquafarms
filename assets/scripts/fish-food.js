@@ -8,10 +8,12 @@ $(".modal-dialog").dialog({
 $(".opener").click(function() {
   // If desktop mode, show ingredients popup instead of ingredients html page.
   if (screen.width >= 960) {
-    var ffIngredientId = $(this).data('id');
-    var dialogId = `#${ffIngredientId}-dialog`;
+    var ffId = $(this).data('id');
+    var dialogId = `#${ffId}-dialog`;
     $(dialogId).dialog("open");
-    $(`${dialogId} .ff-ingredient-snippet`).load(`snippets/${ffIngredientId}.html`);
+    if (ffId !== 'ff-reference') {
+      $(`${dialogId} .ff-ingredient-snippet`).load(`snippets/${ffId}.html`);
+    }
 
 
     // Close dialog when user clicks the "x" button
