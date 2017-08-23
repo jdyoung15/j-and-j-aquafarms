@@ -1012,7 +1012,7 @@ a {
   margin-top: 10px; }
 
 .hdr-aquaponics-section {
-  padding-bottom: 10px; }
+  padding-bottom: 1rem; }
 
 .img-aquaponics-preview {
   height: 110px;
@@ -1020,12 +1020,39 @@ a {
   margin-top: 10px; }
 
 .lightbox .lb-image {
-  height: 75vh !important;
+  height: 50vh !important;
   width: auto !important; }
+  @media screen and (min-width: 960px) {
+    .lightbox .lb-image {
+      height: 75vh !important; } }
 
 .subhdr-aquaponics-year {
   font-weight: 400;
   margin-top: 1em;
   margin-left: 0.65%; }
+
+.galleria {
+  background: #000;
+  height: 400px;
+  max-width: 700px; }
+  @media screen and (min-width: 560px) {
+    .galleria {
+      height: 500px; } }
+  @media screen and (min-width: 960px) {
+    .galleria {
+      height: 600px; } }
+
+.galleria-theme-classic .galleria-info {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.galleria-theme-classic .galleria-counter {
+  bottom: auto;
+  top: 0; }
+
+.galleria-theme-classic .galleria-thumbnails-container {
+  height: 100px; }
 
 /*# sourceMappingURL=main.css.map */

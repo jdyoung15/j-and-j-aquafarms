@@ -982,7 +982,7 @@ form input
   margin-top: 10px
 
 .hdr-aquaponics-section
-  padding-bottom: 10px
+  padding-bottom: 1rem
 
 .img-aquaponics-preview
   height: 110px
@@ -990,11 +990,34 @@ form input
   margin-top: 10px
 
 .lightbox .lb-image
-  height : 75vh !important
+  height: 50vh !important
   width: auto !important
+  @include desktop
+    height: 75vh !important
 
 .subhdr-aquaponics-year
   font-weight: 400
   margin-top: 1em
   margin-left: 0.65%
 
+.galleria
+  background: #000
+  height: 400px
+  max-width: 700px
+  @include tablet
+    height: 500px
+  @include desktop
+    height: 600px
+
+.galleria-theme-classic .galleria-info
+  top: auto
+  bottom: 0
+  left: 0
+  width: 100%
+
+.galleria-theme-classic .galleria-counter
+  bottom: auto
+  top: 0
+
+.galleria-theme-classic .galleria-thumbnails-container
+  height: 100px
