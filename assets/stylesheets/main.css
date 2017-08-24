@@ -954,7 +954,9 @@ a {
   .bulletin h4 {
     margin-top: 0.5rem; }
   .bulletin p {
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
   @media screen and (min-width: 560px) {
     .bulletin {
       display: inline-block;
