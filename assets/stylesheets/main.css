@@ -1063,6 +1063,9 @@ a {
     .pbs-aquaponics-video {
       height: 620px; } }
 
+.video-caption {
+  font-size: 0.75rem; }
+
 .galleria {
   display: block;
   margin-left: auto;
