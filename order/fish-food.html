@@ -65,37 +65,42 @@
 
     </section>
 
-
-    <header class="ff-listings-hdr container group">
-      <span>Fish food type:</span>
-      <select class="ff-filter" id="ff-types">
-        <option value="listing-row">Any</option>
-        <option value="floating">Floating</option>
-        <option value="sinking">Sinking</option>
-        <option value="floating-sinking">Floating/sinking</option>
-        <option value="medicated-floating">Medicated floating</option>
-        <option value="medicated-sinking">Medicated sinking</option>
-      </select>
-      <span>Fish type:</span>
-      <select class="ff-filter" id="fish-types">
-        <option value="listing-row">Any</option>
-        <option value="koi-1-12">Koi Goldfish 1-12"</option>
-        <option value="koi-8-36">Koi 8-36"</option>
-        <option value="tropicals-over-3">African Cichlids, Tilapia, Tropicals over 3"</option>
-        <option value="tropicals-over-8">Oscar Pacu Arowana Tilapia Tropicals over 8"</option>
-        <option value="tropicals-small">&lt;2&quot; Koi, Angels, Discus, Saltwater, Sm. tropical</option>
-        <option value="fry-small-fish">Fry, Small Fish (&lt;1&quot;)</option>
-      </select>
-      <a class="opener link-green link-ff-reference" data-id="ff-reference" href="../assets/images/order/fish-food/fish-food-reference.pdf" target="_blank">Fish food reference<span>&nbsp;(PDF)</span></a>
-      <form class="form-view-cart" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="business" value="john@jandjaquafarms.com">
-        <input class="btn-green view-cart-btn" type="submit" value="View cart">
-        <input type="hidden" name="display" value="1">
-      </form>
-    </header>
-
     <section class="listing-rows row">
+
+      <header class="ff-listings-hdr row group">
+        <div class="ff-filter-container">
+          <h5>Fish food type:</h5>
+          <select class="ff-filter" id="ff-types">
+            <option value="listing-row">Any</option>
+            <option value="floating">Floating</option>
+            <option value="sinking">Sinking</option>
+            <option value="floating-sinking">Floating/sinking</option>
+            <option value="medicated-floating">Medicated floating</option>
+            <option value="medicated-sinking">Medicated sinking</option>
+          </select>
+        </div>
+        <div class="ff-filter-container">
+          <h5>Fish type:</h5>
+          <select class="ff-filter" id="fish-types">
+            <option value="listing-row">Any</option>
+            <option value="koi-1-12">Koi Goldfish 1-12"</option>
+            <option value="koi-8-36">Koi 8-36"</option>
+            <option value="tropicals-over-3">African Cichlids, Tilapia, Tropicals over 3"</option>
+            <option value="tropicals-over-8">Oscar Pacu Arowana Tilapia Tropicals over 8"</option>
+            <option value="tropicals-small">&lt;2&quot; Koi, Angels, Discus, Saltwater, Sm. tropical</option>
+            <option value="fry-small-fish">Fry, Small Fish (&lt;1&quot;)</option>
+          </select>
+        </div>
+        <div class="view-cart-container">
+          <a class="opener link-ff-reference" data-id="ff-reference" href="../assets/images/order/fish-food/fish-food-reference.pdf" target="_blank"><img src="../assets/images/shared/if_info-alt_383122.png"></a>
+          <form class="form-view-cart" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="business" value="john@jandjaquafarms.com">
+            <input class="view-cart-btn" type="image" src="../assets/images/shared/if_shopping-cart_326700.png" name="submit">
+            <input type="hidden" name="display" value="1">
+          </form>
+        </div>
+      </header>
 
       <div id="ff45" class="listing-row floating floating-sinking koi-1-12 tropicals-over-3 tropicals-small">
         <header class="listing-row-header group">

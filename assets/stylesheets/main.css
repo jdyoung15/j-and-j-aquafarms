@@ -414,7 +414,7 @@ a {
 /*  ========================================
  * Forms
  * ========================================  */
-.listing-row-pricing form input, .ff-listings-hdr form input {
+.listing-row-pricing form input, .listing-rows form input {
   border: 0;
   font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -663,83 +663,57 @@ a {
       margin-top: 0; } }
 
 .ff-listings-hdr {
-  background: #f5f5f5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin-top: 1rem;
-  padding: 1rem; }
-  .ff-listings-hdr span {
-    display: block; }
-    .ff-listings-hdr span:not(:first-child) {
-      margin-top: 1rem; }
-    @media screen and (min-width: 960px) {
-      .ff-listings-hdr span {
-        float: left;
-        line-height: 2rem; }
-        .ff-listings-hdr span:not(:first-child) {
-          margin-top: 0; } }
+  padding-bottom: 2rem; }
+  @media screen and (min-width: 560px) {
+    .ff-listings-hdr {
+      display: block; } }
+
+.ff-filter-container {
+  order: 2;
+  width: 100%; }
+  @media screen and (min-width: 560px) {
+    .ff-filter-container {
+      display: inline-block;
+      margin-right: 2%;
+      width: 38%; } }
+  @media screen and (min-width: 960px) {
+    .ff-filter-container {
+      width: 42%; } }
 
 .ff-filter {
   background: #fff;
-  height: 3rem;
-  margin-top: 0.5rem;
+  height: 2rem;
   width: 100%; }
   @media screen and (min-width: 960px) {
     .ff-filter {
-      float: left;
-      height: 2rem;
-      margin: 0 1rem 0 0.5rem; } }
+      float: left; } }
 
-@media screen and (min-width: 960px) {
-  #ff-types {
-    width: 15%; } }
+.intro-listing-row {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
-@media screen and (min-width: 960px) {
-  #fish-types {
-    width: 30%; } }
+.view-cart-container {
+  height: 2rem;
+  order: 1;
+  vertical-align: bottom;
+  width: 30%; }
+  @media screen and (min-width: 560px) {
+    .view-cart-container {
+      display: inline-block;
+      width: 15%; } }
+  @media screen and (min-width: 960px) {
+    .view-cart-container {
+      width: 9%; } }
 
 .link-ff-reference {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  text-align: center; }
-  .link-ff-reference span {
-    display: inline-block; }
-    @media screen and (min-width: 960px) {
-      .link-ff-reference span {
-        display: none; } }
-  @media screen and (min-width: 560px) {
-    .link-ff-reference {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      width: 48%;
-      line-height: 2rem; } }
-  @media screen and (min-width: 960px) {
-    .link-ff-reference {
-      float: left;
-      margin: 0 0 0 1rem;
-      width: auto; } }
+  float: left; }
 
 .form-view-cart {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  text-align: center; }
-  @media screen and (min-width: 560px) {
-    .form-view-cart {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      width: 48%; } }
-  @media screen and (min-width: 960px) {
-    .form-view-cart {
-      float: right;
-      margin: 0;
-      line-height: 2rem;
-      width: auto; } }
+  float: right; }
 
 .tbl-ff-reference {
   font-size: 12px;

@@ -505,7 +505,7 @@ a
     ========================================  */
 
 form input
-  .listing-row-pricing &, .ff-listings-hdr &
+  .listing-row-pricing &, .listing-rows &
     border: 0
     font: $font-primary
 
@@ -716,65 +716,51 @@ form input
     margin-top: 0
 
 .ff-listings-hdr
-  @include bg-grey
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
   margin-top: 1rem
-  padding: 1rem
-  span
+  padding-bottom: 2rem
+  @include tablet
     display: block
-    &:not(:first-child)
-      margin-top: 1rem
-    @include desktop
-      float: left
-      &:not(:first-child)
-        margin-top: 0
-      line-height: 2rem
+
+.ff-filter-container
+  order: 2
+  width: 100%
+  @include tablet
+    display: inline-block
+    margin-right: 2%
+    width: 38%
   @include desktop
+    width: 42%
 
 .ff-filter
   @include bg-white
-  height: 3rem
-  margin-top: 0.5rem
+  height: 2rem
   width: 100%
   @include desktop
     float: left
-    height: 2rem
-    margin: 0 1rem 0 0.5rem
 
-#ff-types
-  @include desktop
+.intro-listing-row
+  padding-top: 1rem
+  padding-bottom: 1rem
+
+.view-cart-container
+  height: 2rem
+  order: 1
+  vertical-align: bottom
+  width: 30%
+  @include tablet
+    display: inline-block
     width: 15%
-
-#fish-types
   @include desktop
-    width: 30%
+    width: 9%
 
 .link-ff-reference
-  @include horizontal-center
-  margin-top: 1rem
-  text-align: center
-  span
-    display: inline-block
-    @include desktop
-      display: none
-  @include tablet
-    @include col-1-2
-    line-height: 2rem
-  @include desktop
-    float: left
-    margin: 0 0 0 1rem
-    width: auto
+  float: left
 
 .form-view-cart
-  @include horizontal-center
-  margin-top: 1rem
-  text-align: center
-  @include tablet
-    @include col-1-2
-  @include desktop
-    float: right
-    margin: 0
-    line-height: 2rem
-    width: auto
+  float: right
 
 .tbl-ff-reference
   font-size: 12px
