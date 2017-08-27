@@ -101,22 +101,13 @@ body
 .bg-grey
   @include bg-grey
 
-.bg-img
-  background-size: cover
-
 
 /*  ========================================
-    Overlays
+    Effects
     ========================================  */
 
-.overlay-low-opacity
-  background-color: rgba($light-grey, 0.7)
-
-.overlay-med-opacity
-  background-color: rgba($white, 0.86)
-
-.overlay-high-opacity
-  background: rgba($white, 0.95)
+@mixin shadow
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2)
 
 
 /*  ========================================
@@ -127,15 +118,6 @@ body
   display: block
   margin-left: auto
   margin-right: auto
-
-.center-text
-  text-align: center
-
-.left-text
-  text-align: left
-
-.right-text
-  text-align: right
 
 
 /*  ========================================
@@ -149,21 +131,15 @@ body
   border-top: 1px solid $med-grey
 
 .border-top-grey
-  border-top: 1px solid $med-grey
+  @include border-top-grey
 
 .border-grey
   border: 1px solid $med-grey 
-
-.border-dark-grey
-  border: 1px solid $dark-grey
 
 
 /*  ========================================
     Lists
     ========================================  */
-
-a
-  color: $dark-grey
 
 .list-square-bullets
   list-style-type: square
@@ -185,9 +161,9 @@ a
     opacity: 0.9
 
 .btn-close 
-  color: #a0a0a0
+  color: $med-grey
   float: right
-  font-size: 30px
+  font-size: 2rem
   &:hover 
     cursor: pointer
 
@@ -265,16 +241,14 @@ h4
 h5 
   font-size: 12px
 
+small
+  font-size: 12px
+
 strong 
   font-weight: 400
 
-
-/*  ========================================
-    Text
-    ========================================  */
-
 p:not(:last-child)
-  margin-bottom: 1em
+  margin-bottom: 1rem
 
 
 /*  ========================================
@@ -288,22 +262,19 @@ p:not(:last-child)
   -moz-box-sizing: border-box
   box-sizing: border-box
 
-.container
-  margin: 0 auto
+
+.row
+  @include horizontal-center
   width: 300px
   @include tablet
     width: 560px
-    padding: 30px
   @include desktop
     width: 960px 
 
-.row
-  margin: 0 auto
-  width: 300px
+.container
+  @extend .row
   @include tablet
-    width: 560px
-  @include desktop
-    width: 960px 
+    padding: 30px
 
 
 /*  ========================================
@@ -342,9 +313,7 @@ p:not(:last-child)
   width: 65%
 
 .col-2-3
-  @extend %col
-  margin: 0 0.5%
-  width: 66%
+  @include col-2-3
 
 .col-1-5
   @extend %col
@@ -381,9 +350,6 @@ p:not(:last-child)
 .nav
   text-align: center
   text-transform: uppercase
-  @include desktop
-    float: right
-    text-align: right
   li
     display: inline-block
   a
@@ -393,22 +359,23 @@ p:not(:last-child)
       color: $green
   .active
     color: $green
+  @include desktop
+    float: right
+    text-align: right
 
 .dropdown-content
+  @include shadow
   display: none
   position: absolute
   background-color: $light-grey
   min-width: 160px
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
   z-index: 1000
   .dropdown:hover &, .dropdown:active &
     display: block
   a
-    color: $dark-grey
     display: block
     padding: 10px
     text-align: left
-    text-decoration: none
     &:hover
       background-color: #f1f1f1
       color: $green
@@ -431,14 +398,14 @@ p:not(:last-child)
 
 .primary-header
   @extend .border-bottom-grey
-  padding-top: 1em
-  padding-bottom: 0.5em 
-  margin-bottom: 1em
+  padding-top: 1rem
+  padding-bottom: 0.5rem 
+  margin-bottom: 1rem
 
 .logo
   display: block
   text-align: center
-  margin-bottom: 0.5em
+  margin-bottom: 0.5rem
   @include tablet
     margin-bottom: 0
   @include desktop 
@@ -452,7 +419,7 @@ p:not(:last-child)
   @include desktop 
     float: left
     line-height: 42px
-    margin-left: 1em
+    margin-left: 1rem
 
 
 /*  ========================================
@@ -460,12 +427,10 @@ p:not(:last-child)
     ========================================  */
 
 .primary-footer
-  border-top: 1px solid #d8d8d8
-  margin-top: 2em
-  padding-top: 1em
-  padding-bottom: 1em
-  small
-    font-size: 12px
+  border-top: 1px solid $med-grey
+  margin-top: 2rem
+  padding-top: 1rem
+  padding-bottom: 1rem
   .copyright
     float: left
   .email
@@ -491,10 +456,11 @@ p:not(:last-child)
     ========================================  */
 
 a
+  color: $dark-grey
   text-decoration: none
 
 .link-green
-  color: #4caf50
+  color: $green
   &:hover
     color: #006600
     cursor: pointer
@@ -505,7 +471,7 @@ a
     ========================================  */
 
 form input
-  .listing-row-pricing &, .listing-rows &
+  .listing-row-pricing &, .ff-listings &
     border: 0
     font: $font-primary
 
@@ -516,7 +482,7 @@ form input
 
 .homepage-content
   @include desktop
-    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2)
+    @include shadow
 
 .homepage-img
   width: 100%
@@ -549,8 +515,7 @@ form input
 .about-img-1,
 .about-img-2-container,
 .about-map
-  display: block
-  margin: 0 auto
+  @include horizontal-center
   width: 100%
   height: 200px
   @include tablet
@@ -575,84 +540,53 @@ form input
   height: 100%
 
 .about-text-section
-  margin-top: 1em
-  margin-bottom: 1em
+  margin-top: 1rem
+  margin-bottom: 1rem
   @include desktop
     @include col-1-2
     margin: 0
-    padding: 1em
+    padding: 1rem
 
 .tbl-contact-us
-  font-size: 0.75em
-  margin: 2em auto 0 auto
+  font-size: 0.75rem
+  margin: 2rem auto 0 auto
   width: 80%
-
-
-/*  ========================================
-    Order landing page
-    ========================================  */
-
-.order-option
-  padding: 5px
-
-.order-option-bg-img
-  display: block
-  height: 10em
-
-.order-plants
-  background-image: url("../images/order/index/order-plants.jpg")
-
-.order-fish
-  background-image: url("../images/order/index/order-fish.jpg")
-
-.order-fish-food
-  background-image: url("../images/order/index/order-fish-food.jpg")
-
-.order-bulletin
-  background-image: url("../images/order/index/order-bulletin.jpg")
-
-.order-option-title
-  border: 1px solid transparent
-  height: 100%
-  width: 100%
-  line-height: 10em
-  .order-option-bg-img:hover &
-    opacity: 0.8
 
 
 /*  ========================================
     Fish page
     ========================================  */
 
-.fish-introduction
-  margin-bottom: 2em
-
 .fish-introduction-text
-  margin-top: 1em
-  margin-bottom: 1em
+  margin-top: 1rem
   @include desktop
     @include col-1-2
     margin: 0
     padding-right: 1em
 
-.freight-options
-  padding: 1em
+.fish-freight-options
+  margin-top: 1rem
+  padding: 1rem
   h3
-    margin-bottom: 0.5em 
+    margin-bottom: 0.5rem 
     &:not(:first-child)
-      margin-top: 0.5em
+      margin-top: 0.5rem
   @include desktop
     @include col-1-2
+    margin-top: 0
 
 .order-fish-btn
-  display: block
-  margin: 0 auto 1em auto
+  @include horizontal-center
+  margin-bottom: 1rem
   width: 50%
 
-.listing-card
+.fish-listings
+  margin-top: 2rem
+
+.fish-listing
   @extend .border-top-grey
-  padding-bottom: 1em
-  padding-top: 1em
+  padding-bottom: 1rem
+  padding-top: 1rem
   text-align: center
   img
     height: 100px
@@ -660,21 +594,21 @@ form input
   @include tablet
     @include col-1-2
     border: 1px solid $med-grey 
-    margin-bottom: 1em
+    margin-bottom: 1rem
     min-height: 440px
-    padding-left: 0.5em
-    padding-right: 0.5em
+    padding-left: 0.5rem
+    padding-right: 0.5rem
   @include desktop
     @include col-1-3
 
 .latin-name
   font-style: italic
 
-.listing-card-desc
+.fish-listing-desc
   text-align: left
 
 .tbl-container
-  margin: 1em 0
+  margin: 1rem 0
   @include tablet
     min-height: 75px
 
@@ -741,11 +675,7 @@ form input
   @include desktop
     float: left
 
-.intro-listing-row
-  padding-top: 1rem
-  padding-bottom: 1rem
-
-.view-cart-container
+.ff-buttons-container
   height: 2rem
   order: 1
   vertical-align: bottom
@@ -756,7 +686,7 @@ form input
   @include desktop
     width: 9%
 
-.link-ff-reference
+.ff-reference-btn
   float: left
 
 .form-view-cart
@@ -773,12 +703,12 @@ form input
     &:hover
       color: #707070
 
-.listing-rows
+.ff-listings
   margin-top: 2rem
   @include desktop
     margin-top: 0
 
-.listing-row
+.ff-listing
   padding-top: 2rem
   padding-bottom: 2rem
   &:not(:first-child)
@@ -788,14 +718,14 @@ form input
     overflow: hidden
     position: relative
 
-.listing-row-header
+.ff-listing-hdr
   @include desktop
     position: absolute
     left: 25%
     top: 20%
     width: 75%
 
-.listing-row-link-img
+.ff-listing-ingredients-link
   p
     text-align: center
   @include tablet
@@ -804,19 +734,19 @@ form input
     @include col-1-4
     float: left
 
-.listing-row-img
+.ff-listing-img
   height: 180px
   margin-top: 1rem
   width: 100%
 
-.listing-row-id
+.ff-listing-id
   text-align: center
   @include tablet
     float: left
   @include desktop
     margin-left: 1rem
 
-.listing-row-name
+.ff-listing-name
   margin-top: 0.5rem
   text-align: center
   font-size: 1rem
@@ -829,7 +759,7 @@ form input
   @include desktop
     font-size: 20px 
 
-.listing-row-desc
+.ff-listing-desc
   margin-top: 1rem
   @include tablet
     @include col-1-2
@@ -839,7 +769,7 @@ form input
     top: 30%
     width: 55%
 
-.listing-row-pricing
+.ff-listing-pricing
   @include bg-grey
   margin-top: 1rem
   padding: 1rem
@@ -851,13 +781,13 @@ form input
     top: 30%
     width: 15%
 
-.listing-row-price
+.ff-listing-price
   float: left 
   @include tablet
   @include desktop
     float: right
 
-.listing-row-shipping
+.ff-listing-shipping
   float: right
   font-size: 0.75rem
   text-align: right
@@ -887,7 +817,7 @@ form input
     float: right
     margin-top: 0.5rem
 
-.dialog-img
+.ff-ingredient-img
   @include horizontal-center
   height: 180px
   width: 100%
@@ -897,7 +827,7 @@ form input
   @include desktop
     width: 50%
 
-.dialog-text-section
+.ff-ingredient-text-section
   padding: 10px
   margin-top: 20px
   h3
@@ -948,7 +878,7 @@ form input
     ========================================  */
 
 .aquaponics-intro
-  margin-bottom: 2em
+  margin-bottom: 2rem
 
 .aquaponics-intro-text
   margin-top: 1rem

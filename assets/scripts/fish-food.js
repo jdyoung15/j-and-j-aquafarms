@@ -38,9 +38,10 @@ $(".ff-filter").change(function() {
   // Value from fish type select
   var fishType = $("#fish-types").val();
   var desiredTypes = "." + ffType + "." + fishType;
+  console.log(desiredTypes);
 
   // Hide all listings, and then fade in appropriate listings
-  $(".listing-row").hide();
+  $(".ff-listing").hide();
   fadeIn(desiredTypes);
 });
 
@@ -50,7 +51,7 @@ $( ".tbl-2-hdr a" ).click( function() {
   $( ".ff-filter :nth-child(1)" ).prop('selected', true);
 
   // Show all listings (in case any had previously been filtered)
-  fadeIn(".listing-row");
+  fadeIn(".ff-listing");
 
   // Close fish food table dialog
   $( "#ff-reference-dialog" ).dialog("close");
