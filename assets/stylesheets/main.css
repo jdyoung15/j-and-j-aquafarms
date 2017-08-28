@@ -202,14 +202,14 @@ p:not(:last-child) {
   margin-left: auto;
   margin-right: auto;
   width: 300px; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .row, .container {
       width: 560px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .row, .container {
       width: 960px; } }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 600px) {
   .container {
     padding: 30px; } }
 
@@ -276,7 +276,7 @@ p:not(:last-child) {
       color: #4caf50; }
   .nav .active {
     color: #4caf50; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .nav {
       float: right;
       text-align: right; } }
@@ -321,20 +321,20 @@ p:not(:last-child) {
   display: block;
   text-align: center;
   margin-bottom: 0.5rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .logo {
       margin-bottom: 0; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .logo {
       display: inline-block; } }
 
 .tagline {
   display: none; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .tagline {
       display: block;
       text-align: center; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .tagline {
       float: left;
       line-height: 42px;
@@ -388,7 +388,7 @@ a {
 /*  ========================================
  * Homepage
  * ========================================  */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   .homepage-content {
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2); } }
 
@@ -399,7 +399,7 @@ a {
   margin-top: 1.5rem; }
   .homepage-text:not(:last-child) {
     margin-bottom: 0; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .homepage-text {
       margin-top: 0;
       padding: 1.5rem 15%; } }
@@ -408,13 +408,13 @@ a {
   font-style: italic;
   font-size: 0.7rem;
   text-align: center; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .quote {
       font-size: 1rem; } }
 
 .exposition {
   text-align: left; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .exposition {
       background: #f5f5f5;
       text-align: center; } }
@@ -430,13 +430,13 @@ a {
   margin-right: auto;
   width: 100%;
   height: 200px; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .about-img-1,
     .about-img-2-container,
     .about-map {
       width: 75%;
       height: 300px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .about-img-1,
     .about-img-2-container,
     .about-map {
@@ -454,7 +454,7 @@ a {
     order: 2; }
   .about-bio img {
     order: 1; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .about-bio {
       display: block; } }
 
@@ -465,7 +465,7 @@ a {
 .about-text-section {
   margin-top: 1rem;
   margin-bottom: 1rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .about-text-section {
       display: inline-block;
       vertical-align: top;
@@ -485,7 +485,7 @@ a {
  * ========================================  */
 .fish-introduction-text {
   margin-top: 1rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .fish-introduction-text {
       display: inline-block;
       vertical-align: top;
@@ -503,7 +503,7 @@ a {
     margin-bottom: 0.5rem; }
     .fish-freight-options h3:not(:first-child) {
       margin-top: 0.5rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .fish-freight-options {
       display: inline-block;
       vertical-align: top;
@@ -519,7 +519,7 @@ a {
   margin-right: auto;
   margin-top: 2rem;
   width: 80%; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .order-fish-btn {
       float: left;
       margin-top: 0.75rem;
@@ -535,7 +535,7 @@ a {
   .fish-listing img {
     height: 100px;
     max-width: 100%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .fish-listing {
       display: inline-block;
       vertical-align: top;
@@ -547,7 +547,7 @@ a {
       min-height: 440px;
       padding-left: 0.5rem;
       padding-right: 0.5rem; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .fish-listing {
       display: inline-block;
       vertical-align: top;
@@ -563,7 +563,7 @@ a {
 
 .tbl-container {
   margin: 1rem 0; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .tbl-container {
       min-height: 75px; } }
 
@@ -587,7 +587,7 @@ a {
 /*  ========================================
  * Fish food page
  * ========================================  */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   .ff-intro-text {
     display: inline-block;
     vertical-align: top;
@@ -601,7 +601,7 @@ a {
   padding: 1rem; }
   .ff-shipping-text li {
     margin-top: 0.5rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-shipping-text {
       display: inline-block;
       vertical-align: top;
@@ -616,19 +616,19 @@ a {
   justify-content: flex-end;
   margin-top: 1rem;
   padding-bottom: 1rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-listings-hdr {
       display: block; } }
 
 .ff-filter-container {
   order: 2;
   width: 100%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-filter-container {
       display: inline-block;
       margin-right: 2%;
       width: 38%; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-filter-container {
       width: 42%; } }
 
@@ -636,7 +636,7 @@ a {
   background: #fff;
   height: 2rem;
   width: 100%; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-filter {
       float: left; } }
 
@@ -645,11 +645,11 @@ a {
   order: 1;
   vertical-align: bottom;
   width: 30%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-buttons-container {
       display: inline-block;
       width: 15%; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-buttons-container {
       width: 9%; } }
 
@@ -672,7 +672,7 @@ a {
 
 .ff-listings {
   margin-top: 2rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listings {
       margin-top: 0; } }
 
@@ -681,12 +681,12 @@ a {
   padding-bottom: 2rem; }
   .ff-listing:not(:first-child) {
     border-top: 1px solid #d8d8d8; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing {
       overflow: hidden;
       position: relative; } }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   .ff-listing-hdr {
     position: absolute;
     left: 25%;
@@ -695,14 +695,14 @@ a {
 
 .ff-listing-ingredients-link p {
   text-align: center; }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 600px) {
   .ff-listing-ingredients-link {
     display: inline-block;
     vertical-align: top;
     margin-left: 0.5%;
     margin-right: 0.5%;
     width: 48%; } }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   .ff-listing-ingredients-link {
     display: inline-block;
     vertical-align: top;
@@ -718,10 +718,10 @@ a {
 
 .ff-listing-id {
   text-align: center; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-listing-id {
       float: left; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-id {
       margin-left: 1rem; } }
 
@@ -729,27 +729,27 @@ a {
   margin-top: 0.5rem;
   text-align: center;
   font-size: 1rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-listing-name {
       float: left;
       font-size: 18px;
       line-height: 2rem;
       margin-left: 1rem;
       margin-top: 0; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-name {
       font-size: 20px; } }
 
 .ff-listing-desc {
   margin-top: 1rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-listing-desc {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 48%; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-desc {
       position: absolute;
       left: 27%;
@@ -760,7 +760,7 @@ a {
   background: #f5f5f5;
   margin-top: 1rem;
   padding: 1rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-pricing {
       background: #fff;
       padding: 0;
@@ -771,7 +771,7 @@ a {
 
 .ff-listing-price {
   float: left; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-price {
       float: right; } }
 
@@ -781,12 +781,12 @@ a {
   text-align: right; }
   .ff-listing-shipping h5 {
     line-height: 0.75rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-listing-shipping {
       float: left;
       margin-left: 1rem;
       text-align: left; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-listing-shipping {
       float: right;
       margin-left: 0;
@@ -799,7 +799,7 @@ a {
   margin-right: auto;
   margin-top: 2rem;
   width: 100%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .add-cart-form, .order-email-btn {
       display: inline-block;
       vertical-align: top;
@@ -808,7 +808,7 @@ a {
       width: 48%;
       margin-top: 0;
       float: right; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .add-cart-form, .order-email-btn {
       clear: both;
       margin-top: 0.5rem;
@@ -823,11 +823,11 @@ a {
   margin-right: auto;
   height: 180px;
   width: 100%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .ff-ingredient-img {
       height: auto;
       max-height: 350px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-ingredient-img {
       width: 50%; } }
 
@@ -837,7 +837,7 @@ a {
   .ff-ingredient-text-section h3 {
     padding-bottom: 10px;
     margin-bottom: 20px; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .ff-ingredient-text-section {
       display: inline-block;
       vertical-align: top;
@@ -845,7 +845,7 @@ a {
       margin-right: 0.5%;
       width: 48%; } }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1000px) {
   .terramycin {
     width: 100%; } }
 
@@ -877,14 +877,14 @@ a {
     font-size: 0.75rem;
     padding-left: 2rem;
     padding-right: 2rem; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .bulletin {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 48%; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .bulletin {
       display: inline-block;
       vertical-align: top;
@@ -900,7 +900,7 @@ a {
 
 .aquaponics-intro-text {
   margin-top: 1rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .aquaponics-intro-text {
       display: inline-block;
       vertical-align: top;
@@ -916,7 +916,7 @@ a {
 
 .aquaponics-intro-img {
   width: 100%; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .aquaponics-intro-img {
       display: inline-block;
       vertical-align: top;
@@ -930,7 +930,7 @@ a {
   background: #fff;
   margin-bottom: 1rem;
   padding: 0.5rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .aquaponics-material-section {
       display: inline-block;
       vertical-align: top;
@@ -952,7 +952,7 @@ a {
   font-size: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .hdr-aquaponics-section {
       font-size: 1.5rem; } }
 
@@ -969,20 +969,20 @@ a {
 .channel-30-aquaponics-video {
   width: 100%;
   height: 170px; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .channel-30-aquaponics-video {
       height: 315px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .channel-30-aquaponics-video {
       height: 540px; } }
 
 .pbs-aquaponics-video {
   width: 100%;
   height: 246px; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .pbs-aquaponics-video {
       height: 400px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .pbs-aquaponics-video {
       height: 620px; } }
 
@@ -998,10 +998,10 @@ a {
   max-height: 75vh;
   margin-bottom: 2rem;
   max-width: 100%; }
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     .galleria {
       height: 500px; } }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
     .galleria {
       height: 600px; } }
 
