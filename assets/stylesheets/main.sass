@@ -561,7 +561,8 @@ form input
   margin-top: 1rem
   @include desktop
     @include col-1-2
-    margin: 0
+    float: left
+    margin-top: 0
     padding-right: 1em
 
 .fish-freight-options
@@ -573,12 +574,17 @@ form input
       margin-top: 0.5rem
   @include desktop
     @include col-1-2
+    float: right
     margin-top: 0
 
 .order-fish-btn
   @include horizontal-center
-  margin-bottom: 1rem
-  width: 50%
+  margin-top: 2rem
+  width: 80%
+  @include desktop
+    float: left
+    margin-top: 0.75rem
+    width: 45%
 
 .fish-listings
   margin-top: 2rem

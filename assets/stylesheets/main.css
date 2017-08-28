@@ -492,7 +492,8 @@ a {
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 48%;
-      margin: 0;
+      float: left;
+      margin-top: 0;
       padding-right: 1em; } }
 
 .fish-freight-options {
@@ -509,14 +510,20 @@ a {
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 48%;
+      float: right;
       margin-top: 0; } }
 
 .order-fish-btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1rem;
-  width: 50%; }
+  margin-top: 2rem;
+  width: 80%; }
+  @media screen and (min-width: 960px) {
+    .order-fish-btn {
+      float: left;
+      margin-top: 0.75rem;
+      width: 45%; } }
 
 .fish-listings {
   margin-top: 2rem; }
