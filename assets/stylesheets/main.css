@@ -615,7 +615,7 @@ a {
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-top: 1rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem; }
   @media screen and (min-width: 560px) {
     .ff-listings-hdr {
       display: block; } }
