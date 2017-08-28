@@ -793,14 +793,14 @@ a {
       margin-top: 0.5rem;
       text-align: right; } }
 
-.add-cart-form {
+.add-cart-form, .order-email-btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   width: 100%; }
   @media screen and (min-width: 560px) {
-    .add-cart-form {
+    .add-cart-form, .order-email-btn {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
@@ -809,7 +809,7 @@ a {
       margin-top: 0;
       float: right; } }
   @media screen and (min-width: 960px) {
-    .add-cart-form {
+    .add-cart-form, .order-email-btn {
       clear: both;
       margin-top: 0.5rem;
       width: 100%; } }
