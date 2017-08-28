@@ -809,19 +809,21 @@ form input
     margin-top: 0.5rem
     text-align: right
 
-.add-cart-btn
+.add-cart-form
   @include horizontal-center
-  clear: both
   margin-top: 2rem
   width: 100%
   @include tablet
-    clear: none
+    @include col-1-2
     margin-top: 0
     float: right
-    @include col-1-2
   @include desktop
-    float: right
+    clear: both
     margin-top: 0.5rem
+    width: 100%
+
+.add-cart-btn
+  width: 100%
 
 .ff-ingredient-img
   @include horizontal-center

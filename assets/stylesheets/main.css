@@ -793,27 +793,29 @@ a {
       margin-top: 0.5rem;
       text-align: right; } }
 
-.add-cart-btn {
+.add-cart-form {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  clear: both;
   margin-top: 2rem;
   width: 100%; }
   @media screen and (min-width: 560px) {
-    .add-cart-btn {
-      clear: none;
-      margin-top: 0;
-      float: right;
+    .add-cart-form {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
       margin-right: 0.5%;
-      width: 48%; } }
+      width: 48%;
+      margin-top: 0;
+      float: right; } }
   @media screen and (min-width: 960px) {
-    .add-cart-btn {
-      float: right;
-      margin-top: 0.5rem; } }
+    .add-cart-form {
+      clear: both;
+      margin-top: 0.5rem;
+      width: 100%; } }
+
+.add-cart-btn {
+  width: 100%; }
 
 .ff-ingredient-img {
   display: block;
