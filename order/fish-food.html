@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
-    <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.min.css">
   </head>
 
   <body>
@@ -1376,8 +1376,14 @@
       </div>
     </footer>
 
-    <script src="../assets/scripts/jquery.js"></script>
-    <script src="../assets/scripts/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+       window.jQuery.ui || document.write('<script src="../assets/scripts/jquery-ui.min.js"><\/script>');
+     </script>
     <script src="../assets/scripts/fish-food.js"></script>
 
   </body>

@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
-    <script src="../assets/scripts/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
-    <script src="../assets/scripts/galleria-setup.js"></script>
   </head>
   <body>
 
@@ -49,36 +51,22 @@
       <p>CART has been operating an aquaponics system since 2009. Starting in 2011, J and J Aquafarms works with a select group of students each semester to research the viability of small scale aquaponics and to build an aquaponics teaching laboratory.</p>
       <p>We will determine the most suitable fish and vegetables for the Central Valley (California), as well as various types of systems and grow media. We use locally and re-purposed materials where possible.</p>
     </header>
+
     <section class="row">
       <h4 class="subhdr-aquaponics-year">2015</h4>
-		  <div class="galleria">
-        <img src="../assets/images/aquaponics/cart/2015/full/img-1.jpg" data-description="In 2015, the Aquaponics groups built a Home DWC (Deep Water Culture) system. Major design elements in this graphic. You need a fish tank, a biofilter, and a growbed. We will use the 2014 Flood/Drain system to supply the Deep Water Culture bed.">
-        <img src="../assets/images/aquaponics/cart/2015/full/img-2.jpg" data-description="">
-        <img src="../assets/images/aquaponics/cart/2015/full/img-3.jpg" data-description="">
+		  <div class="galleria-1 galleria">
       </div>
     </section>
 
     <section class="row">
       <h4 class="subhdr-aquaponics-year">2014</h4>
-		  <div class="galleria">
-        <img src="../assets/images/aquaponics/cart/2014/full/img-1.jpg" data-description="2014 Aquaponics groups constructed IBC-based Flood and Drain systems.">
-        <img src="../assets/images/aquaponics/cart/2014/full/img-2.jpg" data-description="2014 Students harvesting fish at J and J Aquafarms to transfer to their aquaponic systems at school.">
-        <img src="../assets/images/aquaponics/cart/2014/full/img-3.jpg" data-description="Students measure ammonia, and other water parameter levels.">
+		  <div class="galleria-2 galleria">
       </div>
     </section>
 
     <section class="row">
       <h4 class="subhdr-aquaponics-year">2011-2013</h4>
-		  <div class="galleria">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-1.jpg" data-description="The 2013 CART aquaponic system sits inside a fiberglass greenhouse. This is a Food and Drain system. Temperature outside, 50°F Temperature inside, 75°F.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-2.jpg" data-description="The 300 gallon fish tank feeds the grow bed to the left via a low wattage air lift pump.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-3.jpg" data-description="A diaphragm air pump like this draws less than 100 watts. Besides powering the air lift, it areates the fish tank.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-4.jpg" data-description="Hydroton (expanded clay pellets) are added to the grow bed, which is a converted kiddie swimming pool.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-5.jpg" data-description="Use of a 2 liter soda bottle enables students to observe the auto (bell) siphon in action. The vertical pipe on the left is an emergency overflow.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-6.jpg" data-description="Radishes are doing well in the grow bed.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-7.jpg" data-description="The team decided to go clear with the media guard too. It is a modified 5 gallon drinking water bottle. Along with the clear 2 liter &quot;bell&quot;, this allows full view of the dynamics of an auto-siphon.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-8.jpg" data-description="We are comparing plant growth in a Deep Water Culture float.">
-        <img src="../assets/images/aquaponics/cart/2011-2013/full/img-9.jpg" data-description="Root growth is good, but we discovered the ventilation blower was dessicating the plant leaves.">
+		  <div class="galleria-3 galleria">
       </div>
     </section>
 
@@ -88,6 +76,80 @@
         <small class="email">info@jandjaquafarms.com</small>
       </div>
     </footer>
+
+    
+    <script>
+	  const galleriaImgData = {
+      'galleria-1': [
+        {
+          image: "../assets/images/aquaponics/cart/2015/full/img-1.jpg",
+          description: "In 2015, the Aquaponics groups built a Home DWC (Deep Water Culture) system. Major design elements in this graphic. You need a fish tank, a biofilter, and a growbed. We will use the 2014 Flood/Drain system to supply the Deep Water Culture bed."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2015/full/img-2.jpg",
+          description: ""
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2015/full/img-3.jpg",
+          description: ""
+        }
+      ],
+      'galleria-2': [
+        {
+          image: "../assets/images/aquaponics/cart/2014/full/img-1.jpg",
+          description: "2014 Aquaponics groups constructed IBC-based Flood and Drain systems."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2014/full/img-2.jpg",
+          description: "2014 Students harvesting fish at J and J Aquafarms to transfer to their aquaponic systems at school."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2014/full/img-3.jpg",
+          description: "Students measure ammonia, and other water parameter levels."
+        }
+      ],
+      'galleria-3': [
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-1.jpg",
+          description: "The 2013 CART aquaponic system sits inside a fiberglass greenhouse. This is a Food and Drain system. Temperature outside, 50°F Temperature inside, 75°F."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-2.jpg",
+          description: "The 300 gallon fish tank feeds the grow bed to the left via a low wattage air lift pump."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-3.jpg",
+          description: "A diaphragm air pump like this draws less than 100 watts. Besides powering the air lift, it areates the fish tank."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-4.jpg",
+          description: "Hydroton (expanded clay pellets) are added to the grow bed, which is a converted kiddie swimming pool."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-5.jpg",
+          description: "Use of a 2 liter soda bottle enables students to observe the auto (bell) siphon in action. The vertical pipe on the left is an emergency overflow."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-6.jpg",
+          description: "Radishes are doing well in the grow bed."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-7.jpg",
+          description: "The team decided to go clear with the media guard too. It is a modified 5 gallon drinking water bottle. Along with the clear 2 liter &quot;bell&quot;, this allows full view of the dynamics of an auto-siphon."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-8.jpg",
+          description: "We are comparing plant growth in a Deep Water Culture float."
+        },
+        {
+          image: "../assets/images/aquaponics/cart/2011-2013/full/img-9.jpg",
+          description: "Root growth is good, but we discovered the ventilation blower was dessicating the plant leaves."
+        }
+      ]
+    };
+
+    </script>
+    <script src="../assets/scripts/galleria-setup.js"></script>
 
   </body>
 

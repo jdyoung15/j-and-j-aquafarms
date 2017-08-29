@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
-    <script src="../assets/scripts/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+       window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
-    <script src="../assets/scripts/galleria-setup.js"></script>
   </head>
   <body>
 
@@ -51,14 +53,7 @@
       <p>See more photos on their <a class="link-green" href="https://www.facebook.com/Avenal-Community-Garden-110631029006169/" target="_blank">Facebook page</a>.</p>
     </header>
 
-		<div class="galleria row">
-      <img src="../assets/images/aquaponics/avenal/full/img-1.jpg" data-description="Deep water culutre tanks are made from wood frames and poly liners.">
-      <img src="../assets/images/aquaponics/avenal/full/img-2.jpg" data-description="Styrofoam building insulation sheets provide an anchor for the vegetables."></img>
-      <img src="../assets/images/aquaponics/avenal/full/img-3.jpg" data-description="Fish tank covered to reduce solar radiation and algae.">
-      <img src="../assets/images/aquaponics/avenal/full/img-4.jpg" data-description="Teach a man to grow fish and he will eat for a lifetime.">
-      <img src="../assets/images/aquaponics/avenal/full/img-5.jpg" data-description="When life withholds tilapia, grow bluegill sunfish!">
-      <img src="../assets/images/aquaponics/avenal/full/img-6.jpg" data-description="The peas are coming up strong.">
-      <img src="../assets/images/aquaponics/avenal/full/img-7.jpg" data-description="Shade cloth reducing the ample sunlight in the Central Valley.">
+		<div class="galleria-1 galleria row">
     </div>
 
     <footer class="primary-footer container">
@@ -67,6 +62,42 @@
         <small class="email">info@jandjaquafarms.com</small>
       </div>
     </footer>
+
+    <script>
+	  const galleriaImgData = {
+      'galleria-1': [
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-1.jpg",
+          description: "Deep water culutre tanks are made from wood frames and poly liners."
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-2.jpg",
+          description: "Styrofoam building insulation sheets provide an anchor for the vegetables."
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-3.jpg",
+          description: "Fish tank covered to reduce solar radiation and algae."
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-4.jpg",
+          description: "Teach a man to grow fish and he will eat for a lifetime."
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-5.jpg",
+          description: "When life withholds tilapia, grow bluegill sunfish!"
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-6.jpg",
+          description: "The peas are coming up strong."
+        },
+        {
+          image: "../assets/images/aquaponics/avenal/full/img-7.jpg",
+          description: "Shade cloth reducing the ample sunlight in the Central Valley."
+        }
+      ]
+    };
+    </script>
+    <script src="../assets/scripts/galleria-setup.js"></script>
 
   </body>
 
