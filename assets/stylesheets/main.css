@@ -5,7 +5,10 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small,
+.bulletin p,
+.back-aquaponics-link,
+.aquaponics-video-caption, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -82,7 +85,7 @@ body {
 .border-top-grey, .fish-listing {
   border-top: 1px solid #d8d8d8; }
 
-.border-grey, .ff-ingredient-img, .aquaponics-material-section {
+.border-grey, .ff-ingredient-img, .aquaponics-material-box {
   border: 1px solid #d8d8d8; }
 
 /*  ========================================
@@ -178,7 +181,7 @@ h4 {
 h5 {
   font-size: 12px; }
 
-small {
+small, .bulletin p, .back-aquaponics-link, .aquaponics-video-caption {
   font-size: 12px; }
 
 strong {
@@ -348,10 +351,12 @@ p:not(:last-child) {
   margin-top: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem; }
-  .primary-footer .copyright {
-    float: left; }
-  .primary-footer .email {
-    float: right; }
+
+.copyright {
+  float: left; }
+
+.email {
+  float: right; }
 
 /*  ========================================
  * Clearfix
@@ -610,15 +615,23 @@ a {
       width: 32%;
       margin-top: 0; } }
 
-.ff-listings-hdr {
+.ff-listings {
+  margin-top: 2rem; }
+  @media screen and (min-width: 1000px) {
+    .ff-listings {
+      margin-top: 0; } }
+
+.ff-listings-navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-top: 1rem;
   padding-bottom: 1rem; }
   @media screen and (min-width: 600px) {
-    .ff-listings-hdr {
-      display: block; } }
+    .ff-listings-navbar {
+      display: block;
+      flex-wrap: unset;
+      justify-content: unset; } }
 
 .ff-filter-container {
   order: 2;
@@ -626,6 +639,7 @@ a {
   @media screen and (min-width: 600px) {
     .ff-filter-container {
       display: inline-block;
+      order: unset;
       margin-right: 2%;
       width: 38%; } }
   @media screen and (min-width: 1000px) {
@@ -648,6 +662,7 @@ a {
   @media screen and (min-width: 600px) {
     .ff-buttons-container {
       display: inline-block;
+      order: unset;
       width: 15%; } }
   @media screen and (min-width: 1000px) {
     .ff-buttons-container {
@@ -659,28 +674,10 @@ a {
 .form-view-cart {
   float: right; }
 
-.tbl-ff-reference {
-  font-size: 12px;
-  margin-top: 20px; }
-  .tbl-ff-reference th, .tbl-ff-reference td {
-    height: 75px;
-    width: 120px; }
-  .tbl-ff-reference a {
-    color: #404040; }
-    .tbl-ff-reference a:hover {
-      color: #707070; }
-
-.ff-listings {
-  margin-top: 2rem; }
-  @media screen and (min-width: 1000px) {
-    .ff-listings {
-      margin-top: 0; } }
-
 .ff-listing {
+  border-top: 1px solid #d8d8d8;
   padding-top: 2rem;
   padding-bottom: 2rem; }
-  .ff-listing:not(:first-child) {
-    border-top: 1px solid #d8d8d8; }
   @media screen and (min-width: 1000px) {
     .ff-listing {
       overflow: hidden;
@@ -692,29 +689,6 @@ a {
     left: 25%;
     top: 20%;
     width: 75%; } }
-
-.ff-listing-ingredients-link p {
-  text-align: center; }
-@media screen and (min-width: 600px) {
-  .ff-listing-ingredients-link {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 48%; } }
-@media screen and (min-width: 1000px) {
-  .ff-listing-ingredients-link {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 24%;
-    float: left; } }
-
-.ff-listing-img {
-  height: 180px;
-  margin-top: 1rem;
-  width: 100%; }
 
 .ff-listing-id {
   text-align: center; }
@@ -739,6 +713,29 @@ a {
   @media screen and (min-width: 1000px) {
     .ff-listing-name {
       font-size: 20px; } }
+
+.ff-listing-ingredients-link p {
+  text-align: center; }
+@media screen and (min-width: 600px) {
+  .ff-listing-ingredients-link {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 48%; } }
+@media screen and (min-width: 1000px) {
+  .ff-listing-ingredients-link {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 24%;
+    float: left; } }
+
+.ff-listing-img {
+  height: 180px;
+  margin-top: 1rem;
+  width: 100%; }
 
 .ff-listing-desc {
   margin-top: 1rem; }
@@ -817,6 +814,17 @@ a {
 .add-cart-btn {
   width: 100%; }
 
+.tbl-ff-reference {
+  font-size: 12px;
+  margin-top: 20px; }
+  .tbl-ff-reference th, .tbl-ff-reference td {
+    height: 75px;
+    width: 120px; }
+  .tbl-ff-reference a {
+    color: #404040; }
+    .tbl-ff-reference a:hover {
+      color: #707070; }
+
 .ff-ingredient-img {
   display: block;
   margin-left: auto;
@@ -874,7 +882,6 @@ a {
   .bulletin h4 {
     margin-top: 0.5rem; }
   .bulletin p {
-    font-size: 0.75rem;
     padding-left: 2rem;
     padding-right: 2rem; }
   @media screen and (min-width: 600px) {
@@ -893,27 +900,8 @@ a {
       width: 32%; } }
 
 /*  ========================================
- * Aquaponics pages
+ * Aquaponics home page
  * ========================================  */
-.aquaponics-intro {
-  margin-bottom: 2rem; }
-
-.aquaponics-intro-text {
-  margin-top: 1rem; }
-  @media screen and (min-width: 1000px) {
-    .aquaponics-intro-text {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      width: 48%;
-      float: left;
-      margin-top: 0;
-      padding-right: 20px; } }
-
-.aquaponics-questions {
-  margin-bottom: 20px; }
-
 .aquaponics-intro-img {
   width: 100%; }
   @media screen and (min-width: 1000px) {
@@ -926,27 +914,44 @@ a {
       float: right;
       height: 360px; } }
 
-.aquaponics-material-section {
-  background: #fff;
+.aquaponics-intro-text {
+  margin-top: 1rem; }
+  .aquaponics-intro-text ul {
+    margin-bottom: 1rem; }
+  @media screen and (min-width: 1000px) {
+    .aquaponics-intro-text {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 48%;
+      float: left;
+      margin-top: 0;
+      padding-right: 20px; } }
+
+.aquaponics-materials {
+  margin-top: 2rem; }
+
+.aquaponics-material-box {
   margin-bottom: 1rem;
   padding: 0.5rem; }
+  .aquaponics-material-box ul {
+    margin-top: 0.5rem; }
   @media screen and (min-width: 1000px) {
-    .aquaponics-material-section {
+    .aquaponics-material-box {
       display: inline-block;
       vertical-align: top;
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 32%;
-      min-height: 200px; } }
+      margin-bottom: 0;
+      min-height: 180px; } }
 
-.aquaponics-material-list {
-  margin-top: 10px; }
-
+/*  ========================================
+ * Aquaponics individual pages
+ * ========================================  */
 .aquaponics-page-intro {
   margin-bottom: 1rem; }
-
-.back-aquaponics-link {
-  font-size: 0.75rem; }
 
 .hdr-aquaponics-section {
   font-size: 1rem;
@@ -962,32 +967,8 @@ a {
   margin-top: 10px; }
 
 .subhdr-aquaponics-year {
-  font-weight: 400;
   margin-top: 1rem;
   margin-bottom: 0.5rem; }
-
-.channel-30-aquaponics-video {
-  width: 100%;
-  height: 170px; }
-  @media screen and (min-width: 600px) {
-    .channel-30-aquaponics-video {
-      height: 315px; } }
-  @media screen and (min-width: 1000px) {
-    .channel-30-aquaponics-video {
-      height: 540px; } }
-
-.pbs-aquaponics-video {
-  width: 100%;
-  height: 246px; }
-  @media screen and (min-width: 600px) {
-    .pbs-aquaponics-video {
-      height: 400px; } }
-  @media screen and (min-width: 1000px) {
-    .pbs-aquaponics-video {
-      height: 620px; } }
-
-.video-caption {
-  font-size: 0.75rem; }
 
 .galleria {
   display: block;
@@ -1020,5 +1001,25 @@ a {
 
 .caption-link {
   color: #bbb; }
+
+.channel-30-aquaponics-video {
+  width: 100%;
+  height: 170px; }
+  @media screen and (min-width: 600px) {
+    .channel-30-aquaponics-video {
+      height: 315px; } }
+  @media screen and (min-width: 1000px) {
+    .channel-30-aquaponics-video {
+      height: 540px; } }
+
+.pbs-aquaponics-video {
+  width: 100%;
+  height: 246px; }
+  @media screen and (min-width: 600px) {
+    .pbs-aquaponics-video {
+      height: 400px; } }
+  @media screen and (min-width: 1000px) {
+    .pbs-aquaponics-video {
+      height: 620px; } }
 
 /*# sourceMappingURL=main.css.map */
