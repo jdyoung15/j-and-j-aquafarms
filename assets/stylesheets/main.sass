@@ -948,9 +948,21 @@ form input
   width: 100%
   margin-top: 10px
 
-.subhdr-aquaponics-year
-  margin-top: 1rem
-  margin-bottom: 0.5rem
+.ui-tabs .ui-tabs-panel.galleria
+  padding-left: 0
+  padding-right: 0
+
+.ui-tabs .ui-tabs-nav
+  @extend .border-bottom-grey
+  li
+    background: $light-grey
+    font-size: 0.75rem
+    @include tablet
+      font-size: 1rem
+  li.ui-tabs-active
+      @extend .border-grey
+      background: $white
+      border-bottom: 0
 
 .galleria
   @include horizontal-center

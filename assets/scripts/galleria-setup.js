@@ -4,7 +4,7 @@
   function runGalleriaInstance(instanceNum) {
     const name = `galleria-${instanceNum}`;
     const className = `.${name}` 
-
+  
     Galleria.run(className, {
       thumbnails: false,
       _toggleInfo: false,
@@ -12,13 +12,20 @@
       preload: 1
     });
   }
-
+  
+  runGalleriaInstance(1);
+  
   const numGalleriaInstances = $('.galleria').length;
-  for (var i = 1; i < numGalleriaInstances + 1; i++) {
-    runGalleriaInstance(i);
-  }
+  if (numGalleriaInstances > 1) {
+    // Additional galleria instances should run only when user clicks tab to make them visible
+    for (let i = 2; i <= numGalleriaInstances; i++) {
+      $(`#tab-${i}-link`).one('click', function(e) {
+        runGalleriaInstance(i); 
+      });
 
-  if (numGalleriaInstances === 1) {
+    }
+  } else {
+    // Allow user to navigate images with arrow keys if only one Galleria instance exists
     Galleria.ready(function() {
       this.attachKeyboard({
       left: this.prev,
@@ -26,5 +33,4 @@
       });
     });
   }
-
 }());

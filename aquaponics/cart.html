@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
+    <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
        window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+       window.jQuery.ui || document.write('<script src="../assets/scripts/jquery-ui.min.js"><\/script>');
      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
   </head>
@@ -52,23 +57,24 @@
       <p>We will determine the most suitable fish and vegetables for the Central Valley (California), as well as various types of systems and grow media. We use locally and re-purposed materials where possible.</p>
     </header>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2015</h4>
-		  <div class="galleria-1 galleria">
-      </div>
-    </section>
+    <div class="row" id="tabs">
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2014</h4>
-		  <div class="galleria-2 galleria">
-      </div>
-    </section>
+    	<ul>
+    	  <li><a id="tab-1-link" href="#tab-1"><span>2015</span></a></li>
+    	  <li><a id="tab-2-link" href="#tab-2"><span>2014</span></a></li>
+    	  <li><a id="tab-3-link" href="#tab-3"><span>2011-13</span></a></li>
+    	</ul>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2011-2013</h4>
-		  <div class="galleria-3 galleria">
-      </div>
-    </section>
+    	<div class="row galleria-1 galleria" id="tab-1">
+    	</div>
+
+    	<div class="row galleria-2 galleria" id="tab-2">
+    	</div>
+
+    	<div class="row galleria-3 galleria" id="tab-3">
+    	</div>
+
+    </div>
 
     <footer class="primary-footer container">
       <div class="group">
@@ -77,8 +83,16 @@
       </div>
     </footer>
 
-    
     <script>
+  	$("#tabs").tabs();
+
+  	// Deactivate arrow key behavior for tabs
+		jQuery('#tabs').tabs({
+  		activate: function(e, ui) {
+  	  	e.currentTarget.blur();
+  		}
+		});
+
 	  const galleriaImgData = {
       'galleria-1': [
         {
@@ -147,7 +161,6 @@
         }
       ]
     };
-
     </script>
     <script src="../assets/scripts/galleria-setup.js"></script>
 

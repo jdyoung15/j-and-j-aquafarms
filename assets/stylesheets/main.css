@@ -79,13 +79,13 @@ body {
 /*  ========================================
  * Borders  
  * ========================================  */
-.border-bottom-grey, .primary-header {
+.border-bottom-grey, .primary-header, .ui-tabs .ui-tabs-nav {
   border-bottom: 1px solid #d8d8d8; }
 
 .border-top-grey, .fish-listing {
   border-top: 1px solid #d8d8d8; }
 
-.border-grey, .ff-ingredient-img, .aquaponics-material-box {
+.border-grey, .ff-ingredient-img, .aquaponics-material-box, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   border: 1px solid #d8d8d8; }
 
 /*  ========================================
@@ -966,9 +966,19 @@ a {
   width: 100%;
   margin-top: 10px; }
 
-.subhdr-aquaponics-year {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem; }
+.ui-tabs .ui-tabs-panel.galleria {
+  padding-left: 0;
+  padding-right: 0; }
+
+.ui-tabs .ui-tabs-nav li {
+  background: #f5f5f5;
+  font-size: 0.75rem; }
+  @media screen and (min-width: 600px) {
+    .ui-tabs .ui-tabs-nav li {
+      font-size: 1rem; } }
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  background: #fff;
+  border-bottom: 0; }
 
 .galleria {
   display: block;

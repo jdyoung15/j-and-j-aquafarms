@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
+    <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.min.css">
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
        window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+       window.jQuery.ui || document.write('<script src="../assets/scripts/jquery-ui.min.js"><\/script>');
      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
   </head>
@@ -52,31 +58,32 @@
       <p>Subsequent years explore other Aquaponic designs, like Deep Water Culture, and vertical systems. In the future, these systems will be integrated into other aquaculutre systems including greenhouses and open ponds.</p>
     </header>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2014 - 2015</h4>
-		  <div class="galleria-1 galleria">
-      </div>
-    </section>
+    <div class="row" id="tabs">
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2013 - 2014</h4>
-		  <div class="galleria-2 galleria">
-      </div>
-    </section>
+    	<ul>
+    	  <li><a id="tab-1-link" href="#tab-1"><span>2014-15</span></a></li>
+    	  <li><a id="tab-2-link" href="#tab-2"><span>2013-14</span></a></li>
+    	  <li><a id="tab-3-link" href="#tab-3"><span>2011-12</span></a></li>
+    	  <li><a id="tab-4-link" href="#tab-4"><span>Videos</span></a></li>
+    	</ul>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">2011 - 2012</h4>
-		  <div class="galleria-3 galleria">
-      </div>
-    </section>
+      <section class="row galleria-1 galleria" id="tab-1">
+      </section>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">Videos</h4>
-      <iframe class="channel-30-aquaponics-video" src="//abc30.com/video/embed/?pid=1084498" frameborder="0" allowfullscreen></iframe>
-      <p class="aquaponics-video-caption">November 2015, Channel 30 Action news, thanks Dale! Full article <a class="link-green" href="http://abc30.com/education/sanger-high-students-using-unique-techniques-to-grow-food/1084481/" target="_blank">here</a>.</p>
-      <iframe class="pbs-aquaponics-video" src="//player.pbs.org/viralplayer/2365578007" frameborder="0" allowfullscreen></iframe>
-      <p class="aquaponics-video-caption">August, 2015, Thank you PBS!</p>
-    </section>
+      <section class="row galleria-2 galleria" id="tab-2">
+      </section>
+
+      <section class="row galleria-3 galleria" id="tab-3">
+      </section>
+
+      <section class="row" id="tab-4">
+        <iframe class="aquaponics-video channel-30-aquaponics-video" src="about:blank" data-src="//abc30.com/video/embed/?pid=1084498" frameborder="0" allowfullscreen></iframe>
+        <p class="aquaponics-video-caption">November 2015, Channel 30 Action news, thanks Dale! Full article <a class="link-green" href="http://abc30.com/education/sanger-high-students-using-unique-techniques-to-grow-food/1084481/" target="_blank">here</a>.</p>
+        <iframe class="aquaponics-video pbs-aquaponics-video" src="about:blank" data-src="//player.pbs.org/viralplayer/2365578007" frameborder="0" allowfullscreen></iframe>
+        <p class="aquaponics-video-caption">August, 2015, Thank you PBS!</p>
+      </section>
+
+    </div>
 
     <footer class="primary-footer container">
       <div class="group">
@@ -86,6 +93,21 @@
     </footer>
 
     <script>
+  	$("#tabs").tabs();
+
+  	// Deactivate arrow key behavior for tabs
+		jQuery('#tabs').tabs({
+  		activate: function(e, ui) {
+  	  	e.currentTarget.blur();
+  		}
+		});
+
+    $("#tab-4-link").one('click', function() {
+      $(".aquaponics-video").each(function() {
+        $(this).attr("src", $(this).data("src"));
+      });
+    });
+
 	  const galleriaImgData = {
       'galleria-1': [
         {

@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width">
     <title>J&J Aquafarms</title>
     <link rel="stylesheet" href="../assets/stylesheets/main.css">
+    <link rel="stylesheet" href="../assets/stylesheets/jquery-ui.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
        window.jQuery || document.write('<script src="../assets/scripts/jquery-3.2.1.min.js"><\/script>');
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+       window.jQuery.ui || document.write('<script src="../assets/scripts/jquery-ui.min.js"><\/script>');
      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
   </head>
@@ -52,23 +57,24 @@
       <p>J and J Aquafarms designed the compact three-tank system using available materials with minimal cost. Bluegill Sunfish and lettuce were initially stocked in December 2011.</p>
     </header>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">Fall 2012</h4>
-		  <div class="galleria-1 galleria">
-      </div>
-    </section>
+    <div class="row" id="tabs">
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">Spring 2012</h4>
-		  <div class="galleria-2 galleria">
-      </div>
-    </section>
+      <ul>
+        <li><a id="tab-1-link" href="#tab-1"><span>Fall 2012</span></a></li>
+        <li><a id="tab-2-link" href="#tab-2"><span>Spring 2012</span></a></li>
+        <li><a id="tab-3-link" href="#tab-3"><span>Fall 2011</span></a></li>
+      </ul>
 
-    <section class="row">
-      <h4 class="subhdr-aquaponics-year">Fall 2011</h4>
-		  <div class="galleria-3 galleria">
-      </div>
-    </section>
+      <section class="row galleria-1 galleria" id="tab-1">
+      </section>
+
+      <section class="row galleria-2 galleria" id="tab-2">
+      </section>
+
+      <section class="row galleria-3 galleria" id="tab-3">
+      </section>
+
+    </div>
 
     <footer class="primary-footer container">
       <div class="group">
@@ -78,6 +84,14 @@
     </footer>
 
     <script>
+  	$("#tabs").tabs();
+  	// Deactivate arrow key behavior for tabs
+		jQuery('#tabs').tabs({
+  		activate: function(e, ui) {
+  	  	e.currentTarget.blur();
+  		}
+		});
+
 	  const galleriaImgData = {
       'galleria-1': [
         {
