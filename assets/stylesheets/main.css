@@ -1014,22 +1014,22 @@ a {
 
 .channel-30-aquaponics-video {
   width: 100%;
-  height: 170px; }
+  height: 140px; }
   @media screen and (min-width: 580px) {
     .channel-30-aquaponics-video {
-      height: 315px; } }
+      height: 290px; } }
   @media screen and (min-width: 980px) {
     .channel-30-aquaponics-video {
-      height: 540px; } }
+      height: 500px; } }
 
 .pbs-aquaponics-video {
   width: 100%;
-  height: 246px; }
+  height: 215px; }
   @media screen and (min-width: 580px) {
     .pbs-aquaponics-video {
-      height: 400px; } }
+      height: 360px; } }
   @media screen and (min-width: 980px) {
     .pbs-aquaponics-video {
-      height: 620px; } }
+      height: 580px; } }
 
 /*# sourceMappingURL=main.css.map */
