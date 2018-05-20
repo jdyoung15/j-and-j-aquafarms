@@ -332,11 +332,8 @@ p:not(:last-child) {
       display: inline-block; } }
 
 .tagline {
-  display: none; }
-  @media screen and (min-width: 580px) {
-    .tagline {
-      display: block;
-      text-align: center; } }
+  display: block;
+  text-align: center; }
   @media screen and (min-width: 980px) {
     .tagline {
       float: left;
