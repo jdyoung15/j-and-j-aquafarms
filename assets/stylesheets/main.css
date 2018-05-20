@@ -360,7 +360,9 @@ p:not(:last-child) {
  * Primary footer 
  * ========================================  */
 .primary-footer {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .copyright {
   float: left; }
