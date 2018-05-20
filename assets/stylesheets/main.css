@@ -347,9 +347,7 @@ p:not(:last-child) {
  * Primary footer 
  * ========================================  */
 .primary-footer {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
+  margin-top: 2rem; }
 
 .copyright {
   float: left; }
