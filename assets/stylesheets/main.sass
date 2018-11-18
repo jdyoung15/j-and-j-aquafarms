@@ -54,6 +54,7 @@ $dark-blue: #001a66
 $light-blue: #e6ecff
 $green: #4caf50
 $light-grey: #f5f5f5
+$light-grey-2: #f0f0f0
 $med-grey: #d8d8d8
 $dark-grey: #404040
 $charcoal: #282828
@@ -125,16 +126,16 @@ body
     ========================================  */
 
 .border-bottom-grey
-  border-bottom: 1px solid $light-grey
+  border-bottom: 1px solid $light-grey-2
 
 @mixin border-top-grey
-  border-top: 1px solid $light-grey
+  border-top: 1px solid $light-grey-2
 
 .border-top-grey
   @include border-top-grey
 
 .border-grey
-  border: 1px solid $light-grey 
+  border: 1px solid $light-grey-2
 
 
 /*  ========================================
@@ -624,7 +625,7 @@ form input
     max-width: 100%
   @include tablet
     @include col-1-2
-    border: 1px solid $light-grey 
+    border: 1px solid $light-grey-2
     margin-bottom: 1rem
     min-height: 440px
     padding-left: 0.5rem
