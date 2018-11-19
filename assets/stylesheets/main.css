@@ -399,7 +399,8 @@ a {
   text-decoration: none; }
 
 .link-green {
-  color: #4caf50; }
+  color: #4caf50;
+  text-decoration: underline; }
   .link-green:hover {
     color: #006600;
     cursor: pointer; }
@@ -966,6 +967,9 @@ a {
       width: 32%;
       margin-bottom: 0;
       min-height: 180px; } }
+
+.aquaponics-material-box .list-square-bullets li {
+  margin-bottom: 8px; }
 
 /*  ========================================
  * Aquaponics individual pages
