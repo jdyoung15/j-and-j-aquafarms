@@ -269,8 +269,8 @@ p:not(:last-child) {
  * Navigation
  * ========================================  */
 .nav {
-  text-align: center;
-  text-transform: uppercase; }
+  font-variant: small-caps;
+  text-align: center; }
   .nav li {
     display: inline-block; }
   .nav a {
@@ -299,7 +299,7 @@ p:not(:last-child) {
     padding: 10px;
     text-align: left; }
     .dropdown-content a:hover {
-      background-color: #f1f1f1;
+      background-color: #f0f0f0;
       color: #4caf50; }
 
 .dropdown:hover .dropbtn {
