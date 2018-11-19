@@ -98,15 +98,16 @@ body {
 /*  ========================================
  * Buttons
  * ========================================  */
-.btn-green {
-  background: #4caf50;
-  color: #e0e0e0;
+.btn-std {
+  background: #00aaef;
+  border-radius: 5px;
+  color: #fff;
   padding: 5px;
   text-align: center;
   min-width: 120px; }
-  .btn-green:hover {
+  .btn-std:hover {
     cursor: pointer;
-    opacity: 0.9; }
+    background: #10befd; }
 
 .btn-close {
   color: #d8d8d8;
