@@ -80,13 +80,13 @@ body {
  * Borders  
  * ========================================  */
 .border-bottom-grey, .primary-header, .ui-tabs .ui-tabs-nav {
-  border-bottom: 1px solid #f0f0f0; }
+  border-bottom: 1px solid #d8d8d8; }
 
 .border-top-grey, .fish-listing {
-  border-top: 1px solid #f0f0f0; }
+  border-top: 1px solid #d8d8d8; }
 
 .border-grey, .ff-ingredient-img, .aquaponics-material-box, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  border: 1px solid #f0f0f0; }
+  border: 1px solid #d8d8d8; }
 
 /*  ========================================
  * Lists
@@ -299,7 +299,7 @@ p:not(:last-child) {
     padding: 10px;
     text-align: left; }
     .dropdown-content a:hover {
-      background-color: #f0f0f0;
+      background-color: #d8d8d8;
       color: #4caf50; }
 
 .dropdown:hover .dropbtn {
@@ -568,7 +568,7 @@ a {
       margin-left: 0.5%;
       margin-right: 0.5%;
       width: 48%;
-      border: 1px solid #f0f0f0;
+      border: 1px solid #d8d8d8;
       margin-bottom: 1rem;
       min-height: 440px;
       padding-left: 0.5rem;
@@ -696,7 +696,7 @@ a {
   float: right; }
 
 .ff-listing {
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #d8d8d8;
   padding-top: 2rem;
   padding-bottom: 2rem; }
   @media screen and (min-width: 980px) {
