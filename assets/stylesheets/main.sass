@@ -75,6 +75,9 @@ $font-primary: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sa
   @media screen and (min-width: 980px)
     @content
 
+@mixin desktop-wide
+  @media screen and (min-width: 2000px)
+    @content
 
 /*  ========================================
     Custom styles
@@ -166,6 +169,7 @@ body
   color: $med-grey
   float: right
   font-size: 2rem
+
   &:hover 
     cursor: pointer
 
@@ -210,9 +214,12 @@ table
 
 .ui-dialog 
   background: $white
-  min-width: 50%
+  min-width: 75%
   min-height: 50%
   position: fixed
+
+  @include desktop-wide
+    min-width: 50%
 
 .ui-dialog-titlebar 
   display: none
@@ -859,12 +866,15 @@ form input
   @extend .border-grey
   @include horizontal-center
   height: 180px
-  width: 100%
+  margin-top: 30px
+  width: 235px
   @include tablet 
     height: auto
     max-height: 350px
+    width: 300px
   @include desktop
-    width: 50%
+    margin-top: unset
+    width: 500px
 
 .ff-ingredient-text-section
   padding: 10px
@@ -883,9 +893,11 @@ form input
   margin-left: auto
   margin-right: auto
   font-size: 12px
-  min-width: 300px
+  min-width: 235px
   th
     width: 30%
+  @include tablet 
+    min-width: 300px
 
 
 /*  ========================================

@@ -151,9 +151,12 @@ table {
  * ========================================  */
 .ui-dialog {
   background: #fff;
-  min-width: 50%;
+  min-width: 75%;
   min-height: 50%;
   position: fixed; }
+  @media screen and (min-width: 2000px) {
+    .ui-dialog {
+      min-width: 50%; } }
 
 .ui-dialog-titlebar {
   display: none; }
@@ -849,14 +852,17 @@ a {
   margin-left: auto;
   margin-right: auto;
   height: 180px;
-  width: 100%; }
+  margin-top: 30px;
+  width: 235px; }
   @media screen and (min-width: 580px) {
     .ff-ingredient-img {
       height: auto;
-      max-height: 350px; } }
+      max-height: 350px;
+      width: 300px; } }
   @media screen and (min-width: 980px) {
     .ff-ingredient-img {
-      width: 50%; } }
+      margin-top: unset;
+      width: 500px; } }
 
 .ff-ingredient-text-section {
   padding: 10px;
@@ -880,9 +886,12 @@ a {
   margin-left: auto;
   margin-right: auto;
   font-size: 12px;
-  min-width: 300px; }
+  min-width: 235px; }
   .tbl-guaranteed-analysis th {
     width: 30%; }
+  @media screen and (min-width: 580px) {
+    .tbl-guaranteed-analysis {
+      min-width: 300px; } }
 
 /*  ========================================
  * Technical Bulletins page
