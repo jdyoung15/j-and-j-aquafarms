@@ -154,7 +154,7 @@ table {
   min-width: 75%;
   min-height: 50%;
   position: fixed; }
-  @media screen and (min-width: 2000px) {
+  @media screen and (min-width: 1400px) {
     .ui-dialog {
       min-width: 50%; } }
 
