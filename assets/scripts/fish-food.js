@@ -11,10 +11,6 @@ $(".opener").click(function() {
     var ffId = $(this).data('id');
     var dialogId = `#${ffId}-dialog`;
     $(dialogId).dialog("open");
-    if (ffId !== 'ff-reference') {
-      $(`${dialogId} .ff-ingredient-snippet`).load(`snippets/${ffId}.html`);
-    }
-
 
     // Close dialog when user clicks the "x" button
     $(".btn-close").click(function() {
