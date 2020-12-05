@@ -753,6 +753,10 @@ a {
     margin-right: 0.5%;
     width: 24%;
     float: left; } }
+.ff-listing-ingredients-link:hover {
+  cursor: pointer; }
+  .ff-listing-ingredients-link:hover .link-green {
+    color: #006600; }
 
 .ff-listing-img {
   height: 180px;
