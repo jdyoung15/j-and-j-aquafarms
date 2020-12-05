@@ -8,10 +8,6 @@ $(".modal-dialog").dialog({
 $(".opener").click(function() {
   var ffId = $(this).data('id');
 
-  if (ffId === "ff-reference" && screen.width < 960) {
-    return
-  }
-
   var dialogId = `#${ffId}-dialog`;
   $(dialogId).dialog("open");
 
