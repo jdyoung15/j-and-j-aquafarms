@@ -419,6 +419,7 @@ a {
  * Homepage
  * ========================================  */
 .primary-header.homepage-header {
+  border-bottom: unset;
   margin-bottom: 0; }
 
 @media screen and (min-width: 980px) {
