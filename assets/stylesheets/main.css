@@ -335,9 +335,11 @@ p:not(:last-child) {
     margin-left: 20px;
     text-align: left; }
     @media screen and (min-width: 980px) {
-      .dropdown-content a:hover {
-        background-color: #d8d8d8;
-        color: #4caf50; } }
+      .dropdown-content a {
+        margin-left: unset; }
+        .dropdown-content a:hover {
+          background-color: #d8d8d8;
+          color: #4caf50; } }
 
 @media screen and (min-width: 980px) {
   .dropdown:hover .dropbtn {
