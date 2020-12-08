@@ -343,6 +343,12 @@ p:not(:last-child) {
   .dropdown:hover .dropbtn {
     color: #4caf50; } }
 
+.dropbtn.active {
+  color: #d8d8d8; }
+  @media screen and (min-width: 980px) {
+    .dropbtn.active {
+      color: #4caf50; } }
+
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
