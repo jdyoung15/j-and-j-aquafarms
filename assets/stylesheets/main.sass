@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section
 body
   line-height: 1
 
+  &.mobile-menu-open
+    height: 100vh
+    overflow-y: hidden
+
 ol, ul
   list-style: none
 
@@ -357,40 +361,71 @@ p:not(:last-child)
     ========================================  */
 
 .nav
+  background-color: $charcoal
+  display: none
   font-variant: small-caps
-  text-align: center
+  height: 100% 
+  position: absolute
+  right: 0
+  top: 0
+  width: 225px
+  z-index: 3
   li
-    display: inline-block
+    display: block
   a
+    color: $med-grey
     display: block
     padding: 10px
-    &:hover
-      color: $green
+    @include desktop
+      &:hover
+        color: $green
   .active
     color: $green
+  @include tablet
+    width: 275px
   @include desktop
+    background: unset
+    display: block
+    height: unset
+    position: unset
+    right: unset
+    top: unset
     float: right
     text-align: right
+    width: unset
+    z-index: unset
+    li
+      display: inline-block
+    a
+      color: $dark-grey 
+
+.nav-row:first-child
+  text-align: center
 
 .dropdown-content
-  @include shadow
-  display: none
-  position: absolute
-  background-color: $light-grey
   min-width: 160px
-  z-index: 1000
+  @include desktop
+    background-color: $light-grey
+    display: none
+    @include shadow
+    position: absolute
+    z-index: 1000
+
   .dropdown:hover &, .dropdown:active &
     display: block
   a
     display: block
     padding: 10px
+    margin-left: 20px
     text-align: left
-    &:hover
-      background-color: $med-grey
-      color: $green
+    @include desktop
+      &:hover
+        background-color: $med-grey
+        color: $green
 
 .dropdown:hover .dropbtn
-  color: $green
+  @include desktop
+    color: $green
 
 .no-select
   -webkit-touch-callout: none
@@ -410,15 +445,42 @@ p:not(:last-child)
   padding-top: 1rem
   padding-bottom: 0
   margin-bottom: 1rem
+  @include tablet
+    padding-left: 0
+    padding-right: 0
+  @include desktop
+    padding-left: 30px 
+    padding-right: 30px 
+
+.logo-link
+  display: inline-block
+  margin-left: 25px
+  @include tablet
+    margin-left: 30px
+  @include desktop
+    display: unset
+    margin-left: unset
 
 .logo
   display: block
-  text-align: center
-  margin-bottom: 0.5rem
+  margin-left: auto
+  margin-right: auto
+  @include desktop
+    text-align: left
+
+h1.logo
+  font-size: 24px
+  @include tablet 
+    font-size: 36px
+
+.mobile-menu-icon
+  float: right
+  margin-top: 10px
+  width: 25px
   @include tablet
-    margin-bottom: 0
-  @include desktop 
-    display: inline-block
+    width: 30px
+  @include desktop
+    display: none
 
 .tagline
   display: block
