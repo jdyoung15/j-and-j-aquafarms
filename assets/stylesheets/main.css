@@ -989,6 +989,7 @@ a {
   .bulletin h4 {
     margin-top: 0.5rem; }
   .bulletin p {
+    line-height: normal;
     padding-left: 2rem;
     padding-right: 2rem; }
   @media screen and (min-width: 580px) {
