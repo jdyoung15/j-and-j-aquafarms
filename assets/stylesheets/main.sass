@@ -635,12 +635,18 @@ form input
 .about-map
   @include horizontal-center
   width: 100%
-  height: 200px
   @include tablet
     width: 75%
     height: 300px
   @include desktop
     @include col-1-2
+    height: 340px
+
+.about-map
+  height: 250px
+  @include tablet
+    height: 300px
+  @include desktop
     height: 340px
 
 .about-bio
