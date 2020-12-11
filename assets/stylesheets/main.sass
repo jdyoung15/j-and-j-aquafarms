@@ -590,6 +590,13 @@ form input
   @include desktop
     @include shadow
 
+.homepage-content.row
+  width: 100%
+  @include tablet
+    width: 560px
+  @include desktop
+    width: 960px 
+
 .homepage-img
   width: 100%
 
@@ -609,9 +616,14 @@ form input
     font-size: 1rem
 
 .exposition
+  @include bg-grey
+  padding: 10px 20px
   text-align: left
+  @include tablet
+    background: unset
   @include desktop
     @include bg-grey
+    padding: 1.5rem 15%
     text-align: center
 
 /*  ========================================
