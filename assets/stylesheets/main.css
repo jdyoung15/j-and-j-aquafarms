@@ -211,7 +211,7 @@ p:not(:last-child) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 300px; }
+  width: 90%; }
   @media screen and (min-width: 580px) {
     .row, .container {
       width: 560px; } }
