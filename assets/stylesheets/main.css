@@ -782,7 +782,7 @@ a {
   height: 2rem;
   order: 1;
   vertical-align: bottom;
-  width: 30%; }
+  width: 90px; }
   @media screen and (min-width: 580px) {
     .ff-buttons-container {
       display: inline-block;
@@ -838,32 +838,35 @@ a {
     .ff-listing-name {
       font-size: 20px; } }
 
-.ff-listing-ingredients-link p {
+.ff-listing-ingredients-link {
   text-align: center; }
-@media screen and (min-width: 580px) {
-  .ff-listing-ingredients-link {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 48%; } }
-@media screen and (min-width: 980px) {
-  .ff-listing-ingredients-link {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 24%;
-    float: left; } }
-.ff-listing-ingredients-link:hover {
-  cursor: pointer; }
-  .ff-listing-ingredients-link:hover .link-green {
-    color: #006600; }
+  @media screen and (min-width: 580px) {
+    .ff-listing-ingredients-link {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 48%; } }
+  @media screen and (min-width: 980px) {
+    .ff-listing-ingredients-link {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
+      width: 24%;
+      float: left; } }
+  .ff-listing-ingredients-link:hover {
+    cursor: pointer; }
+    .ff-listing-ingredients-link:hover .link-green {
+      color: #006600; }
 
 .ff-listing-img {
   height: 180px;
   margin-top: 1rem;
-  width: 100%; }
+  width: 280px; }
+  @media screen and (min-width: 580px) {
+    .ff-listing-img {
+      width: 100%; } }
 
 .ff-listing-desc {
   margin-top: 1rem; }
