@@ -546,6 +546,12 @@ a {
       padding: 1.5rem 15%;
       text-align: center; } }
 
+.homepage-footer {
+  display: none; }
+  @media screen and (min-width: 580px) {
+    .homepage-footer {
+      display: block; } }
+
 /*  ========================================
  * About page
  * ========================================  */
