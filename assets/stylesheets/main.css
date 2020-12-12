@@ -500,7 +500,7 @@ a {
   border-bottom: unset;
   margin-bottom: 0; }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 580px) {
   .homepage-content {
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2); } }
 
@@ -537,12 +537,8 @@ a {
   background: #f5f5f5;
   padding: 10px 20px;
   text-align: left; }
-  @media screen and (min-width: 580px) {
-    .exposition {
-      background: unset; } }
   @media screen and (min-width: 980px) {
     .exposition {
-      background: #f5f5f5;
       padding: 1.5rem 15%;
       text-align: center; } }
 
