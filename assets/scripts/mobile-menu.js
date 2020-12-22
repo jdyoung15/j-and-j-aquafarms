@@ -3,7 +3,7 @@ const menu = document.querySelector(".mobile-menu-icon")
 const body = document.querySelector("body")
 const nav = document.querySelector(".nav");
 menu.onclick = function(event) {
-  nav.style.display = "block";
+  nav.style.display = "flex";
   menu.classList.add("clicked")
   body.classList.add("mobile-menu-open");  
 }
@@ -23,5 +23,5 @@ body.onclick = function(event) {
 // Hide the mobile nav menu on window width stretch. Ensure the nav menu is shown 
 // if stretching the window from mobile to desktop width.
 window.onresize = function() {
-  nav.style.display = window.innerWidth >= 980 ? "block" : "none";
+  nav.style.display = window.innerWidth >= 980 ? "flex" : "none";
 }
