@@ -303,12 +303,13 @@ p:not(:last-child) {
     .nav {
       background: unset;
       display: block;
+      float: right;
       height: unset;
+      margin-top: 8px;
       overflow-y: unset;
       position: unset;
       right: unset;
       top: unset;
-      float: right;
       text-align: right;
       width: unset;
       z-index: unset; }
@@ -316,9 +317,6 @@ p:not(:last-child) {
         display: inline-block; }
       .nav a {
         color: #404040; } }
-
-.nav-row:first-child {
-  text-align: center; }
 
 .dropdown-content {
   min-width: 160px; }
@@ -370,28 +368,19 @@ p:not(:last-child) {
  * Primary header
  * ========================================  */
 .primary-header {
-  padding-top: 1rem;
-  padding-bottom: 0;
-  margin-bottom: 1rem; }
+  padding-top: 10px; }
   @media screen and (min-width: 580px) {
     .primary-header {
-      padding-left: 0;
-      padding-right: 0; } }
+      padding: 10px; } }
   @media screen and (min-width: 980px) {
     .primary-header {
-      padding-left: 30px;
-      padding-right: 30px; } }
+      padding: 10px 30px 5px 30px; } }
 
 .logo-link {
-  display: inline-block;
-  margin-left: 25px; }
-  @media screen and (min-width: 580px) {
-    .logo-link {
-      margin-left: 30px; } }
+  display: inline-block; }
   @media screen and (min-width: 980px) {
     .logo-link {
-      display: unset;
-      margin-left: unset; } }
+      display: unset; } }
 
 .logo {
   display: block;
@@ -399,6 +388,7 @@ p:not(:last-child) {
   margin-right: auto; }
   @media screen and (min-width: 980px) {
     .logo {
+      display: inline-block;
       text-align: left; } }
 
 h1.logo {

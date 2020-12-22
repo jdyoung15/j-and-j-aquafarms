@@ -387,12 +387,13 @@ p:not(:last-child)
   @include desktop
     background: unset
     display: block
+    float: right
     height: unset
+    margin-top: 8px
     overflow-y: unset
     position: unset
     right: unset
     top: unset
-    float: right
     text-align: right
     width: unset
     z-index: unset
@@ -400,9 +401,6 @@ p:not(:last-child)
       display: inline-block
     a
       color: $dark-grey 
-
-.nav-row:first-child
-  text-align: center
 
 .dropdown-content
   min-width: 160px
@@ -454,30 +452,23 @@ p:not(:last-child)
 
 .primary-header
   @extend .border-bottom-grey
-  padding-top: 1rem
-  padding-bottom: 0
-  margin-bottom: 1rem
+  padding-top: 10px
   @include tablet
-    padding-left: 0
-    padding-right: 0
+    padding: 10px
   @include desktop
-    padding-left: 30px 
-    padding-right: 30px 
+    padding: 10px 30px 5px 30px
 
 .logo-link
   display: inline-block
-  margin-left: 25px
-  @include tablet
-    margin-left: 30px
   @include desktop
     display: unset
-    margin-left: unset
 
 .logo
   display: block
   margin-left: auto
   margin-right: auto
   @include desktop
+    display: inline-block
     text-align: left
 
 h1.logo
