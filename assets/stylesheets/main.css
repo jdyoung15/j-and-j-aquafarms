@@ -62,7 +62,7 @@ table {
 body {
   background: #fff;
   color: #404040;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 400 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*  ========================================
  * Backgrounds
@@ -396,6 +396,7 @@ p:not(:last-child) {
 
 .logo {
   display: block;
+  font-weight: 300;
   margin-left: auto;
   margin-right: auto; }
   @media screen and (min-width: 980px) {
@@ -493,7 +494,7 @@ a {
  * ========================================  */
 .listing-row-pricing form input, .ff-listings form input {
   border: 0;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 400 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*  ========================================
  * Homepage
