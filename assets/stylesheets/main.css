@@ -383,7 +383,7 @@ p:not(:last-child) {
   padding-top: 10px; }
   @media screen and (min-width: 580px) {
     .primary-header {
-      padding: 10px; } }
+      padding: 10px 10px 5px 10px; } }
   @media screen and (min-width: 980px) {
     .primary-header {
       padding: 10px 30px 5px 30px; } }
