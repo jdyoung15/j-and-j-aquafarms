@@ -418,7 +418,6 @@ p:not(:last-child)
   a
     display: block
     padding: 10px
-    margin-left: 20px
     text-align: left
     @include desktop
       margin-left: unset 
@@ -429,6 +428,11 @@ p:not(:last-child)
 .dropdown:hover .dropbtn
   @include desktop
     color: $green
+
+.nav .dropbtn
+  display: none
+  @include desktop
+    display: block
 
 .dropbtn.active
   color: $med-grey

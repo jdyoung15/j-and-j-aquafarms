@@ -334,7 +334,6 @@ p:not(:last-child) {
   .dropdown-content a {
     display: block;
     padding: 10px;
-    margin-left: 20px;
     text-align: left; }
     @media screen and (min-width: 980px) {
       .dropdown-content a {
@@ -346,6 +345,12 @@ p:not(:last-child) {
 @media screen and (min-width: 980px) {
   .dropdown:hover .dropbtn {
     color: #4caf50; } }
+
+.nav .dropbtn {
+  display: none; }
+  @media screen and (min-width: 980px) {
+    .nav .dropbtn {
+      display: block; } }
 
 .dropbtn.active {
   color: #d8d8d8; }
