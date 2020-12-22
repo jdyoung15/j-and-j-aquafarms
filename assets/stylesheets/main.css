@@ -409,15 +409,16 @@ h1.logo {
     h1.logo {
       font-size: 36px; } }
 
-.mobile-menu-icon {
+.hamburger-menu-icon {
+  border: 1px solid #404040;
   float: right;
   margin-top: 10px;
   width: 25px; }
   @media screen and (min-width: 580px) {
-    .mobile-menu-icon {
+    .hamburger-menu-icon {
       width: 30px; } }
   @media screen and (min-width: 980px) {
-    .mobile-menu-icon {
+    .hamburger-menu-icon {
       display: none; } }
 
 .tagline {
