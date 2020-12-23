@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1; }
-  body.mobile-menu-open {
+  body.hamburger-menu-open {
     height: 100vh;
     overflow-y: hidden; }
 
@@ -276,8 +276,9 @@ p:not(:last-child) {
  * ========================================  */
 .nav {
   background-color: #282828;
+  color: #d8d8d8;
   display: none;
-  font-variant: small-caps;
+  flex-direction: column;
   height: 100%;
   overflow-y: scroll;
   position: absolute;
@@ -290,6 +291,7 @@ p:not(:last-child) {
   .nav a {
     color: #d8d8d8;
     display: block;
+    font-variant: small-caps;
     padding: 10px; }
     @media screen and (min-width: 980px) {
       .nav a:hover {
@@ -317,6 +319,9 @@ p:not(:last-child) {
         display: inline-block; }
       .nav a {
         color: #404040; } }
+
+.nav-links {
+  flex-grow: 4; }
 
 .dropdown-content {
   min-width: 160px; }
@@ -375,6 +380,22 @@ p:not(:last-child) {
   -webkit-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
   transform: scaleY(-1); }
+
+.nav .contact-info {
+  padding: 10px; }
+  .nav .contact-info .contact-img-container {
+    display: inline-block;
+    position: relative;
+    width: 10px; }
+  .nav .contact-info .contact-img-phone,
+  .nav .contact-info .contact-img-email {
+    bottom: -2px;
+    height: 11px;
+    position: absolute;
+    width: 10px; }
+  @media screen and (min-width: 980px) {
+    .nav .contact-info {
+      display: none; } }
 
 /*  ========================================
  * Primary header

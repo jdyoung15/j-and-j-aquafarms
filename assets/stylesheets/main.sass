@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section
 body
   line-height: 1
 
-  &.mobile-menu-open
+  &.hamburger-menu-open
     height: 100vh
     overflow-y: hidden
 
@@ -362,8 +362,9 @@ p:not(:last-child)
 
 .nav
   background-color: $charcoal
+  color: $med-grey
   display: none
-  font-variant: small-caps
+  flex-direction: column
   height: 100% 
   overflow-y: scroll
   position: absolute
@@ -376,6 +377,7 @@ p:not(:last-child)
   a
     color: $med-grey
     display: block
+    font-variant: small-caps
     padding: 10px
     @include desktop
       &:hover
@@ -401,6 +403,9 @@ p:not(:last-child)
       display: inline-block
     a
       color: $dark-grey 
+
+.nav-links
+  flex-grow: 4
 
 .dropdown-content
   min-width: 160px
@@ -456,6 +461,24 @@ p:not(:last-child)
   -webkit-transform: scaleY(-1)
   -ms-transform: scaleY(-1)
   transform: scaleY(-1)
+
+.nav .contact-info
+  padding: 10px
+
+  .contact-img-container
+    display: inline-block
+    position: relative 
+    width: 10px
+
+  .contact-img-phone,
+  .contact-img-email
+    bottom: -2px
+    height: 11px
+    position: absolute
+    width: 10px
+
+  @include desktop
+    display: none
 
 
 /*  ========================================

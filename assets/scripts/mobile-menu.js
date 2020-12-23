@@ -3,7 +3,7 @@ const menu = document.querySelector(".hamburger-menu-icon")
 const body = document.querySelector("body")
 const nav = document.querySelector(".nav");
 menu.onclick = function(event) {
-  nav.style.display = "block";
+  nav.style.display = "flex";
   menu.classList.add("clicked")
   body.classList.add("hamburger-menu-open");  
 }
