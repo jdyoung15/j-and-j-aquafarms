@@ -418,6 +418,7 @@ p:not(:last-child)
 
   .dropdown:hover &, .dropdown:active &
     display: block
+
   a
     display: block
     padding: 10px
@@ -427,6 +428,11 @@ p:not(:last-child)
       &:hover
         background-color: $med-grey
         color: $green
+
+  .contact-link
+    display: none
+    @include desktop
+      display: block
 
 .dropdown:hover .dropbtn
   @include desktop
