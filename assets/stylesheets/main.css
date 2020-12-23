@@ -455,11 +455,11 @@ h1.logo {
       .primary-footer .contact-info {
         display: block;
         line-height: 42px;
-        text-align: center; }
-        .primary-footer .contact-info .contact-info-item:last-child {
-          padding-left: 20px; } }
+        text-align: center; } }
   .primary-footer .contact-info-item {
-    display: inline-block; }
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px; }
   .primary-footer .contact-txt {
     display: inline-block;
     padding-left: 3px; }
