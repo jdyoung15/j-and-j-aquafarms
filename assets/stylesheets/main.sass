@@ -497,6 +497,7 @@ p:not(:last-child)
   @include tablet
     padding: 10px 10px 5px 10px
   @include desktop
+    margin-bottom: 1rem
     padding: 10px 30px 0 30px
 
 .logo-link
@@ -689,12 +690,22 @@ form input
   height: 100%
 
 .about-text-section
+  font-size: 16px
   margin-top: 1rem
   margin-bottom: 1rem
   @include desktop
     @include col-1-2
     margin: 0
-    padding: 1rem
+    padding-left: 10px
+
+.about-bio .about-text-section
+  @include desktop
+    padding-top: 10px
+    padding-right: 10px
+
+.about-conclusion .about-text-section
+  @include desktop
+    padding-top: 10px
 
 .meet-owner
   text-decoration: underline
