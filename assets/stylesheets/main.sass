@@ -372,20 +372,16 @@ p:not(:last-child)
   top: 0
   width: 225px
   z-index: 3
+
   li
     display: block
-  a
-    color: $med-grey
-    display: block
-    font-variant: small-caps
-    padding: 10px
-    @include desktop
-      &:hover
-        color: $green
+
   .active
     color: $green
+
   @include tablet
     width: 275px
+
   @include desktop
     background: unset
     display: block
@@ -406,6 +402,16 @@ p:not(:last-child)
 
 .nav-links
   flex-grow: 4
+
+  a
+    color: $med-grey
+    display: block
+    font-variant: small-caps
+    padding: 10px
+    &:hover
+      color: $green
+    @include desktop
+      color: $dark-grey
 
 .dropdown-content
   min-width: 160px
@@ -428,11 +434,6 @@ p:not(:last-child)
       &:hover
         background-color: $med-grey
         color: $green
-
-  .contact-link
-    display: none
-    @include desktop
-      display: block
 
 .dropdown:hover .dropbtn
   @include desktop
@@ -486,19 +487,20 @@ p:not(:last-child)
   @include desktop
     display: none
 
+.nav .contact-link
+  color: $med-grey
+  font-variant: unset
 
 /*  ========================================
     Primary header
     ========================================  */
 
 .primary-header
-  @extend .border-bottom-grey
-  margin-bottom: 1rem
   padding-top: 10px
   @include tablet
     padding: 10px 10px 5px 10px
   @include desktop
-    padding: 10px 30px 0 30px
+    padding: 10px 0 0 0 
 
 .logo-link
   display: inline-block
@@ -512,6 +514,7 @@ p:not(:last-child)
   margin-right: auto
   @include desktop
     display: inline-block
+    padding-left: 10px
     text-align: left
 
 h1.logo
@@ -530,6 +533,70 @@ h1.logo
 
 
 /*  ========================================
+    Breadcrumb & Contact Info Bar
+    ========================================  */
+
+.breadcrumb-row 
+  background: $light-grey
+  font-size: 12px
+  margin-bottom: 10px
+  padding: 0 0 0 5%
+  width: 100%
+  @include tablet
+    padding: 0 5px
+    width: 560px
+  @include desktop
+    width: 960px 
+
+.breadcrumb
+  float: left
+
+.breadcrumb-link:hover
+  text-decoration: underline
+
+.breadcrumb-row .contact-info
+  display: none
+  float: right
+
+  @include desktop 
+    display: block
+
+.breadcrumb-row .contact-info-item
+  display: inline-block
+  margin-left: 10px
+
+.breadcrumb-row .contact-img-container
+  display: inline-block
+  width: 10px
+
+.breadcrumb-row .contact-img-phone
+  height: 8px
+  width: 8px
+
+.breadcrumb-row .contact-img-email
+  height: 7px
+  width: 8px
+
+.arrow-right
+  height: 5px
+  margin-bottom: 2px
+  width: 9px
+  -webkit-transform: rotate(-90deg)
+  -ms-transform: rotate(-90deg)
+  transform: rotate(-90deg)
+
+.contact-link
+  font-size: 12px
+
+  &:hover
+    text-decoration: underline
+
+/*  ========================================
+    Breadcrumb & Contact Info Bar
+    ========================================  */
+
+
+/*  ========================================
     Primary footer 
     ========================================  */
 
@@ -537,29 +604,6 @@ h1.logo
   margin-top: 2rem
   padding: 0
   
-  .contact-info
-    display: none
-    @include desktop 
-      display: block
-      line-height: 42px
-      text-align: center
-  
-  .contact-info-item
-    display: inline-block
-    padding-left: 10px
-    padding-right: 10px
-  
-  .contact-txt
-    display: inline-block
-    padding-left: 3px
-  
-  .contact-img-phone
-    height: 10px 
-    width: 10px
-  
-  .contact-img-email
-    height: 9px 
-    width: 12px
 
 /*  ========================================
     Clearfix
