@@ -1164,12 +1164,9 @@ a {
   margin-bottom: 1rem; }
 
 .hdr-aquaponics-section {
-  font-size: 1rem;
+  color: #909090;
   margin-bottom: 1rem;
   margin-top: 1rem; }
-  @media screen and (min-width: 980px) {
-    .hdr-aquaponics-section {
-      font-size: 1.5rem; } }
 
 .img-aquaponics-preview {
   height: 110px;
