@@ -14,11 +14,18 @@ body.onclick = function(event) {
     && event.target.closest(".hamburger-menu-icon") === null 
     && event.target.closest(".nav") === null) 
   {
-    nav.style.display = "none";
-    menu.classList.remove("clicked");  
-    body.classList.remove("hamburger-menu-open");  
+    hideMobileNav(event);
   }
 }
+
+function hideMobileNav(event) {
+  nav.style.display = "none";
+  menu.classList.remove("clicked");  
+  body.classList.remove("hamburger-menu-open");  
+}
+
+const closeNav = document.querySelector(".close-nav");
+closeNav.onclick = hideMobileNav;
 
 // Hide the mobile nav menu on window width stretch. Ensure the nav menu is shown 
 // if stretching the window from mobile to desktop width.

@@ -325,6 +325,13 @@ p:not(:last-child) {
       .nav-links a {
         color: #404040; } }
 
+.close-nav a {
+  border-bottom: 1px solid #d8d8d8;
+  cursor: pointer; }
+  @media screen and (min-width: 980px) {
+    .close-nav a {
+      display: none; } }
+
 .dropdown-content {
   min-width: 160px; }
   @media screen and (min-width: 980px) {
