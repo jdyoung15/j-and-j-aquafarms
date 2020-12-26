@@ -33,7 +33,9 @@ body {
   line-height: 1; }
   body.hamburger-menu-open {
     height: 100vh;
-    overflow-y: hidden; }
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%; }
 
 ol, ul {
   list-style: none; }
